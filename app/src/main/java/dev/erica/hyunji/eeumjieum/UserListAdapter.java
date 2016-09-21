@@ -53,9 +53,6 @@ public class UserListAdapter extends BaseAdapter{
         return convertView;
     }
 
-   public void setChecked(int position){
-
-   }
 }
 
 

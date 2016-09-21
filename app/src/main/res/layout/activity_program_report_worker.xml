@@ -44,14 +44,45 @@
         </LinearLayout>
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/title_day_tv"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:layout_marginTop="60dp"
-        android:textSize="25dp"
-        android:text="2016년 6월"
-        android:textAlignment="center"/>
+        android:orientation="horizontal"
+        android:background="@color/colorBgDefault">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:drawableLeft="@drawable/ss_arr_prev"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_prevbtn"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/title_day_tv"
+            android:text="2016년 6월"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:drawableRight="@drawable/ss_arr_next"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_nextbtn"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
 
     //article container
     <ListView

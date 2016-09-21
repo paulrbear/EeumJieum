@@ -197,14 +197,21 @@ public class DetailProgramReportViewActivity extends FragmentActivity {
         commlist = handler.getArticleCommentList("PROGRAMCOMMENT", articleKey);
         ListView listView = (ListView) findViewById(R.id.commentlist);
 
+        TextView commentcount = (TextView) findViewById(R.id.comment_num_tv);
+        commentcount.setText(""+commlist.size());
+
+
         Iterator iterator = commlist.iterator();
         while (iterator.hasNext()) {
 
             ArticleCommentItem tmpresult = (ArticleCommentItem) iterator.next();
             String comm_writer = tmpresult.getWriter();
+            List<String> loginuser_data = handler.getLoginUserData(savedID);
+            String loginuser_name = loginuser_data.get(0);
 
 
-            if (article_writer.equals(comm_writer)) {
+
+            if (loginuser_name.equals(comm_writer)) {
                 ArticleCommentItem tmp = new ArticleCommentItem(tmpresult.getArticleKey(), tmpresult.getDay(), tmpresult.getTime(), tmpresult.getWriter(), tmpresult.getComment_content(), 1);
                 data.add(tmp);
             } else {
@@ -227,14 +234,19 @@ public class DetailProgramReportViewActivity extends FragmentActivity {
         commlist = handler.getArticleCommentList("PROGRAMCOMMENT", articleKey);
         //ListView listView = (ListView) findViewById(R.id.commentlist);
 
+        TextView commentcount = (TextView) findViewById(R.id.comment_num_tv);
+        commentcount.setText(""+commlist.size());
+
         Iterator iterator = commlist.iterator();
         while (iterator.hasNext()) {
 
             ArticleCommentItem tmpresult = (ArticleCommentItem) iterator.next();
             String comm_writer = tmpresult.getWriter();
+            List<String> loginuser_data = handler.getLoginUserData(savedID);
+            String loginuser_name = loginuser_data.get(0);
 
 
-            if (article_writer.equals(comm_writer)) {
+            if (loginuser_name.equals(comm_writer)) {
                 ArticleCommentItem tmp = new ArticleCommentItem(tmpresult.getArticleKey(), tmpresult.getDay(), tmpresult.getTime(), tmpresult.getWriter(), tmpresult.getComment_content(), 1);
                 data.add(tmp);
             } else {
