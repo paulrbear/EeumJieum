@@ -1,6 +1,7 @@
 package dev.erica.hyunji.eeumjieum;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -44,6 +46,11 @@ public class WorkReportActivity extends FragmentActivity {
     ArrayList<WorkReportArticleItem> data = new ArrayList<>();
     WorkReportArticleListAdater adapter;
 
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

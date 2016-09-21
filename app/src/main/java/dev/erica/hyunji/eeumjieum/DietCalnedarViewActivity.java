@@ -17,6 +17,8 @@ import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
@@ -37,6 +39,11 @@ public class DietCalnedarViewActivity extends FragmentActivity {
 
     ArrayList<DietListItem> data = new ArrayList<>();
     DietCalendarViewListAdapter adapter;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
 
     @Override

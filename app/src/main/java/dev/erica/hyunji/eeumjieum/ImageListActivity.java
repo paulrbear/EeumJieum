@@ -15,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -48,6 +50,11 @@ public class ImageListActivity extends FragmentActivity {
     }
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_list);
@@ -77,7 +84,7 @@ public class ImageListActivity extends FragmentActivity {
             TextView tv = (TextView) findViewById(R.id.total_limit_tfd);
             tv.setText("/50");
             tv = (TextView) findViewById(R.id.title_tfd);
-            tv.setText("카메라 롤");
+            tv.setText("사진 선택");
         }
 
         gridView = (GridView) findViewById(R.id.grid_view);

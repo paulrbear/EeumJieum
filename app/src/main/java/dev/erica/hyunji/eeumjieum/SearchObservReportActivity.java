@@ -1,5 +1,6 @@
 package dev.erica.hyunji.eeumjieum;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -13,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -32,6 +35,11 @@ public class SearchObservReportActivity extends FragmentActivity {
 
     ArrayList<ObservArticleItem> data = new ArrayList<>();
     ObservArticleListAdapter2 adapter;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
 
     @Override
