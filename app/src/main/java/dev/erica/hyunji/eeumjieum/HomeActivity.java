@@ -23,6 +23,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
@@ -52,9 +54,12 @@ public class HomeActivity extends Activity {
     private static ViewPager mPager;
     private static ViewPagerAdapter adapter;
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

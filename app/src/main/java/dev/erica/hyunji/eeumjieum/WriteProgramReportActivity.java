@@ -1,5 +1,6 @@
 package dev.erica.hyunji.eeumjieum;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,6 +22,11 @@ public class WriteProgramReportActivity extends FragmentActivity {
     private String objectName, writername, writerroom, day, title, tfdContent, totalphotoUrl;
     private int dayorder;
     private String mode;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

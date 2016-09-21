@@ -19,6 +19,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -64,6 +66,10 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
     }
 
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
 
     @Override

@@ -19,13 +19,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
 
 public class MainActivity extends FragmentActivity {
 
     EditText temp_email, temp_pwd;
     RelativeLayout temp_view;
 
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -12,10 +12,17 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
 import java.util.ArrayList;
 
 public class ExtraImageActivity extends FragmentActivity {
     private ArrayList<Integer> mThumbIds= new ArrayList<>();
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

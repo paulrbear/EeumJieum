@@ -17,6 +17,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
@@ -45,6 +47,11 @@ public class WriteDietActivity extends FragmentActivity {
     int selected_date;
     String string_selected_day;
     int articleKey;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
 
     @Override
@@ -142,12 +149,10 @@ public class WriteDietActivity extends FragmentActivity {
 
             TextView titletv = (TextView) findViewById(R.id.title_tv);
             titletv.setText("식단표");
-            Button del = (Button) findViewById(R.id.delete_btn);
-            del.setVisibility(View.VISIBLE);
-            del = (Button) findViewById(R.id.write_btn);
-            del.setVisibility(View.VISIBLE);
-            del = (Button) findViewById(R.id.donebtn);
+            Button del = (Button) findViewById(R.id.donebtn);
             del.setVisibility(View.GONE);
+            del = (Button) findViewById(R.id.backbtn);
+            del.setVisibility(View.VISIBLE);
             iv1.setClickable(false);
             iv2.setClickable(false);
             iv3.setClickable(false);

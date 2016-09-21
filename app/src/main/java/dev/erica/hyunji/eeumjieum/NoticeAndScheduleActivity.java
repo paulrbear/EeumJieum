@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -53,6 +54,11 @@ public class NoticeAndScheduleActivity extends FragmentActivity {
     ArrayList<NoticeListItem> notice_data = new ArrayList<>();
     NoticeListAdapter nadapter;
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +73,8 @@ public class NoticeAndScheduleActivity extends FragmentActivity {
             savedID = pref.getString("id", "");
             savedMode = pref.getInt("mode", 0);
         }
+
+
 
         mode = intent.getExtras().getString("mode");
 
@@ -99,6 +107,9 @@ public class NoticeAndScheduleActivity extends FragmentActivity {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setColorNormalResId(R.color.colorRedOrange);
         fab.setColorPressedResId(R.color.colorBgDefault);
+
+
+
 
         setTabView();
 

@@ -1,5 +1,6 @@
 package dev.erica.hyunji.eeumjieum;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,6 +23,11 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
     String savedID;
     int savedMode;
     String string_selected_day;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
