@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.erica.hyunji.eeumjieum.DietCalnedarViewActivity">
+
+    //top title bar
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/colorSelectFont">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_w_btn"
+                android:onClick="onClick_backbtn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="10dp"
+                android:text="식단표"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="@android:color/white"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+        //calender linear layout
+        <LinearLayout
+            android:id="@+id/calender_linearlayout"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/transparent">
+            //month
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBgDefault">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text=""
+                    android:drawableLeft="@drawable/ss_arr_prev"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick_prevbtn"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:id="@+id/month_tv"
+                    android:text="07월"
+                    android:gravity="center"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text=""
+                    android:drawableRight="@drawable/ss_arr_next"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick_nextbtn"/>
+            </LinearLayout>
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSelectFont"
+                android:numColumns="7">
+            </GridView>
+        </LinearLayout>
+        <ListView
+            android:background="@color/colorBgDefault"
+            android:layout_below="@id/calender_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/colorBackgroundGray"
+            android:dividerHeight="1dp"
+            android:id="@+id/diet_listview">
+        </ListView>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

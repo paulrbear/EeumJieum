@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="CheckableRealtiveLayout">
+        <attr name="checkable" format="integer" />
+    </declare-styleable>
+</resources>
+
+

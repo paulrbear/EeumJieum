@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:background="@color/colorDarkGray"
+    android:id="@+id/join_worker_mainview"
+    tools:context="dev.erica.hyunji.eeumjieum.JoinWorkerActivity">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/ssjoin_w"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/compNumtfd"
+        android:layout_marginTop="64dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@drawable/ssemail"
+        android:text="시설번호"
+        android:padding="7dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/shape_tfd"
+        android:textColor="@color/colorDarkGray"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/emailtfd"
+        android:layout_below="@+id/compNumtfd"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/compNumtfd"
+        android:layout_marginLeft="40dp"
+        android:drawableLeft="@drawable/ssemail"
+        android:text="이메일"
+        android:padding="7dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/shape_top_tfd"
+        android:textColor="@color/colorDarkGray"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:inputType="textVisiblePassword"
+        android:ems="10"
+        android:id="@+id/pwdtfd"
+        android:layout_below="@+id/emailtfd"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/compNumtfd"
+        android:drawableLeft="@drawable/sspassword"
+        android:layout_marginLeft="40dp"
+        android:text="비밀번호"
+        android:padding="7dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/shape_center_tfd"
+        android:textColor="@color/colorDarkGray"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:inputType="textVisiblePassword"
+        android:ems="10"
+        android:id="@+id/repwdtfd"
+        android:layout_below="@+id/pwdtfd"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/compNumtfd"
+        android:layout_marginLeft="40dp"
+        android:drawableLeft="@drawable/sspassword"
+        android:text="비밀번호 재입력"
+        android:imeOptions="actionDone"
+        android:padding="7dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/shape_bottom_tfd"
+        android:textColor="@color/colorDarkGray"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="회원가입"
+        android:id="@+id/okbtn"
+        android:layout_below="@+id/repwdtfd"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_darkblue_btn"
+        android:textColor="@color/colorBgDefault"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick_joinbtn" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:id="@+id/backbtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorDarkGray"
+        android:src="@drawable/ssback_w_btn"
+        android:onClick="onClick_backbtn" />
+
+</RelativeLayout>

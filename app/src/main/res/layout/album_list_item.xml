@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/open_iv"
+        android:src="@drawable/s_pic_3"
+        android:layout_gravity="bottom"
+        android:visibility="gone"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/open_overlay_iv"
+        android:src="#33263238"
+        android:layout_gravity="bottom"
+        android:visibility="gone"/>
+
+    <ImageView android:id="@+id/background_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:src = "@drawable/s_pic_2"
+        android:scaleType="centerCrop"
+        android:layout_gravity="bottom"
+       />
+
+    <ImageView android:id="@+id/overlay_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:src = "#E6263238"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_tv"
+        android:paddingLeft="20dp"
+        android:paddingBottom="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorSkyBlue"
+        android:text="해맞이 공원 소풍"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/day_tv"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="15dp"
+        android:textColor="@android:color/white"
+        android:text="2016년 9월 18일 (일)"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/invisible_content_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/transparent"/>
+
+
+</FrameLayout>

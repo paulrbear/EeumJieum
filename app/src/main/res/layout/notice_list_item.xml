@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/front_exist_iv"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/shape_oval_cyan"/>
+
+        <TextView
+            android:id="@+id/notice_title_tv"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="해맞이공원소풍"
+            android:textColor="@color/colorTitleBlack"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="시설"
+            android:textColor="@color/colorLeftMenu"
+            android:textSize="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+        <TextView
+            android:id="@+id/notice_day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorLeftMenu"
+            android:textSize="15dp"
+            android:text="2016년 09월 1일 (금)"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/notice_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMidGray"
+            android:textSize="18dp"
+            android:text="내용"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:id="@+id/writer_name_tv"
+            android:text="윤고은 생활재활교사"
+            android:textColor="@color/colorSelectFont"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment_num"
+            android:text="0"
+            android:gravity="left"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorSelectFont"
+            android:textSize="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<dev.erica.hyunji.eeumjieum.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:erica="http://schemas.android.com/apk/res/dev.erica.hyunji.eeumjieum"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" erica:checkable="@+id/radio">
+
+    <ImageView android:id="@+id/userImg_item"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" />
+
+    <RadioButton android:id="@id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dip"
+        android:focusable="false"
+        android:clickable="false"/>
+
+    <TextView android:id="@+id/userName_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/userImg_item"
+        android:textSize="20dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"/>
+
+    <TextView android:id="@+id/userClass_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/userImg_item"
+        android:layout_below="@+id/userName_item"
+        android:textSize="15dp"
+        android:textColor="@color/colorLightGray"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp" />
+
+</dev.erica.hyunji.eeumjieum.CheckableRelativeLayout>

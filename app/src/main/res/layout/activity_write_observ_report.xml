@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.erica.hyunji.eeumjieum.WriteObservReportActivity">
+
+    //top title bar
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/colorSelectedBlue">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_w_btn"
+                android:onClick="onClick_backbtn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/top_title"
+                android:layout_marginRight="60dp"
+                android:layout_weight="5"
+                android:layout_marginTop="10dp"
+                android:text="일지작성"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    //main content
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/content_bg"
+        android:layout_marginTop="60dp"
+        android:onClick="onClick_bgclick"
+        android:focusableInTouchMode="true">
+
+        //left room select
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            android:id="@+id/leftroom"
+            android:background="@color/colorDarkGray">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorDarkBlue"
+                android:text="전체"
+                android:id="@+id/totaltv"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="10dp"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@id/totaltv"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/room1"
+                android:text="기쁨방"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:onClick="onClick_room1btn"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@id/room1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/room2"
+                android:text="믿음방"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:onClick="onClick_room2btn"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@id/room2"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/room3"
+                android:text="은혜방"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:onClick="onClick_room3btn"/>
+        </RelativeLayout>
+
+        //right user list
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="7.5"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:drawableRight="@drawable/sssearch"
+                android:background="@drawable/shape_search_bar_tfd"
+                android:textColor="@color/colorLightGray"
+                android:id="@+id/search_name"
+                android:text="이름으로 검색"
+                android:focusable="false"
+                android:clickable="false"/>
+
+            <ListView
+                android:id="@+id/userlistview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="60dp"
+                android:divider="@color/colorLightGray"
+                android:choiceMode="singleChoice"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

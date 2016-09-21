@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView android:id="@+id/objImg_item"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/uimg_circle_1"/>
+
+    <TextView android:id="@+id/objName_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/objImg_item"
+        android:textSize="20dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:text="박현지"/>
+
+    <TextView
+        android:id="@+id/article_content_tfd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/objImg_item"
+        android:textSize="15dp"
+        android:text="hihi"/>
+
+    <TextView
+        android:id="@+id/invisible_content_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/transparent"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_toRightOf="@id/objImg_item"
+        android:layout_centerInParent="true"
+        android:id="@+id/status_iv"
+        android:visibility="gone"/>
+
+</RelativeLayout>

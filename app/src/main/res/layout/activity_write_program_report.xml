@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.erica.hyunji.eeumjieum.WriteProgramReportActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        //top title bar
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/topbar"
+            android:layout_gravity="top"
+            android:background="@drawable/shape_lightgray_bottomline">
+            <Button
+                android:id="@+id/cancelbtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height = "40dp"
+                android:layout_alignParentLeft="true"
+                android:text="취소"
+                android:textSize="20dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_cancelbtn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="프로그램 일지"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/donebtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height = "40dp"
+                android:layout_alignParentRight="true"
+                android:text="완료"
+                android:textSize="20dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_donebtn"/>
+
+        </RelativeLayout>
+
+        //write title
+        <EditText
+            android:layout_below="@id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:background="@drawable/shape_lightgray_bottomline"
+
+            android:id="@+id/title_et"
+            android:text="제목을 입력하세요"
+            android:textSize="20dp"
+            android:textColor="@color/colorLightGray"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="106dp"
+        android:focusableInTouchMode="true">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:scrollHorizontally="true"
+            android:scrollbars="vertical"
+            android:id="@+id/content_et"
+            android:textSize="20dp"
+            android:text="  내용을 입력하세요"
+            android:textColor="@color/colorLightGray"
+            android:background="@drawable/shape_lightgray_bottomline">
+        </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/shape_bggray_bottomline">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:minHeight="30dp"
+                    android:minWidth="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:background="@drawable/tag_person"
+                    android:onClick="onClick_personbtn"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_marginLeft="240dp"
+                        android:id="@+id/person_count_tv"
+                        android:textColor="@color/colorSelectedBlue"
+                        android:visibility="gone" />
+                   </LinearLayout>
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:minHeight="30dp"
+                    android:minWidth="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/tag_location"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:minHeight="30dp"
+                        android:minWidth="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/photo_btn"
+                        android:background="@drawable/album_click"
+                        android:onClick="onClick_photobtn"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_marginLeft="30dp"
+                        android:id="@+id/photo_count_tv"
+                        android:textColor="@color/colorSelectedBlue"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

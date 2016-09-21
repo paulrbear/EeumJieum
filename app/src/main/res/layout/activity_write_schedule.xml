@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.erica.hyunji.eeumjieum.WriteScheduleActivity">
+
+    //top title bar
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topbar"
+        android:layout_gravity="top"
+        android:background="@drawable/shape_lightgray_bottomline">
+        <Button
+            android:id="@+id/cancelbtn"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height = "40dp"
+            android:layout_alignParentLeft="true"
+            android:text="취소"
+            android:textSize="20dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_cancelbtn"/>
+
+        <Button
+            android:id="@+id/donebtn"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height = "40dp"
+            android:layout_alignParentRight="true"
+            android:text="완료"
+            android:textSize="20dp"
+            android:textColor="@color/colorSelectedBlue"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_donebtn"/>
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="106dp"
+    android:focusableInTouchMode="true">
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/pick_date_btn"
+        android:textSize="15dp"
+        android:text="00월 00일"
+        android:onClick="onClick_pickdatebtn"/>
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/pick_time_btn"
+        android:layout_toRightOf="@id/pick_date_btn"
+        android:textSize="15dp"
+        android:text="오후 0시"
+        android:onClick="onClick_timebtn"/>
+    <EditText
+        android:id="@+id/title_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/pick_date_btn"
+        android:background="@drawable/shape_white_bggray_bottomline"
+        android:paddingLeft="20dp"
+        android:textColor="@color/colorLightGray"
+        android:text="제목을 입력하세요"/>
+    <EditText
+        android:id="@+id/location_et"
+        android:layout_below="@id/title_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_white_bggray_bottomline"
+        android:paddingLeft="20dp"
+        android:textColor="@color/colorLightGray"
+        android:text="장소를 입력하세요"/>
+</RelativeLayout>
+
+    //bottom textfield and button
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="260dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:scrollHorizontally="true"
+            android:scrollbars="vertical"
+            android:id="@+id/content_tfd"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"
+            android:text="내용을 입력하세요"
+            android:textColor="@color/colorLightGray"
+            android:background="@drawable/shape_lightgray_bottomline">
+        </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/shape_bggray_bottomline">
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:minHeight="30dp"
+                    android:minWidth="100dp"
+                    android:layout_marginLeft="280dp"
+                    android:id="@+id/photo_btn"
+                    android:background="@drawable/album_click"
+                    android:onClick="onClick_photobtn"
+                    android:layout_gravity="right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_bggray_bottomline">
+                <GridView
+                    android:id="@+id/img_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:columnWidth="90dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:stretchMode="columnWidth"
+                    android:gravity="center"
+                    android:drawSelectorOnTop="true"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    //room select
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        >
+        <Button
+            android:id="@+id/tfdbtn1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10pt"
+            android:textColor="@android:color/black"
+            android:background="@color/colorBgDefault"
+            android:onClick="onClick_roomlist"
+            android:text="시설전체"
+            />
+        <Button
+            android:id="@+id/tfdbtn2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10pt"
+            android:textColor="@android:color/black"
+            android:background="@color/colorBgDefault"
+            android:layout_marginTop="50dp"
+            android:onClick="onClick_roomlist"
+            android:visibility="gone"
+            android:text="전체"
+            />
+        <Button
+            android:id="@+id/tfdbtn3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10pt"
+            android:textColor="@android:color/black"
+            android:background="@color/colorBgDefault"
+            android:layout_marginTop="100dp"
+            android:onClick="onClick_roomlist"
+            android:visibility="gone"
+            android:text="은혜방"/>
+        <Button
+            android:id="@+id/tfdbtn4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10pt"
+            android:textColor="@android:color/black"
+            android:background="@color/colorBgDefault"
+            android:layout_marginTop="150dp"
+            android:onClick="onClick_roomlist"
+            android:visibility="gone"
+            android:text="기쁨방"/>
+        <Button
+            android:id="@+id/tfdbtn5"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10pt"
+            android:textColor="@android:color/black"
+            android:background="@color/colorBgDefault"
+            android:layout_marginTop="200dp"
+            android:onClick="onClick_roomlist"
+            android:visibility="gone"
+            android:text="믿음방"/>
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/writeday"
+       android:paddingLeft="20dp"
+       android:paddingTop="5dp"
+       android:textSize="20dp"
+       android:textStyle="bold"
+       android:text="06.28"/>
+
+
+    <TextView
+        android:id="@+id/article_content_tfd"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/writeday"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="15dp"
+        android:text="hihi"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:id="@+id/mood_iv"
+        android:layout_below="@id/article_content_tfd"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/mood_good"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/activity_iv"
+        android:layout_below="@id/article_content_tfd"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/mood_iv"
+        android:src="@drawable/activity_soso"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:id="@+id/sleep_iv"
+        android:layout_below="@id/article_content_tfd"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/activity_iv"
+        android:src="@drawable/sleep_bad"/>
+
+
+    <TextView
+        android:id="@+id/invisible_content_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/transparent"
+        />
+
+    <TextView
+        android:id="@+id/writer_tfd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mood_iv"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/comment_num"
+        android:text="생활재활교사"/>
+
+
+    <TextView
+        android:id="@+id/comment_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleep_iv"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="0"/>
+
+
+</RelativeLayout>

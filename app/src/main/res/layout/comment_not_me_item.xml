@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최해영 어머니"
+        android:id="@+id/name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comtext"
+        android:text="늘 감사드려요\n옷도 궁금하고요"
+        android:textSize="15dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorDarkGray"
+        android:layout_below="@id/name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/comtext"
+        android:id="@+id/comtime"
+        android:text="18:14"
+        android:layout_toRightOf="@id/comtext"/>
+
+</RelativeLayout>

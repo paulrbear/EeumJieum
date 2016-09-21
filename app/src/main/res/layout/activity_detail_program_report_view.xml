@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/detail_view_mainview"
+    tools:context="dev.erica.hyunji.eeumjieum.DetailProgramReportViewActivity">
+
+    //top title bar
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:id="@+id/top_title"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_b_btn"
+                android:onClick="onClick_backbtn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="10dp"
+                android:text="프로그램 일지"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="@color/colorLightGray"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:background="@drawable/alarm"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_title"
+        android:layout_below="@id/top_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_tv"
+            android:text="거제 해수욕장"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSkyBlue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_tv"
+            android:layout_below="@id/title_tv"
+            android:text="2016년 06월 15일 (목)"
+            android:textSize="15dp"
+            android:textColor="@color/colorDarkGray"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/content_title"
+        android:layout_marginBottom="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_frame">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/image"
+                    android:src="@drawable/s_pic_2"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/img_left_btn"
+                    android:background="@drawable/arr_prev"
+                    android:onClick="onClick_prevbtn"
+                    android:visibility="gone"
+                    android:scaleY="0.2"/>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="right"
+                    android:id="@+id/img_right_btn"
+                    android:background="@drawable/arr_next"
+                    android:onClick="onClick_nextbtn"
+                    android:visibility="gone"
+                    android:scaleY="0.2"/>
+           </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/content_tv"
+                android:layout_below="@id/image_frame"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/writer_img"
+                    android:src="@drawable/uimg_circle_1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/writer_name_tv"
+                        android:text="작성자이름"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/last_tv"
+                        android:text="생활재활교사"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="댓글"
+                    android:background="@color/colorBackgroundGray"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commentlist"
+                    android:background="@color/colorBackgroundGray" >
+
+                </ListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내용을 입력해주세요"
+        android:id="@+id/comment_et"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="50dp"/>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="300dp"
+        android:text="입력"
+        android:onClick="onClick_commentbtn"/>
+
+</RelativeLayout>

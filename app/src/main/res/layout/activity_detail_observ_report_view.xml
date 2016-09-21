@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_view_mainview"
+    android:layout_height="fill_parent" android:layout_width="fill_parent"
+    tools:context="dev.erica.hyunji.eeumjieum.ObservReportWorkerActivity">
+
+    //top title bar
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorSelectedBlue">
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_w_btn"
+                android:onClick="onClick_backbtn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="10dp"
+                android:text="관찰일지"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="@android:color/white"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    //top calender
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <Button android:background="@color/colorBgDefault"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"/>
+            <Button android:background="@color/colorBackgroundGray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cal_sun_1"/>
+            <Button android:background="@color/colorBackgroundGray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cal_mon_1"/>
+            <Button android:background="@color/colorBackgroundGray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cal_tue_1"/>
+            <Button android:background="@color/colorBackgroundGray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cal_wed_1"/>
+            <Button android:background="@color/colorBackgroundGray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cal_thu_1"/>
+            <Button android:background="@color/colorBackgroundGray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cal_fri_1"/>
+            <Button android:background="@color/colorBackgroundGray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cal_sat_1"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+
+            <Button
+                android:background="@color/colorBgDefault"
+                android:text="1000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorLightGray"
+                android:textSize="8pt"
+                android:id="@+id/cal_year"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="일"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="10pt"
+                android:id="@+id/cal_sun_2"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="월"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:id="@+id/cal_mon_2"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="화"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:id="@+id/cal_tue_2"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="수"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:id="@+id/cal_wed_2"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="목"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:id="@+id/cal_thu_2"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="금"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:id="@+id/cal_fri_2"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="토"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="10pt"
+                android:id="@+id/cal_sat_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+            <Button
+                android:background="@color/colorBgDefault"
+                android:text="00"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="1.3"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="12pt"
+                android:id="@+id/cal_month"/>
+            <Button
+                android:background="@android:color/white"
+                android:text="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="12pt"
+                android:id="@+id/cal_sun_3"
+               />
+            <Button
+                android:background="@android:color/white"
+                android:text="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12pt"
+                android:id="@+id/cal_mon_3"
+              />
+            <Button
+                android:background="@android:color/white"
+                android:text="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12pt"
+                android:id="@+id/cal_tue_3"
+                />
+            <Button
+                android:background="@android:color/white"
+                android:text="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12pt"
+                android:id="@+id/cal_wed_3"
+                />
+            <Button
+                android:background="@android:color/white"
+                android:text="8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12pt"
+                android:id="@+id/cal_thu_3"
+                />
+            <Button
+                android:background="@android:color/white"
+                android:text="9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12pt"
+                android:id="@+id/cal_fri_3"
+               />
+            <Button
+                android:background="@android:color/white"
+                android:text="10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="12pt"
+                android:id="@+id/cal_sat_3"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="50dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars = "vertical"
+        android:scrollHorizontally="true"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/main_image_view"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:layout_marginLeft="320dp"
+                android:textSize="15dp"
+                android:id="@+id/countPhoto"
+                android:onClick="onClick_countPhoto"
+                android:textColor="@color/colorSelectedBlue"
+                android:background="@drawable/shape_white_radius_rectangle"/>
+        </FrameLayout>
+            <!-- text mood/activity/sleep -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal"
+                android:focusableInTouchMode="true">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="기분"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="활동량"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="수면"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <!-- imgView mood/activity/sleep -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/mood_iv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:src="@drawable/status_good"/>
+                <ImageView
+                    android:id="@+id/activity_iv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:src="@drawable/status_good"/>
+                <ImageView
+                    android:id="@+id/sleep_iv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:src="@drawable/status_good"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_content_tv"
+                android:text="hihi"
+                android:textSize="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/main_article_writer_img"
+                android:src="@drawable/uimg_circle_1"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_article_writer"
+                    android:text="작성자이름"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_article_writer_room"
+                    android:text="00방생활재활교사"/>
+                </LinearLayout>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="댓글"
+                android:background="@color/colorBackgroundGray"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/commentlist"
+                android:background="@color/colorBackgroundGray">
+
+            </ListView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <EditText
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내용을 입력해주세요"
+        android:id="@+id/comment_et"
+        android:layout_marginRight="50dp"/>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:text="입력"
+        android:onClick="onClick_commentbtn"/>
+
+
+
+</FrameLayout>

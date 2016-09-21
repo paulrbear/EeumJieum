@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.erica.hyunji.eeumjieum.NoticeAndScheduleActivity">
+
+    //top select button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_white_bggray_bottomline">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="공지사항"
+            android:id="@+id/tab1_btn"
+            android:textStyle="bold"
+            android:textColor="@color/colorBackgroundGray"
+            android:onClick="onClick_tab1"
+            android:background="@android:color/transparent"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="시설일정"
+            android:id="@+id/tab2_btn"
+            android:textStyle="bold"
+            android:textColor="@color/colorSelectFont"
+            android:onClick="onClick_tab2"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    //first tab listview
+    <ListView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firsttab_listview"
+        android:divider="@color/colorBgDefault"
+        android:dividerHeight="5dp">
+
+    </ListView>
+
+    //second tab total relative layout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_tab_relativelayout"
+        android:visibility="gone">
+        //second tab calender linear layout
+        <LinearLayout
+            android:id="@+id/secondtab_calender_linearlayout"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+            //month
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBgDefault">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="이전달"
+                    android:drawableLeft="@drawable/ss_arr_prev"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick_prevbtn"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:id="@+id/month_tv"
+                    android:text="07월"
+                    android:gravity="center"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="다음달"
+                    android:drawableRight="@drawable/ss_arr_next"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick_nextbtn"/>
+            </LinearLayout>
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="7">
+            </GridView>
+        </LinearLayout>
+        <ListView
+            android:background="@color/colorBgDefault"
+            android:layout_below="@id/secondtab_calender_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:id="@+id/schedule_listview">
+        </ListView>
+    </RelativeLayout>
+
+
+    //floating action button
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="470dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dual_write_btn"
+            android:onClick="onClick_fabbtn"
+            />
+
+    </FrameLayout>
+
+    //bottom pop-menu (message)
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/notice_btn"
+            android:layout_marginTop="430dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick_noticebtn"
+            android:visibility="gone"
+            android:background="@drawable/dual_notice_btn"/>
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:id="@+id/notice_label"
+            android:layout_marginTop="445dp"
+            android:layout_marginLeft="70dp"
+            android:text="공지사항"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/schedule_btn"
+            android:layout_marginTop="360dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick_scheduletbtn"
+            android:visibility="gone"
+            android:background="@drawable/dual_schedule_btn"/>
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:id="@+id/schedule_label"
+            android:layout_marginTop="375dp"
+            android:layout_marginLeft="70dp"
+            android:text="시설일정"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"/>
+
+
+    </FrameLayout>
+    //bottom pop-menu (note)
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/program_btn"
+            android:layout_marginTop="430dp"
+            android:layout_marginLeft="230dp"
+            android:onClick="onClick_programbtn"
+            android:visibility="gone"
+            android:background="@drawable/dual_program_btn"/>
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:id="@+id/program_label"
+            android:layout_marginTop="445dp"
+            android:layout_marginLeft="290dp"
+            android:text="프로그램일지"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/observ_report_btn"
+            android:layout_marginTop="360dp"
+            android:layout_marginLeft="230dp"
+            android:onClick="onClick_observreportbtn"
+            android:visibility="gone"
+            android:background="@drawable/dual_observ_report_btn"/>
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:id="@+id/observ_report_label"
+            android:layout_marginTop="375dp"
+            android:layout_marginLeft="290dp"
+            android:text="관찰일지"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/work_report_btn"
+            android:layout_marginTop="290dp"
+            android:layout_marginLeft="230dp"
+            android:onClick="onClick_workreportbtn"
+            android:visibility="gone"
+            android:background="@drawable/dual_work_report_btn"/>
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:id="@+id/work_report_label"
+            android:layout_marginTop="305dp"
+            android:layout_marginLeft="290dp"
+            android:text="근무일지"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"/>
+
+    </FrameLayout>
+    //bottom menu
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <dev.erica.hyunji.eeumjieum.BottomTabNavi
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomNavi">
+
+        </dev.erica.hyunji.eeumjieum.BottomTabNavi>
+    </FrameLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    //top title bar
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:id="@+id/top_titlebar_color_layout"
+            android:background="@color/colorSelectedBlue">
+            <Button
+                android:id="@+id/cancelbtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height = "40dp"
+                android:layout_alignParentLeft="true"
+                android:text="취소"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_cancelbtn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_tfd"
+                android:layout_weight="4"
+                android:layout_marginTop="10dp"
+                android:text="모든 사진"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="@android:color/white"/>
+            <Button
+                android:id="@+id/donebtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height = "40dp"
+                android:layout_alignParentRight="true"
+                android:text="완료"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_donebtn"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    //img list
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:columnWidth="90dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:drawSelectorOnTop="true"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:id="@+id/current_select_layout"
+        android:background="@android:color/white"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/selected_count_tfd"
+            android:textSize="20dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:textColor="@color/colorSelectedBlue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_limit_tfd"
+            android:textSize="20dp"
+            android:text="/10"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorDarkGray"/>
+    </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>

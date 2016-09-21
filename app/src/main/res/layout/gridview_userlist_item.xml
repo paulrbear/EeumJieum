@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/userImg_selected_item"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/shape_oval_photo_selected"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/userImg_item"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/uimg_circle_1" />
+
+        <ImageView
+            android:id="@+id/userImg_disabled_item"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/shape_oval_disable_photo"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/userName_item"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="3dp"
+            android:text="박현지"/>
+
+
+
+</FrameLayout>

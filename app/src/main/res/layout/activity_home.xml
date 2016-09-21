@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_activity_main_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    //main frame
+    <FrameLayout
+        android:id="@+id/fl_activity_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+         <android.support.v4.view.ViewPager
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/pager">
+         </android.support.v4.view.ViewPager>
+
+<!--
+         //main content
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorAccent"
+             android:id="@+id/main_content_bg">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal">
+                 <ImageButton
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:id="@+id/main_content_prev_btn"
+                     android:background="@android:color/transparent"
+                     android:src="@drawable/arr_prev"
+                     android:scaleType="centerInside"
+                     android:onClick="onClick_prevbtn"/>
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_weight="6"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical"
+                     android:layout_marginTop="50dp"
+                     android:layout_marginBottom="70dp"
+                     android:gravity="center"
+                     android:id="@+id/main_article_linearlayout">
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:id="@+id/main_content_sub_title_tv"
+                         android:gravity="center"
+                         android:text="sampe title"
+                         android:textSize="15dp"
+                         android:textColor="@android:color/white"/>
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1.5"
+                         android:gravity="center_horizontal"
+                         android:id="@+id/main_content_title_tv"
+                         android:text="Sample Text 1"
+                         android:textSize="30dp"
+                         android:textColor="@android:color/white"/>
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:gravity="center_horizontal"
+                         android:id="@+id/main_content_tv"
+                         android:text="context input txt"
+                         android:textSize="10dp"
+                         android:textColor="@android:color/white"/>
+                     <Button
+                         android:layout_width="wrap_content"
+                         android:layout_height="25dp"
+                         android:layout_marginBottom="40dp"
+                         android:text="상세보기"
+                         android:layout_gravity="center"
+                         android:background="@drawable/shape_radius_rect_selected_blue"/>
+                     </LinearLayout>
+                 <ImageButton
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:id="@+id/main_content_next_btn"
+                     android:background="@android:color/transparent"
+                     android:src="@drawable/arr_next"
+                     android:scaleType="centerInside"
+                     android:onClick="onClick_nextbtn"/>
+
+
+             </LinearLayout>
+
+         </FrameLayout>
+-->
+
+
+         <ImageButton
+             android:layout_width="20dp"
+             android:layout_height="match_parent"
+             android:id="@+id/main_content_prev_btn"
+             android:background="@android:color/transparent"
+             android:src="@drawable/arr_prev"
+             android:scaleType="centerInside"
+             android:onClick="mOnClick"/>
+
+         <ImageButton
+             android:layout_width="20dp"
+             android:layout_height="match_parent"
+             android:id="@+id/main_content_next_btn"
+             android:background="@android:color/transparent"
+             android:layout_gravity="right"
+             android:src="@drawable/arr_next"
+             android:scaleType="centerInside"
+             android:onClick="mOnClick"/>
+
+
+
+
+         //top title bar
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="top">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal">
+                 <Button
+                  android:id="@+id/menubtn"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_width="0dp"
+                  android:layout_height = "40dp"
+                  android:layout_weight="1"
+                  android:background="@drawable/menu"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="4"
+                     android:layout_marginTop="10dp"
+                     android:text="@string/app_name"
+                     android:textAlignment="center"
+                     android:textSize="25dp"
+                     android:textColor="@android:color/white"/>
+                 <Button
+                     android:id="@+id/alarmbtn"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginRight="10dp"
+                     android:layout_width="0dp"
+                     android:layout_height = "40dp"
+                     android:layout_weight="1"
+                     android:background="@drawable/alarm"/>
+             </LinearLayout>
+
+         </FrameLayout>
+
+         //bottom pop-menu (message)
+         <FrameLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+             <Button
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/notice_btn"
+                 android:layout_marginTop="430dp"
+                 android:layout_marginLeft="10dp"
+                 android:onClick="onClick_noticebtn"
+                 android:visibility="gone"
+                 android:background="@drawable/dual_notice_btn"/>
+             <TextView
+                 android:layout_width="115dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/notice_label"
+                 android:layout_marginTop="445dp"
+                 android:layout_marginLeft="70dp"
+                 android:text="공지사항"
+                 android:textSize="18dp"
+                 android:visibility="gone"
+                 android:textColor="@android:color/white"/>
+
+             <Button
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/schedule_btn"
+                 android:layout_marginTop="360dp"
+                 android:layout_marginLeft="10dp"
+                 android:onClick="onClick_scheduletbtn"
+                 android:visibility="gone"
+                 android:background="@drawable/dual_schedule_btn"/>
+             <TextView
+                 android:layout_width="115dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/schedule_label"
+                 android:layout_marginTop="375dp"
+                 android:layout_marginLeft="70dp"
+                 android:text="시설일정"
+                 android:textSize="18dp"
+                 android:visibility="gone"
+                 android:textColor="@android:color/white"/>
+
+
+         </FrameLayout>
+
+         //bottom pop-menu (note)
+         <FrameLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+             <Button
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/program_btn"
+                 android:layout_marginTop="430dp"
+                 android:layout_marginLeft="230dp"
+                 android:onClick="onClick_programbtn"
+                 android:visibility="gone"
+                 android:background="@drawable/dual_program_btn"/>
+             <TextView
+                 android:layout_width="115dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/program_label"
+                 android:layout_marginTop="445dp"
+                 android:layout_marginLeft="290dp"
+                 android:text="프로그램일지"
+                 android:textSize="18dp"
+                 android:visibility="gone"
+                 android:textColor="@android:color/white"/>
+
+             <Button
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/observ_report_btn"
+                 android:layout_marginTop="360dp"
+                 android:layout_marginLeft="230dp"
+                 android:onClick="onClick_observreportbtn"
+                 android:visibility="gone"
+                 android:background="@drawable/dual_observ_report_btn"/>
+             <TextView
+                 android:layout_width="115dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/observ_report_label"
+                 android:layout_marginTop="375dp"
+                 android:layout_marginLeft="290dp"
+                 android:text="관찰일지"
+                 android:textSize="18dp"
+                 android:visibility="gone"
+                 android:textColor="@android:color/white"/>
+
+             <Button
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/work_report_btn"
+                 android:layout_marginTop="290dp"
+                 android:layout_marginLeft="230dp"
+                 android:onClick="onClick_workreportbtn"
+                 android:visibility="gone"
+                 android:background="@drawable/dual_work_report_btn"/>
+             <TextView
+                 android:layout_width="115dp"
+                 android:layout_height="50dp"
+                 android:id="@+id/work_report_label"
+                 android:layout_marginTop="305dp"
+                 android:layout_marginLeft="290dp"
+                 android:text="근무일지"
+                 android:textSize="18dp"
+                 android:visibility="gone"
+                 android:textColor="@android:color/white"/>
+
+         </FrameLayout>
+
+
+        //bottom menu
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <dev.erica.hyunji.eeumjieum.BottomTabNavi
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavi">
+
+            </dev.erica.hyunji.eeumjieum.BottomTabNavi>
+        </FrameLayout>
+
+
+     </FrameLayout>
+
+
+    //left drawer menu
+     <ListView
+         android:id="@+id/lv_activity_main_nav_list"
+         android:layout_width="240dp"
+         android:layout_height="match_parent"
+         android:layout_gravity="start"
+         android:background="#EDEDED"
+         android:choiceMode="singleChoice"
+         android:divider="@android:color/transparent"
+         android:dividerHeight="0dp" />
+
+</android.support.v4.widget.DrawerLayout>

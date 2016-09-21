@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgDefault"
+
+    tools:context="dev.erica.hyunji.eeumjieum.JoinActivity">
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:paddingTop="7dp"
+        android:background="@color/colorBgDefault"
+        android:drawableLeft="@drawable/ssback_b_btn"
+        android:id="@+id/backbtn"
+        android:layout_marginLeft="25dp"
+        android:onClick="onClick_backbtn" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="5"
+        android:background="@color/colorBgDefault"
+        android:src="@drawable/ssparentbtn"
+        android:id="@+id/parentbtn"
+        android:onClick="onClick_joinParent" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="5"
+        android:background="@color/colorDarkGray"
+        android:src="@drawable/ssworkerbtn"
+        android:id="@+id/workerbtn"
+        android:onClick="onClick_joinWorker" />
+
+</LinearLayout>

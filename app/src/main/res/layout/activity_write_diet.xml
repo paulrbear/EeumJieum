@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.erica.hyunji.eeumjieum.WriteDietActivity"
+    android:id="@+id/detail_view_mainview"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/white">
+
+    //top title bar
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:id="@+id/top_titlebar_color_layout"
+        android:background="@color/colorSelectedBlue">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:text="취소"
+                android:textColor="@android:color/white"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_cancelbtn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="10dp"
+                android:text="식단표 작성"
+                android:textAlignment="center"
+                android:id="@+id/title_tv"
+                android:textSize="25dp"
+                android:textColor="@android:color/white"/>
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/delete_btn"
+                android:background="@drawable/menu"
+                android:visibility="gone"/>
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/write_btn"
+                android:background="@drawable/alarm"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/donebtn"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:text="완료"
+                android:textColor="@android:color/white"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_donebtn"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/day_btn"
+        android:layout_below="@id/top_titlebar_color_layout"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:text="5월 23일 (월)"
+        android:onClick="onClick_pickdatebtn"/>
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/day_btn"
+        android:src="@color/colorBackgroundGray"
+        android:id="@+id/morning_iv"
+        android:scaleType="fitXY"
+        android:onClick="onClick_photo"/>
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/morning_iv"
+        android:src="@color/colorBackgroundGray"
+        android:id="@+id/afternoon_iv"
+        android:scaleType="fitXY"
+        android:onClick="onClick_photo"/>
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/afternoon_iv"
+        android:src="@color/colorBackgroundGray"
+        android:id="@+id/night_iv"
+        android:scaleType="fitXY"
+        android:onClick="onClick_photo"/>
+
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:background="@color/colorBackgroundGray"
+        android:id="@+id/morning_et"
+        android:gravity="left"
+        android:padding="5dp"
+        android:text="메뉴를 입력하세요"
+        android:layout_toRightOf="@id/morning_iv"
+        android:layout_alignBottom="@id/morning_iv"/>
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:background="@color/colorBackgroundGray"
+        android:id="@+id/afternoon_et"
+        android:gravity="left"
+        android:padding="5dp"
+        android:text="메뉴를 입력하세요"
+        android:layout_toRightOf="@id/afternoon_iv"
+        android:layout_alignBottom="@id/afternoon_iv"/>
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:background="@color/colorBackgroundGray"
+        android:id="@+id/night_et"
+        android:gravity="left"
+        android:padding="5dp"
+        android:text="메뉴를 입력하세요"
+        android:layout_toRightOf="@id/night_iv"
+        android:layout_alignBottom="@id/night_iv"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/morning_tv"
+        android:layout_toRightOf="@id/morning_iv"
+        android:layout_above="@id/morning_et"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:text="아침"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/afternoon_tv"
+        android:layout_toRightOf="@id/afternoon_iv"
+        android:layout_above="@id/afternoon_et"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:text="점심"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/night_tv"
+        android:layout_toRightOf="@id/night_iv"
+        android:layout_above="@id/night_et"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:text="저녁"/>
+
+
+</RelativeLayout>
