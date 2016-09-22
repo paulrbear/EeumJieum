@@ -428,6 +428,7 @@ public class DetailObservReportViewActivity extends Activity {
     public void onClick_countPhoto(View v){
         Intent intent = new Intent(this, ExtraImageActivity.class);
         intent.putExtra("photo",totalphotosurl);
+        intent.putExtra("mode", "observ");
         startActivity(intent);
         overridePendingTransition(0,0);     //activity transition animation delete
     }
