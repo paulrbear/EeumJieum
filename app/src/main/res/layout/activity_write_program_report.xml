@@ -32,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:id="@+id/title_tv"
                 android:text="프로그램 일지"
                 android:textSize="20dp"
                 android:textStyle="bold"
@@ -108,8 +109,9 @@
                     android:layout_height="30dp"
                     android:minHeight="30dp"
                     android:minWidth="100dp"
-                    android:layout_marginLeft="230dp"
-                    android:background="@drawable/tag_person"
+                    android:layout_marginLeft="260dp"
+                        android:id="@+id/tag_person_btn"
+                    android:background="@drawable/tag"
                     android:onClick="onClick_personbtn"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -120,13 +122,6 @@
                         android:textColor="@color/colorSelectedBlue"
                         android:visibility="gone" />
                    </LinearLayout>
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:minHeight="30dp"
-                    android:minWidth="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/tag_location"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -138,7 +133,7 @@
                         android:minWidth="100dp"
                         android:layout_marginLeft="20dp"
                         android:id="@+id/photo_btn"
-                        android:background="@drawable/album_click"
+                        android:background="@drawable/addphoto"
                         android:onClick="onClick_photobtn"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -149,6 +144,26 @@
                         android:textColor="@color/colorSelectedBlue"
                         android:visibility="gone" />
                 </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBgDefault">
+                <GridView
+                    android:id="@+id/img_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:columnWidth="90dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:stretchMode="columnWidth"
+                    android:gravity="center"
+                    android:drawSelectorOnTop="true"
+                    android:visibility="gone"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -4,8 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +31,20 @@ public class WriteProgramReportActivity extends FragmentActivity {
     private int dayorder;
     private String mode;
 
+    ArrayList<Integer> mThumbIds= new ArrayList<>();
+    GridView gridView;
+    int len;
+    private ImageAdapter mAdapter;
+
+    //ImageView iv;
+
+    class ViewHolder{
+        ImageView imageview;
+        ImageView selectedimg;
+        TextView selectedtxt;
+        int id;
+    }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
@@ -37,6 +59,26 @@ public class WriteProgramReportActivity extends FragmentActivity {
         savedID = intent.getExtras().getString("userID");
         savedMode = intent.getExtras().getInt("userMode");
         mode = intent.getExtras().getString("mode");
+
+
+        //grid view setting
+        gridView = (GridView) findViewById(R.id.img_grid_view);
+
+        if(mode.equals("album")){
+            TextView title_tv = (TextView) findViewById(R.id.title_tv);
+            title_tv.setText("앨범");
+            EditText content_et = (EditText) findViewById(R.id.content_et);
+            content_et.setText("소중한 순간을 올려주세요");
+            content_et.setFocusable(false);
+
+        }
+
+
+
+        mAdapter = new ImageAdapter(this);
+        gridView.setAdapter(mAdapter);
+        len = gridView.getCount();
+
 
     }
 
@@ -120,13 +162,30 @@ public class WriteProgramReportActivity extends FragmentActivity {
             totalphotoUrl = tmp.size() + "/";
             while (iterator.hasNext()){
                 Integer element = (Integer) iterator.next();
+                mThumbIds.add(element);
                 totalphotoUrl = totalphotoUrl + element.toString() + "/";
+            }if(mThumbIds.size() > 0) {
+
+                if(mode.equals("album")){
+                    EditText content_et = (EditText) findViewById(R.id.content_et);
+                    content_et.setVisibility(View.GONE);
+
+                    gridView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    gridView.setBackgroundColor(getResources().getColor(R.color.colorBgDefault));
+                }
+
+                gridView.setVisibility(View.VISIBLE);
+                Button photobtn = (Button) findViewById(R.id.photo_btn);
+                photobtn.setBackgroundResource(R.drawable.addphoto_active);
+                mAdapter.notifyDataSetChanged();
             }
 
             Toast.makeText(getBaseContext(), ""+tmp.size(), Toast.LENGTH_SHORT).show();
             TextView tv = (TextView) findViewById(R.id.photo_count_tv);
             tv.setVisibility(View.VISIBLE);
             tv.setText(""+tmp.size());
+
+
         }
         else if(resultCode == 2 & data != null){                //personselected
             ArrayList<String> tmp = data.getStringArrayListExtra("result");
@@ -139,13 +198,123 @@ public class WriteProgramReportActivity extends FragmentActivity {
             }
 
             Toast.makeText(getBaseContext(), ""+tmp.size(), Toast.LENGTH_SHORT).show();
-            TextView tv = (TextView) findViewById(R.id.person_count_tv);
-            tv.setVisibility(View.VISIBLE);
-            tv.setText(""+tmp.size());
+            if(tmp.size() > 0) {
+                Button person = (Button) findViewById(R.id.tag_person_btn);
+                person.setBackgroundResource(R.drawable.tag_active);
+
+                TextView tv = (TextView) findViewById(R.id.person_count_tv);
+                tv.setVisibility(View.VISIBLE);
+                tv.setText("" + tmp.size());
+            }
         }
 
     }
+    private class ImageAdapter extends BaseAdapter {
+        private LayoutInflater mInflater;
+        private Context mContext;
+        //DataSetObservable mDataSetObservable = new DataSetObservable();
 
+        public ImageAdapter(Context c){
+            mContext = c;
+            mInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        }
+
+        @Override
+        public int getCount() {
+            return mThumbIds.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return position;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            final ViewHolder holder;
+            if(convertView == null){
+                holder = new ViewHolder();
+                convertView = mInflater.inflate(R.layout.galleryitem, null);
+                holder.imageview = (ImageView) convertView.findViewById(R.id.thumbImage);
+                holder.selectedimg = (ImageView) convertView.findViewById(R.id.selectedImg);
+                holder.selectedtxt = (TextView) convertView. findViewById(R.id.selectedTxt);
+
+                convertView.setTag(holder);
+
+                holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(220,220));
+                holder.imageview.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                holder.selectedimg.setLayoutParams(new FrameLayout.LayoutParams(220,220));
+                holder.selectedimg.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                holder.selectedimg.setVisibility(View.VISIBLE);
+                holder.selectedtxt.setVisibility(View.VISIBLE);
+                holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorDDarkGray));
+                holder.selectedtxt.setText("X");
+                holder.selectedimg.bringToFront();
+                holder.selectedtxt.bringToFront();
+
+            }else{
+
+                holder = (ViewHolder) convertView.getTag();
+                holder.selectedimg.setVisibility(View.VISIBLE);
+                holder.selectedtxt.setVisibility(View.VISIBLE);
+                holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorDDarkGray));
+                holder.selectedtxt.setText("X");
+                holder.selectedimg.bringToFront();
+                holder.selectedtxt.bringToFront();
+            }
+
+            holder.imageview.setId(position);
+            holder.selectedimg.setId(position);
+            holder.selectedtxt.setId(position);
+            holder.selectedimg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int id = v.getId();
+                    if(mThumbIds.size() > 1) {
+                        System.out.println("hi we have plenty of items");
+                        holder.selectedimg.setVisibility(View.GONE);
+                        holder.selectedtxt.setVisibility(View.GONE);
+                        mThumbIds.remove(id);
+                        mAdapter.notifyDataSetChanged();
+                        TextView photo_count_tv = (TextView) findViewById(R.id.photo_count_tv);
+                        photo_count_tv.setText(""+mThumbIds.size());
+
+                    }else if(mThumbIds.size() == 1){
+                        System.out.println("this is the last item");
+                        gridView.setVisibility(View.GONE);
+                        Button photobtn = (Button) findViewById(R.id.photo_btn);
+                        photobtn.setBackgroundResource(R.drawable.addphoto);
+                        mThumbIds.remove(id);
+                        TextView photo_count_tv = (TextView) findViewById(R.id.photo_count_tv);
+                        photo_count_tv.setVisibility(View.GONE);
+
+                        EditText content_et = (EditText) findViewById(R.id.content_et);
+                        content_et.setVisibility(View.VISIBLE);
+
+
+
+                    }else{
+
+                    }
+
+                }
+            });
+
+            holder.imageview.setImageResource(mThumbIds.get(position));
+            holder.id = position;
+            return convertView;
+
+        }
+
+    }
 
 
 

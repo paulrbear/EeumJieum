@@ -2,6 +2,7 @@ package dev.erica.hyunji.eeumjieum;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.SparseBooleanArray;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -29,6 +31,11 @@ public class SelectMultiRoomUserActivity extends FragmentActivity {
     String mode;
     ArrayList<String> objectlist = new ArrayList<>();
     ListView listView;
+    int[] room_user_count;
+    boolean all_checked=false;
+    boolean room1_checked=false;
+    boolean room2_checked= false;
+    boolean room3_checked= false;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -64,9 +71,11 @@ public class SelectMultiRoomUserActivity extends FragmentActivity {
         MyDBHandler handler = MyDBHandler.open(getApplicationContext());
         List<RoomUserItem> userlist;
         String roomname[] = {"기쁨방", "믿음방", "은혜방"};
+        room_user_count = new int[3];
 
         for(int i =0; i<roomname.length; i++) {
             userlist = handler.getRoomUser(roomname[i]);
+            room_user_count[i] = userlist.size();
             Iterator iterator = userlist.iterator();
 
             while (iterator.hasNext()) {
@@ -82,10 +91,115 @@ public class SelectMultiRoomUserActivity extends FragmentActivity {
         listView.setOnItemClickListener(itemClickListenerOfUserList);
     }
 
-    public void onClick_allbtn(View v){
-        for(int i = 0; i < listView.getCount(); i++) {
-            listView.setItemChecked(i, !listView.isItemChecked(i));
+    public void  onClick_room1btn(View v){
+        if(room1_checked) {
+            for(int i = 0 ; i < room_user_count[0] ; i++) {
+                listView.setItemChecked(i, false);
+            }
+            room1_checked = false;
+
+            Button tmpbtn = (Button) findViewById(R.id.room1);
+            tmpbtn.setBackgroundColor(Color.TRANSPARENT);
+
+        }else{
+            for(int i =  0 ; i < room_user_count[0]; i++) {
+                listView.setItemChecked(i, true);
+            }
+            room1_checked = true;
+
+            Button tmpbtn = (Button) findViewById(R.id.room1);
+            tmpbtn.setBackgroundResource(R.drawable.shape_oval_room);
+
         }
+
+        int count = listView.getCheckedItemCount();
+        TextView tmp = (TextView) findViewById(R.id.total_count_tfd);
+        tmp.setText("" + count);
+    }
+
+    public void  onClick_room2btn(View v){
+        if(room2_checked) {
+            for(int i =  room_user_count[0] ; i < room_user_count[0] + room_user_count[1] ; i++) {
+                listView.setItemChecked(i, false);
+            }
+            room2_checked = false;
+
+            Button tmpbtn = (Button) findViewById(R.id.room2);
+            tmpbtn.setBackgroundColor(Color.TRANSPARENT);
+
+        }else{
+            for(int i =  room_user_count[0] ; i < room_user_count[0] + room_user_count[1]; i++) {
+                listView.setItemChecked(i, true);
+            }
+            room2_checked = true;
+
+            Button tmpbtn = (Button) findViewById(R.id.room2);
+            tmpbtn.setBackgroundResource(R.drawable.shape_oval_room);
+
+        }
+
+        int count = listView.getCheckedItemCount();
+        TextView tmp = (TextView) findViewById(R.id.total_count_tfd);
+        tmp.setText("" + count);
+    }
+
+    public void  onClick_room3btn(View v){
+        Button tmpbtn = (Button) findViewById(R.id.room3);
+        if(room3_checked) {
+            for(int i =  room_user_count[0] + room_user_count[1]; i < room_user_count[0] + room_user_count[1] + room_user_count[2]; i++) {
+                listView.setItemChecked(i, false);
+            }
+            room3_checked = false;
+            tmpbtn.setBackgroundColor(Color.TRANSPARENT);
+
+        }else{
+            for(int i =  room_user_count[0] + room_user_count[1]; i < room_user_count[0] + room_user_count[1] + room_user_count[2]; i++) {
+                listView.setItemChecked(i, true);
+            }
+            room3_checked = true;
+            tmpbtn.setBackgroundResource(R.drawable.shape_oval_room);
+        }
+
+        int count = listView.getCheckedItemCount();
+        TextView tmp = (TextView) findViewById(R.id.total_count_tfd);
+        tmp.setText("" + count);
+
+    }
+
+
+    public void onClick_allbtn(View v){
+        if(all_checked) {
+            for (int i = 0; i < listView.getCount(); i++) {
+                listView.setItemChecked(i, false);
+            }
+
+            all_checked = false;
+            room1_checked = false;
+            room2_checked = false;
+            room3_checked = false;
+            Button tmpbtn = (Button) findViewById(R.id.room1);
+            tmpbtn.setBackgroundColor(Color.TRANSPARENT);
+            tmpbtn = (Button) findViewById(R.id.room2);
+            tmpbtn.setBackgroundColor(Color.TRANSPARENT);
+            tmpbtn = (Button) findViewById(R.id.room3);
+            tmpbtn.setBackgroundColor(Color.TRANSPARENT);
+
+        }else{
+            for (int i = 0; i < listView.getCount(); i++) {
+                listView.setItemChecked(i, true);
+            }
+            all_checked = true;
+            room1_checked = true;
+            room2_checked = true;
+            room3_checked = true;
+            Button tmpbtn = (Button) findViewById(R.id.room1);
+            tmpbtn.setBackgroundResource(R.drawable.shape_oval_room);
+            tmpbtn = (Button) findViewById(R.id.room2);
+            tmpbtn.setBackgroundResource(R.drawable.shape_oval_room);
+            tmpbtn = (Button) findViewById(R.id.room3);
+            tmpbtn.setBackgroundResource(R.drawable.shape_oval_room);
+        }
+
         int count = listView.getCheckedItemCount();
         TextView tmp = (TextView) findViewById(R.id.total_count_tfd);
         tmp.setText("" + count);

@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/top_titlebar"
         android:orientation="horizontal"
         android:background="@color/colorSelectedBlue">
         <Button
@@ -41,11 +42,36 @@
             android:visibility="invisible"/>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_titlebar"
+        android:id="@+id/article_title_tv"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="hi"
+        android:textColor="@color/colorTitleBlack"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_title_tv"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/article_date_tv"
+        android:text="2016년 9월 22일"
+        android:textSize="15dp"
+        android:textColor="@color/colorBackgroundGray"
+        android:visibility="gone"/>
+
 
     //img list
     <GridView
         android:id="@+id/grid_view"
-        android:layout_marginTop="60dp"
+        android:layout_below="@id/top_titlebar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnWidth="150dp"

@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -31,6 +33,7 @@ public class ExtraImageActivity extends FragmentActivity {
 
         Intent intent = getIntent();
         String photo = intent.getExtras().getString("photo");
+        String mode = intent.getStringExtra("mode");
 
         String arr[] = photo.split("/");
         if(arr.length > 0){
@@ -38,8 +41,6 @@ public class ExtraImageActivity extends FragmentActivity {
                 mThumbIds.add(Integer.parseInt(arr[i]));
             }
         }
-
-
 
         GridView gridview = (GridView) findViewById(R.id.grid_view);
         gridview.setAdapter(new ImageAdapter(this));
@@ -56,6 +57,24 @@ public class ExtraImageActivity extends FragmentActivity {
                 overridePendingTransition(0,0);     //activity transition animation delete
             }
         });
+
+
+
+        if(mode.equals("album")){
+            TextView tv = (TextView) findViewById(R.id.article_title_tv);
+            tv.setVisibility(View.VISIBLE);
+            tv.setText(intent.getStringExtra("title"));
+            tv = (TextView) findViewById(R.id.article_date_tv);
+            tv.setVisibility(View.VISIBLE);
+            tv.setText(intent.getStringExtra("day"));
+
+            RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            p.addRule(RelativeLayout.BELOW, R.id.article_date_tv);
+            gridview.setLayoutParams(p);
+        }
+
+
+
 
     }
 

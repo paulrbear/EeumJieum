@@ -14,12 +14,13 @@
         android:layout_alignParentBottom="true" />
 
     <RadioButton android:id="@id/radio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="5dip"
+        android:layout_marginRight="5dp"
+        android:layout_height="20dp"
+        android:layout_width="20dp"
+        android:button="@drawable/dual_radio_btn"
         android:focusable="false"
         android:clickable="false"/>
 

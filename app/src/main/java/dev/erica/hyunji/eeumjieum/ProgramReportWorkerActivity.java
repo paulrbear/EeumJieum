@@ -189,9 +189,6 @@ public class ProgramReportWorkerActivity extends FragmentActivity {
 
 
 
-
-
-
     private AbsListView.OnScrollListener itemScrollistenerOfArticleList = new AbsListView.OnScrollListener(){
 
         @Override
