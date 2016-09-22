@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -104,7 +105,7 @@ public class AlbumActivity extends FragmentActivity {
         listView.setAdapter(adapter);
         listView.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
         listView.setOnScrollListener(itemScrollistenerOfArticleList);
-        //listView.setOnItemClickListener(itemClickListenerOfArticleList);
+        listView.setOnItemClickListener(itemClickListenerOfArticleList);
 
     }
 
@@ -130,6 +131,29 @@ public class AlbumActivity extends FragmentActivity {
         adapter.notifyDataSetChanged();
 
     }
+
+    private AdapterView.OnItemClickListener itemClickListenerOfArticleList = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            //String objectName = data.get(position).getObjectname();
+            String totalphoto = data.get(position).getPhoto();
+            //Toast.makeText(getApplicationContext(), objectName, Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(getApplicationContext(), ExtraImageActivity.class);
+            intent.putExtra("mode", "album");
+            intent.putExtra("photo",totalphoto);
+            intent.putExtra("title", data.get(position).getTitle());
+            intent.putExtra("day", data.get(position).getDay());
+            startActivity(intent);
+            overridePendingTransition(0,0);     //activity transition animation delete
+
+
+            startActivity(intent);
+            overridePendingTransition(0,0);     //activity transition animation delete
+        }
+    };
+
+
 
 
     private AbsListView.OnScrollListener itemScrollistenerOfArticleList = new AbsListView.OnScrollListener(){
