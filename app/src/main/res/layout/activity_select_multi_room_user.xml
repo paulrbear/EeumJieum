@@ -73,7 +73,7 @@
             android:layout_height="match_parent"
             android:id="@+id/leftroom"
             android:background="@color/colorDarkGray">
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/colorDarkBlue"
@@ -83,7 +83,8 @@
                 android:textAlignment="center"
                 android:paddingTop="12dp"
                 android:paddingBottom="10dp"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:onClick="onClick_allbtn"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

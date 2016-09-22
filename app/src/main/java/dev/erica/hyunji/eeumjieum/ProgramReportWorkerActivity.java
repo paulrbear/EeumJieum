@@ -137,6 +137,60 @@ public class ProgramReportWorkerActivity extends FragmentActivity {
         adapter.notifyDataSetChanged();
     }
 
+    public void onClick_prevbtn(View v){
+        TextView title_day_tv = (TextView)findViewById(R.id.title_day_tv);
+        if(cur_month == 1){
+            cur_year = cur_year - 1;
+            cur_month = 12;
+
+            String str = String.valueOf(cur_year) + "년 " + String.valueOf(cur_month) + "월";
+            title_day_tv.setText(str);
+        }else {
+            cur_month = cur_month - 1;
+            if(cur_month<10){
+                String str = String.valueOf(cur_year) + "년 " + "0" + String.valueOf(cur_month) + "월";
+                title_day_tv.setText(str);
+            }else{
+                String str = String.valueOf(cur_year) + "년 " +  String.valueOf(cur_month) + "월";
+                title_day_tv.setText(str);
+            }
+
+        }
+        updatelist();
+    }
+
+    public void onClick_nextbtn(View v){
+        TextView title_day_tv = (TextView)findViewById(R.id.title_day_tv);
+
+        if(cur_month == 12){
+            cur_year = cur_year + 1;
+            cur_month = 1;
+            if(cur_month<10){
+                String str =  String.valueOf(cur_year) + "년 " +"0" + String.valueOf(cur_month) + "월";
+                title_day_tv.setText(str);
+            }else{
+                String str =  String.valueOf(cur_year) + "년 " + String.valueOf(cur_month) + "월";
+                title_day_tv.setText(str);
+            }
+        }else {
+            cur_month = cur_month + 1;
+            if(cur_month<10){
+                String str = String.valueOf(cur_year) + "년 " + "0" + String.valueOf(cur_month) + "월";
+                title_day_tv.setText(str);
+            }else{
+                String str =  String.valueOf(cur_year) + "년 " + String.valueOf(cur_month) + "월";
+                title_day_tv.setText(str);
+            }
+        }
+        updatelist();
+    }
+
+
+
+
+
+
+
 
     private AbsListView.OnScrollListener itemScrollistenerOfArticleList = new AbsListView.OnScrollListener(){
 

@@ -65,7 +65,6 @@ public class SelectMultiRoomUserActivity extends FragmentActivity {
         List<RoomUserItem> userlist;
         String roomname[] = {"기쁨방", "믿음방", "은혜방"};
 
-
         for(int i =0; i<roomname.length; i++) {
             userlist = handler.getRoomUser(roomname[i]);
             Iterator iterator = userlist.iterator();
@@ -81,6 +80,15 @@ public class SelectMultiRoomUserActivity extends FragmentActivity {
         listView.setAdapter(adapter);
         listView.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
         listView.setOnItemClickListener(itemClickListenerOfUserList);
+    }
+
+    public void onClick_allbtn(View v){
+        for(int i = 0; i < listView.getCount(); i++) {
+            listView.setItemChecked(i, !listView.isItemChecked(i));
+        }
+        int count = listView.getCheckedItemCount();
+        TextView tmp = (TextView) findViewById(R.id.total_count_tfd);
+        tmp.setText("" + count);
     }
 
     public void onClick_donebtn(View v){

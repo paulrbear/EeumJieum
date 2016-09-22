@@ -1,7 +1,6 @@
 package dev.erica.hyunji.eeumjieum;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,13 +55,14 @@ public class CommentListAdapter extends BaseAdapter {
             if(commentlistitem.getType() == 1){
                 RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) comment_writer.getLayoutParams();
                 params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+
                 comment_writer.setLayoutParams(params);
 
                 params = (RelativeLayout.LayoutParams) comment.getLayoutParams();
                 params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
                 comment.setLayoutParams(params);
 
-                comment.setBackgroundColor(Color.BLUE);
+                comment.setBackgroundResource(R.drawable.shape_rect_comment_me);
 
                 params = (RelativeLayout.LayoutParams) comment_time.getLayoutParams();
                 params.removeRule(RelativeLayout.RIGHT_OF);
