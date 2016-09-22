@@ -177,6 +177,337 @@ public class DietActivity extends FragmentActivity {
         startActivity(intent);
         overridePendingTransition(0,0);     //activity transition animation delete
     }
+    //bottom menu click listener
+    public void onClick_messagebtn(View v) {
+        Button temp_btn;
+        switch (selected_menu) {
+            case 0:
+                break;
+            case 1:
+                setAnimation(1, View.GONE, menudown);       //messagebtn menu param = 1
+
+                selected_menu = 0;
+                temp_btn = (Button) findViewById(R.id.messagebtn);
+                temp_btn.setBackgroundResource(R.drawable.message);
+                return;
+            case 2:
+                temp_btn = (Button) findViewById(R.id.foodbtn);
+                temp_btn.setBackgroundResource(R.drawable.food);
+                break;
+            case 3:
+                temp_btn = (Button) findViewById(R.id.homebtn);
+                temp_btn.setBackgroundResource(R.drawable.home);
+                break;
+            case 4:
+                setAnimation(2, View.GONE, menudown);       //notebtn menu param = 2
+                temp_btn = (Button) findViewById(R.id.notebtn);
+                temp_btn.setBackgroundResource(R.drawable.note);
+                break;
+            case 5:
+                temp_btn = (Button) findViewById(R.id.albumbtn);
+                temp_btn.setBackgroundResource(R.drawable.album);
+                break;
+        }
+
+        notice_btn.setVisibility(View.VISIBLE);
+        schedule_btn.setVisibility(View.VISIBLE);
+        notice_lb.setVisibility(View.VISIBLE);
+        schedule_lb.setVisibility(View.VISIBLE);
+
+        setAnimation(1, View.VISIBLE, menuup);          //messagebtn menu param = 1
+
+        selected_menu = 1;
+        temp_btn = (Button) findViewById(R.id.messagebtn);
+        temp_btn.setBackgroundResource(R.drawable.message_click);
+
+    }
+    public void onClick_foodbtn(View v) {
+        Button temp_btn;
+        switch (selected_menu) {
+            case 0:
+                break;
+            case 1:
+                setAnimation(1, View.GONE, menudown);       //messagebtn menu param = 1
+                temp_btn = (Button) findViewById(R.id.messagebtn);
+                temp_btn.setBackgroundResource(R.drawable.message);
+                break;
+            case 2:
+
+                break;
+            case 3:
+                temp_btn = (Button) findViewById(R.id.homebtn);
+                temp_btn.setBackgroundResource(R.drawable.home);
+                break;
+            case 4:
+                setAnimation(2, View.GONE, menudown);       //notebtn menu param = 2
+                Button temp_bt = (Button) findViewById(R.id.notebtn);
+                temp_bt.setBackgroundResource(R.drawable.note);
+                break;
+            case 5:
+                temp_btn = (Button) findViewById(R.id.albumbtn);
+                temp_btn.setBackgroundResource(R.drawable.album);
+                break;
+        }
+
+        selected_menu = 2;
+        temp_btn = (Button) findViewById(R.id.foodbtn);
+        temp_btn.setBackgroundResource(R.drawable.food_click);
 
 
+    }
+    public void onClick_homebtn(View v) {
+        Button temp_btn;
+        switch (selected_menu) {
+            case 0:
+                break;
+            case 1:
+                setAnimation(1, View.GONE, menudown);       //messagebtn menu param = 1
+                temp_btn = (Button) findViewById(R.id.messagebtn);
+                temp_btn.setBackgroundResource(R.drawable.message);
+                break;
+            case 2:
+                temp_btn = (Button) findViewById(R.id.foodbtn);
+                temp_btn.setBackgroundResource(R.drawable.food);
+                break;
+            case 3:
+
+                break;
+            case 4:
+                setAnimation(2, View.GONE, menudown);       //notebtn menu param = 2
+                Button temp_bt = (Button) findViewById(R.id.notebtn);
+                temp_bt.setBackgroundResource(R.drawable.note);
+                break;
+            case 5:
+                temp_btn = (Button) findViewById(R.id.albumbtn);
+                temp_btn.setBackgroundResource(R.drawable.album);
+                break;
+        }
+
+        selected_menu = 3;
+        temp_btn = (Button) findViewById(R.id.homebtn);
+        temp_btn.setBackgroundResource(R.drawable.home_click);
+
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+    }
+    public void onClick_notebtn(View v) {
+        Button temp_btn;
+        switch (selected_menu) {
+            case 0:
+                break;
+            case 1:
+                setAnimation(1, View.GONE, menudown);       //messagebtn menu param = 1
+                temp_btn = (Button) findViewById(R.id.messagebtn);
+                temp_btn.setBackgroundResource(R.drawable.message);
+                break;
+            case 2:
+                temp_btn = (Button) findViewById(R.id.foodbtn);
+                temp_btn.setBackgroundResource(R.drawable.food);
+                break;
+            case 3:
+                temp_btn = (Button) findViewById(R.id.homebtn);
+                temp_btn.setBackgroundResource(R.drawable.home);
+                break;
+            case 4:
+                setAnimation(2, View.GONE, menudown);       //notebtn mode param = 2
+
+                selected_menu = 0;
+                temp_btn = (Button) findViewById(R.id.notebtn);
+                temp_btn.setBackgroundResource(R.drawable.note);
+
+                return;
+            case 5:
+                temp_btn = (Button) findViewById(R.id.albumbtn);
+                temp_btn.setBackgroundResource(R.drawable.album);
+                break;
+        }
+
+        selected_menu = 4;
+        temp_btn = (Button) findViewById(R.id.notebtn);
+        temp_btn.setBackgroundResource(R.drawable.note_click);
+
+        if(savedMode == 1){ //parent
+            program_btn.setVisibility(View.VISIBLE);
+            observ_report_btn.setVisibility(View.VISIBLE);
+            program_lb.setVisibility(View.VISIBLE);
+            observ_report_lb.setVisibility(View.VISIBLE);
+            setAnimation(2, View.VISIBLE, menuup);          //notebtn mode param = 2
+
+        }else{  //worker
+            program_btn.setVisibility(View.VISIBLE);
+            observ_report_btn.setVisibility(View.VISIBLE);
+            work_report_btn.setVisibility(View.VISIBLE);
+            program_lb.setVisibility(View.VISIBLE);
+            observ_report_lb.setVisibility(View.VISIBLE);
+            work_report_lb.setVisibility(View.VISIBLE);
+            setAnimation(2, View.VISIBLE, menuup);         //notebtn mode param = 2
+        }
+
+    }
+    public void onClick_albumbtn(View v) {
+        Button temp_btn;
+        switch (selected_menu) {
+            case 0:
+                break;
+            case 1:
+                setAnimation(1, View.GONE, menudown);       //messagebtn menu param = 1
+                temp_btn = (Button) findViewById(R.id.messagebtn);
+                temp_btn.setBackgroundResource(R.drawable.message);
+                break;
+            case 2:
+                temp_btn = (Button) findViewById(R.id.foodbtn);
+                temp_btn.setBackgroundResource(R.drawable.food);
+                break;
+            case 3:
+                temp_btn = (Button) findViewById(R.id.homebtn);
+                temp_btn.setBackgroundResource(R.drawable.home);
+                break;
+            case 4:
+                setAnimation(2, View.GONE, menudown);       //notebtn menu param = 2
+                Button temp_bt = (Button) findViewById(R.id.notebtn);
+                temp_bt.setBackgroundResource(R.drawable.note);
+                break;
+            case 5:
+                break;
+        }
+
+        selected_menu = 5;
+        temp_btn = (Button) findViewById(R.id.albumbtn);
+        temp_btn.setBackgroundResource(R.drawable.album_click);
+
+        Intent intent = new Intent(this, AlbumActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+
+
+    }
+
+    //bottom pop-menu click listener
+    public void onClick_noticebtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.notice_btn);
+        tmp_btn.setSelected(true);
+
+        Intent intent = new Intent(this, NoticeAndScheduleActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        intent.putExtra("mode", "notice");
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+
+    }
+    public void onClick_scheduletbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.schedule_btn);
+        tmp_btn.setSelected(true);
+
+        Intent intent = new Intent(this, NoticeAndScheduleActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        intent.putExtra("mode", "schedule");
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+
+    }
+    public void onClick_programbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.program_btn);
+        tmp_btn.setSelected(true);
+
+        if(savedMode == 1){         //parent observ report activity
+
+        }else if(savedMode == 2){   //worker observ report activity
+            Intent intent = new Intent(this, ProgramReportWorkerActivity.class);
+            intent.putExtra("userID",savedID);
+            intent.putExtra("userMode", savedMode);
+            startActivityForResult(intent,0);
+            overridePendingTransition(0,0);     //activity transition animation delete
+        }
+    }
+    public void onClick_observreportbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.observ_report_btn);
+        tmp_btn.setSelected(true);
+
+        if(savedMode == 1){         //parent observ report activity
+
+        }else if(savedMode == 2){   //worker observ report activity
+            Intent intent = new Intent(this, ObservReportWorkerActivity.class);
+            intent.putExtra("userID",savedID);
+            intent.putExtra("userMode", savedMode);
+            startActivityForResult(intent,0);
+            overridePendingTransition(0,0);     //activity transition animation delete
+        }
+
+    }
+    public void onClick_workreportbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.work_report_btn);
+        tmp_btn.setSelected(true);
+
+        if(savedMode == 1){         //parent observ report activity
+
+        }else if(savedMode == 2){   //worker observ report activity
+            Intent intent = new Intent(this, WorkReportActivity.class);
+            intent.putExtra("userID",savedID);
+            intent.putExtra("userMode", savedMode);
+            startActivityForResult(intent,0);
+            overridePendingTransition(0,0);     //activity transition animation delete
+        }
+
+    }
+    //bottom pop-menu animation
+    private void setAnimation(final int menuNum, final int btnStatus, Animation animation){
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                /*if(btnStatus == View.VISIBLE) {
+                    program_btn.setVisibility(btnStatus);
+                    observ_report_btn.setVisibility(btnStatus);
+                    work_report_btn.setVisibility(btnStatus);
+                }*/
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if(menuNum == 1 && btnStatus == View.GONE){
+                    notice_btn.setVisibility(btnStatus);
+                    schedule_btn.setVisibility(btnStatus);
+                    notice_lb.setVisibility(btnStatus);
+                    schedule_lb.setVisibility(btnStatus);
+                }
+                if(menuNum == 2 && btnStatus == View.GONE) {
+                    program_btn.setVisibility(btnStatus);
+                    observ_report_btn.setVisibility(btnStatus);
+                    work_report_btn.setVisibility(btnStatus);
+                    program_lb.setVisibility(btnStatus);
+                    observ_report_lb.setVisibility(btnStatus);
+                    work_report_lb.setVisibility(btnStatus);
+                }
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        if(menuNum == 1){
+            notice_btn.startAnimation(animation);
+            schedule_btn.startAnimation(animation);
+            notice_lb.startAnimation(animation);
+            schedule_lb.startAnimation(animation);
+
+        }else if(menuNum ==2){
+            if (savedMode == 2) {    //worker need work report menu
+                work_report_btn.startAnimation(animation);
+                work_report_lb.startAnimation(animation);
+            }
+            program_btn.startAnimation(animation);
+            observ_report_btn.startAnimation(animation);
+            program_lb.startAnimation(animation);
+            observ_report_lb.startAnimation(animation);
+        }
+    }
 }
+

@@ -113,12 +113,14 @@ public class HomeActivity extends Activity {
         //lvNavList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, navItems));
         lvNavList.setOnItemClickListener(new DrawerItemClickListener());
 
+        //button
         notice_btn = (Button) findViewById(R.id.notice_btn);
         schedule_btn = (Button) findViewById(R.id.schedule_btn);
         program_btn = (Button) findViewById(R.id.program_btn);
         observ_report_btn = (Button) findViewById(R.id.observ_report_btn);
         work_report_btn = (Button) findViewById(R.id.work_report_btn);
 
+        //labels (make into single item with button and replace with the new icon
         notice_lb = (TextView) findViewById(R.id.notice_label);
         schedule_lb = (TextView) findViewById(R.id.schedule_label);
         program_lb = (TextView) findViewById(R.id.program_label);
@@ -557,7 +559,6 @@ public class HomeActivity extends Activity {
                 selected_menu = 0;
                 temp_btn = (Button) findViewById(R.id.messagebtn);
                 temp_btn.setBackgroundResource(R.drawable.message);
-
                 return;
             case 2:
                 temp_btn = (Button) findViewById(R.id.foodbtn);

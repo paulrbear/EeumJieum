@@ -15,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -30,8 +29,9 @@ public class ObservReportWorkerActivity extends FragmentActivity {
 
     private Button program_btn, observ_report_btn, work_report_btn, notice_btn, schedule_btn, roombtn1, roombtn2, roombtn3;
     private TextView notice_lb, schedule_lb, program_lb, observ_report_lb, work_report_lb;
-    private Animation menuup, menudown, roomup, roomdown;
+    private Animation menuup, menudown, roomup, roomdown, fastmenudown;
     private int selected_menu = 0;
+
 
     private String savedID;
     private int savedMode;
@@ -90,6 +90,8 @@ public class ObservReportWorkerActivity extends FragmentActivity {
         menudown = AnimationUtils.loadAnimation(this, R.anim.note_down_animation);
         roomdown = AnimationUtils.loadAnimation(this, R.anim.roomlist_down_animation);
         roomup = AnimationUtils.loadAnimation(this, R.anim.roomlist_up_animation);
+
+        fastmenudown =  AnimationUtils.loadAnimation(this, R.anim.fast_note_down_animation);
 
 
         initCalenderDate();
@@ -302,7 +304,6 @@ public class ObservReportWorkerActivity extends FragmentActivity {
                 selected_menu = 0;
                 temp_btn = (Button) findViewById(R.id.messagebtn);
                 temp_btn.setBackgroundResource(R.drawable.message);
-
                 return;
             case 2:
                 temp_btn = (Button) findViewById(R.id.foodbtn);
@@ -367,6 +368,11 @@ public class ObservReportWorkerActivity extends FragmentActivity {
         temp_btn = (Button) findViewById(R.id.foodbtn);
         temp_btn.setBackgroundResource(R.drawable.food_click);
 
+        Intent intent = new Intent(this, DietActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
     }
     public void onClick_homebtn(View v) {
         Button temp_btn;
@@ -399,6 +405,12 @@ public class ObservReportWorkerActivity extends FragmentActivity {
         selected_menu = 3;
         temp_btn = (Button) findViewById(R.id.homebtn);
         temp_btn.setBackgroundResource(R.drawable.home_click);
+
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
     }
     public void onClick_notebtn(View v) {
         Button temp_btn;
@@ -485,10 +497,89 @@ public class ObservReportWorkerActivity extends FragmentActivity {
         temp_btn = (Button) findViewById(R.id.albumbtn);
         temp_btn.setBackgroundResource(R.drawable.album_click);
 
+        Intent intent = new Intent(this, AlbumActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+
+    }
+    //bottom pop-menu click listener
+    public void onClick_noticebtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.notice_btn);
+        tmp_btn.setSelected(true);
+
+        Intent intent = new Intent(this, NoticeAndScheduleActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        intent.putExtra("mode", "notice");
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+
+    }
+    public void onClick_scheduletbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.schedule_btn);
+        tmp_btn.setSelected(true);
+
+        Intent intent = new Intent(this, NoticeAndScheduleActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        intent.putExtra("mode", "schedule");
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+
+    }
+    public void onClick_programbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.program_btn);
+        tmp_btn.setSelected(true);
+
+        if(savedMode == 1){         //parent observ report activity
+
+        }else if(savedMode == 2){   //worker observ report activity
+            Intent intent = new Intent(this, ProgramReportWorkerActivity.class);
+            intent.putExtra("userID",savedID);
+            intent.putExtra("userMode", savedMode);
+            startActivityForResult(intent,0);
+            overridePendingTransition(0,0);     //activity transition animation delete
+        }
+    }
+    public void onClick_observreportbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.observ_report_btn);
+        tmp_btn.setSelected(true);
+
+        /*
+        if(savedMode == 1){         //parent observ report activity
+
+        }else if(savedMode == 2){   //worker observ report activity
+
+            Intent intent = new Intent(this, ObservReportWorkerActivity.class);
+            intent.putExtra("userID",savedID);
+            intent.putExtra("userMode", savedMode);
+            startActivityForResult(intent,0);
+            overridePendingTransition(0,0);     //activity transition animation delete
+        }
+*/
+
+    }
+    public void onClick_workreportbtn(View v){
+        Button tmp_btn = (Button) findViewById(R.id.work_report_btn);
+        tmp_btn.setSelected(true);
+
+        if(savedMode == 1){         //parent observ report activity
+
+        }else if(savedMode == 2){   //worker observ report activity
+            Intent intent = new Intent(this, WorkReportActivity.class);
+            intent.putExtra("userID",savedID);
+            intent.putExtra("userMode", savedMode);
+            startActivityForResult(intent,0);
+            overridePendingTransition(0,0);     //activity transition animation delete
+        }
 
     }
 
+
     //bottom pop-menu click listener
+    /*
     public void onClick_noticebtn(View v){
         Toast.makeText(getApplicationContext(), "open44", Toast.LENGTH_SHORT).show();
 
@@ -512,7 +603,7 @@ public class ObservReportWorkerActivity extends FragmentActivity {
         Toast.makeText(getApplicationContext(), "open33", Toast.LENGTH_SHORT).show();
 
     }
-
+*/
     //room list animation
     private void setAnimation(final int btnStatus, final Animation animation){
         animation.setAnimationListener(new Animation.AnimationListener(){
