@@ -180,13 +180,15 @@ public class HomeActivity extends Activity {
             String[] arr2 = tmpphoto.split("/");
             if(arr2[0].equals(null) ) {
                 //default image setting
-                photo = R.drawable.pic_20;
+                //photo = R.drawable.pic_20;
+                photo = R.color.colorDarkGray;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
                 }else {
                     //default image setting
-                    photo = R.drawable.pic_20;
+                    //photo = R.drawable.pic_20;
+                    photo = R.color.colorDarkGray;
                 }
             }
             String subtitle = "시설공지";
@@ -212,13 +214,15 @@ public class HomeActivity extends Activity {
             String[] arr2 = tmpphoto.split("/");
             if(arr2[0].equals(null) ) {
                 //default image setting
-                photo = R.drawable.pic_20;
+                //photo = R.drawable.pic_20;
+                photo = R.color.colorDarkGray;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
                 }else{
                     //default image setting
-                    photo = R.drawable.pic_20;
+                    //photo = R.drawable.pic_20;
+                    photo = R.color.colorDarkGray;
                 }
             }
             String subtitle = stmp.getDay();
@@ -245,13 +249,15 @@ public class HomeActivity extends Activity {
             String[] arr2 = tmpphoto.split("/");
             if(arr2[0].equals(null) ) {
                 //default image setting
-                photo = R.drawable.pic_20;
+                //photo = R.drawable.pic_20;
+                photo = R.color.colorDarkGray;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
                 }else{
                     //default image setting
-                    photo = R.drawable.pic_20;
+                    //photo = R.drawable.pic_20;
+                    photo = R.color.colorDarkGray;
                 }
             }
             String subtitle = otmp.getDay();
@@ -317,13 +323,15 @@ public class HomeActivity extends Activity {
             String[] arr2 = tmpphoto.split("/");
             if(arr2[0].equals(null) ) {
                 //default image setting
-                photo = R.drawable.pic_20;
+                //photo = R.drawable.pic_20;
+                photo = R.color.colorDarkGray;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
                 }else{
                     //default image setting
-                    photo = R.drawable.pic_20;
+                    //photo = R.drawable.pic_20;
+                    photo = R.color.colorDarkGray;
                 }
             }
             String subtitle = otmp.getDay();

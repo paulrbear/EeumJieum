@@ -218,7 +218,6 @@ public class WriteNoticeActivity extends FragmentActivity {
             while (iterator.hasNext()) {
                 Integer element = (Integer) iterator.next();
                 mThumbIds.add(element);
-                System.out.println("result array" + element.toString() + (R.drawable.s_pic_1));
             }
             if(mThumbIds.size() > 0) {
                 gridView.setVisibility(View.VISIBLE);
