@@ -98,6 +98,10 @@ public class WriteProgramReportActivity extends FragmentActivity {
             dialog.setDialogMsg("프로그램 일지를 \n등록하시겠습니까?");
             dialog.show();
         }else {
+            if(mThumbIds.size()==0){
+                Toast.makeText(getApplicationContext(), "사진을 선택하세요:)", Toast.LENGTH_SHORT).show();
+                return;
+            }
             setDBdata();
             CustomDialog dialog = new CustomDialog(this);
             dialog.setBtn1Text("뒤로");
