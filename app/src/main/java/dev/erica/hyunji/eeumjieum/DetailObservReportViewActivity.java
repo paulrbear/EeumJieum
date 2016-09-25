@@ -259,7 +259,7 @@ public class DetailObservReportViewActivity extends Activity {
             tmp = (ImageView) findViewById(R.id.main_image_view);
             //tmp.setLayoutParams(new LinearLayout.LayoutParams(800, 400));
             tmp.setScaleType(ImageView.ScaleType.FIT_XY);
-            tmp.setImageResource(R.drawable.pic_2);     //default image
+            tmp.setImageResource(R.color.colorDarkGray);     //default image
 
             Button tmpbtn = (Button) findViewById(R.id.countPhoto);
             tmpbtn.setVisibility(View.GONE);

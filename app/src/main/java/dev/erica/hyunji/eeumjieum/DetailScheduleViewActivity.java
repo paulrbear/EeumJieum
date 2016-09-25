@@ -119,7 +119,7 @@ public class DetailScheduleViewActivity extends FragmentActivity {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 tmp = (ImageView) findViewById(R.id.main_image_view);
                 tmp.setScaleType(ImageView.ScaleType.FIT_XY);
-                tmp.setImageResource(R.drawable.pic_2);     //default image
+                tmp.setImageResource(R.color.colorDarkGray);     //default image
             } else {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 int photourl = Integer.parseInt(arr[1]);
@@ -171,7 +171,7 @@ public class DetailScheduleViewActivity extends FragmentActivity {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 tmp = (ImageView) findViewById(R.id.main_image_view);
                 tmp.setScaleType(ImageView.ScaleType.FIT_XY);
-                tmp.setImageResource(R.drawable.pic_2);     //default image
+                tmp.setImageResource(R.color.colorDarkGray);     //default image
             } else {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 int photourl = Integer.parseInt(arr[1]);

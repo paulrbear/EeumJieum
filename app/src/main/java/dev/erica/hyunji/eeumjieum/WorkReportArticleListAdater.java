@@ -54,7 +54,7 @@ public class WorkReportArticleListAdater extends BaseAdapter{
         TextView hospitalcount = (TextView) convertView.findViewById(R.id.hospital_count_tv);
         TextView etccount = (TextView) convertView.findViewById(R.id.etc_count_tv);
 
-
+        //default image
         objimg.setImageResource(R.drawable.s_pic_3);
         String tmp = articlelistitem.getObjectroom();
         roomname.setText(tmp);
