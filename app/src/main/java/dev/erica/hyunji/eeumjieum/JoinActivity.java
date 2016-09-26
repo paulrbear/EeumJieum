@@ -21,6 +21,7 @@ public class JoinActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if(Build.VERSION.SDK_INT >= 21){
+            setContentView(R.layout.activity_splash);
             getWindow().setStatusBarColor(Color.parseColor("#F7F7F7"));
         }
         setContentView(R.layout.activity_join);

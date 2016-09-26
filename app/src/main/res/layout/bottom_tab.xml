@@ -2,14 +2,14 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    android:layout_height="70dp"
+    android:layout_height="60dp"
     android:layout_width="match_parent"
     android:background="@android:color/black"
     android:orientation="horizontal">
 
     <Button
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:id="@+id/messagebtn"
         android:background="@drawable/message"
@@ -18,7 +18,7 @@
 
     <Button
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:id="@+id/foodbtn"
         android:background="@drawable/food"
@@ -27,7 +27,7 @@
 
     <Button
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:id="@+id/homebtn"
         android:background="@drawable/home"
@@ -36,7 +36,7 @@
 
     <Button
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:id="@+id/notebtn"
         android:background="@drawable/note"
@@ -45,7 +45,7 @@
 
     <Button
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:id="@+id/albumbtn"
         android:background="@drawable/album"

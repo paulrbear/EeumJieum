@@ -25,7 +25,7 @@ public class SplashActivity extends FragmentActivity {
             public void run() {
                 finish();
             }
-        }, 3000);       //delay 3 seconds
+        }, 4000);       //delay 4.000 seconds
 
     }
 

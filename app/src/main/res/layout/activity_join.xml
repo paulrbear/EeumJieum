@@ -24,6 +24,7 @@
         android:layout_weight="5"
         android:background="@color/colorBgDefault"
         android:src="@drawable/ssparentbtn"
+        android:adjustViewBounds="true"
         android:id="@+id/parentbtn"
         android:onClick="onClick_joinParent" />
 
@@ -33,6 +34,7 @@
         android:layout_weight="5"
         android:background="@color/colorDarkGray"
         android:src="@drawable/ssworkerbtn"
+        android:adjustViewBounds="true"
         android:id="@+id/workerbtn"
         android:onClick="onClick_joinWorker" />
 
