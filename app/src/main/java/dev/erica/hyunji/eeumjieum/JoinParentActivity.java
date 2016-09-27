@@ -40,8 +40,6 @@ public class JoinParentActivity extends FragmentActivity {
         setContentView(R.layout.activity_join_parent);
 
         if(Build.VERSION.SDK_INT >= 21){
-            startActivity(new Intent(this, SplashActivity.class));
-            //start splash page
             getWindow().setStatusBarColor(Color.parseColor("#F7F7F7"));
         }
 
