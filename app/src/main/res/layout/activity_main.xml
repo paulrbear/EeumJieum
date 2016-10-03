@@ -12,21 +12,23 @@
     tools:context="dev.erica.hyunji.eeumjieum.MainActivity">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/loginlogoimg"
         android:src="@drawable/login_logo"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true" />
 
    <EditText
-       android:layout_width="wrap_content"
+       android:layout_width="250dp"
        android:layout_height="40dp"
        android:inputType="textEmailAddress"
        android:ems="10"
        android:id="@+id/emailtfd"
        android:textColor="@color/colorBlueGray1"
        android:drawableLeft="@drawable/ssemail"
+       android:includeFontPadding="true"
        android:gravity="center_horizontal|center_vertical"
        android:text="이메일"
        android:layout_centerHorizontal="true"
@@ -35,7 +37,7 @@
 <!--  android:onClick="onClick_emailtfd"  -->
 
    <EditText
-       android:layout_width="wrap_content"
+       android:layout_width="250dp"
        android:layout_height="40dp"
        android:inputType="textVisiblePassword"
        android:ems="10"
@@ -50,7 +52,7 @@
 
 
    <Button
-       android:layout_width="wrap_content"
+       android:layout_width="250dp"
        android:layout_height="40dp"
        android:text="로그인"
        android:id="@+id/loginbtn"
@@ -63,7 +65,7 @@
        android:layout_alignEnd="@+id/pwdtfd" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="40dp"
         android:text="회원가입"
         android:id="@+id/joinbtn"

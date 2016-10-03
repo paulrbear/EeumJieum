@@ -10,43 +10,51 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E6263238"
+        android:background="@color/colorCyanDarkAlpha"
         android:id="@+id/image"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="70dp"
         android:gravity="center">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="45dp"
             android:id="@+id/sub_title_tv"
             android:gravity="center"
             android:text="sampe title"
-            android:textSize="15dp"
+            android:textSize="18sp"
             android:textColor="@android:color/white"/>
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="0dp"
-            android:layout_weight="1.5"
+            android:layout_weight="2"
             android:gravity="center_horizontal"
             android:id="@+id/title_tv"
             android:text="Sample Text 1"
-            android:textSize="30dp"
+            android:textSize="38sp"
             android:textColor="@android:color/white"/>
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_marginBottom="34dp"
+            android:background="@android:color/white"/>
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_width="280dp"
+            android:layout_height="126dp"
             android:gravity="center_horizontal"
             android:id="@+id/content_tv"
             android:text="context input txt"
-            android:textSize="10dp"
+            android:textSize="18dp"
             android:textColor="@android:color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,12 +64,13 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="80dp"
-        android:layout_height="25dp"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
         android:id="@+id/detailview_btn"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="110dp"
         android:text="상세보기"
+        android:textSize="17sp"
         android:textColor="@android:color/white"
         android:background="@drawable/shape_oval_room" />
 

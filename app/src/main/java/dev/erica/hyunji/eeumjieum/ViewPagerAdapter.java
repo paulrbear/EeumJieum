@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static dev.erica.hyunji.eeumjieum.R.id.title_tv;
+
 /**
  * Created by Erica on 2016-09-20.
  */
@@ -22,8 +24,9 @@ public class ViewPagerAdapter extends PagerAdapter {
         // TODO Auto-generated constructor stub
        inflater = LayoutInflater.from(context);
         this.mListData = data;
-        System.out.println("current data length" + mListData.size() + "**********" +
-                "*********************************************************");
+
+        //System.out.println("current data length" + mListData.size() + "**********" +
+        //      "*********************************************************");
     }
 
     @Override
@@ -65,13 +68,15 @@ public class ViewPagerAdapter extends PagerAdapter {
 
         FrameLayout img = (FrameLayout) view.findViewById(R.id.fullscreen_layout);
         TextView subtitle = (TextView) view.findViewById(R.id.sub_title_tv);
-        TextView title = (TextView) view.findViewById(R.id.title_tv);
+        TextView title = (TextView) view.findViewById(title_tv);
         TextView content = (TextView) view.findViewById(R.id.content_tv);
         TextView articlekey = (TextView) view.findViewById(R.id.invisible_content_key);
         Button detailview = (Button) view.findViewById(R.id.detailview_btn);
 
 
         ViewPagerItem tmp = mListData.get(position);
+        //ViewPagerItem sizeoftext = mListData.get(content_tv);
+
 
         if(mListData.size() > 0) {
             img.setBackgroundResource(tmp.getMain_photo());

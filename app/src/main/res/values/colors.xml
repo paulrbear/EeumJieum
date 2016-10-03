@@ -20,5 +20,9 @@
     <color name="colorBlueDark">#1D262A</color>
     <color name="colorBlueBlack">#13191C</color>
 
+    //Alpha
+    <color name="colorCyanDarkAlpha">#99263238</color>
+    <color name="colorBlueDarkAlpha">#9913191C</color>
+
 
 </resources>

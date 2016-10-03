@@ -18,87 +18,6 @@
              android:id="@+id/pager">
          </android.support.v4.view.ViewPager>
 
-<!--
-         //main content
-         <FrameLayout
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:background="@color/colorAccent"
-             android:id="@+id/main_content_bg">
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:orientation="horizontal">
-                 <ImageButton
-                     android:layout_width="0dp"
-                     android:layout_height="match_parent"
-                     android:layout_weight="1"
-                     android:id="@+id/main_content_prev_btn"
-                     android:background="@android:color/transparent"
-                     android:src="@drawable/arr_prev"
-                     android:scaleType="centerInside"
-                     android:onClick="onClick_prevbtn"/>
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_weight="6"
-                     android:layout_height="match_parent"
-                     android:orientation="vertical"
-                     android:layout_marginTop="50dp"
-                     android:layout_marginBottom="70dp"
-                     android:gravity="center"
-                     android:id="@+id/main_article_linearlayout">
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="0dp"
-                         android:layout_weight="1"
-                         android:id="@+id/main_content_sub_title_tv"
-                         android:gravity="center"
-                         android:text="sampe title"
-                         android:textSize="15dp"
-                         android:textColor="@android:color/white"/>
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="0dp"
-                         android:layout_weight="1.5"
-                         android:gravity="center_horizontal"
-                         android:id="@+id/main_content_title_tv"
-                         android:text="Sample Text 1"
-                         android:textSize="30dp"
-                         android:textColor="@android:color/white"/>
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="0dp"
-                         android:layout_weight="1"
-                         android:gravity="center_horizontal"
-                         android:id="@+id/main_content_tv"
-                         android:text="context input txt"
-                         android:textSize="10dp"
-                         android:textColor="@android:color/white"/>
-                     <Button
-                         android:layout_width="wrap_content"
-                         android:layout_height="25dp"
-                         android:layout_marginBottom="40dp"
-                         android:text="상세보기"
-                         android:layout_gravity="center"
-                         android:background="@drawable/shape_radius_rect_selected_blue"/>
-                     </LinearLayout>
-                 <ImageButton
-                     android:layout_width="0dp"
-                     android:layout_height="match_parent"
-                     android:layout_weight="1"
-                     android:id="@+id/main_content_next_btn"
-                     android:background="@android:color/transparent"
-                     android:src="@drawable/arr_next"
-                     android:scaleType="centerInside"
-                     android:onClick="onClick_nextbtn"/>
-
-
-             </LinearLayout>
-
-         </FrameLayout>
--->
-
-
          <ImageButton
              android:layout_width="20dp"
              android:layout_height="match_parent"
@@ -149,13 +68,13 @@
                      android:textSize="25dp"
                      android:textColor="@android:color/white"/>
                  <Button
-                     android:id="@+id/alarmbtn"
+                     android:id="@+id/blankbtn"
                      android:layout_marginTop="10dp"
                      android:layout_marginRight="10dp"
                      android:layout_width="0dp"
                      android:layout_height = "40dp"
                      android:layout_weight="1"
-                     android:background="@drawable/alarm"/>
+                     android:background="@drawable/blank"/>
              </LinearLayout>
 
          </FrameLayout>

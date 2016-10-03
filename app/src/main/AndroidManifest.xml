@@ -14,7 +14,7 @@
         android:name=".CustomFont">
         <activity
             android:name=".MainActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar">
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
