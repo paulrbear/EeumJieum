@@ -36,7 +36,7 @@
                 android:layout_toLeftOf="@id/donebtn"
                 android:text="저장"
                 android:textSize="20dp"
-                android:textColor="@color/colorSelectedBlue"
+                android:textColor="@color/colorCyanMain"
                 android:background="@android:color/transparent" />
 
             <Button
@@ -48,7 +48,7 @@
                 android:layout_alignParentRight="true"
                 android:text="완료"
                 android:textSize="20dp"
-                android:textColor="@color/colorSelectedBlue"
+                android:textColor="@color/colorCyanMain"
                 android:background="@android:color/transparent"
                 android:onClick="onClick_donebtn"/>
 
@@ -72,7 +72,7 @@
                 android:text="방이름"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:textColor="@color/colorSelectedBlue"/>
+                android:textColor="@color/colorCyanMain"/>
         </RelativeLayout>
     </RelativeLayout>
 
@@ -91,7 +91,7 @@
             android:textSize="20dp"
             android:id="@+id/btn01"
             android:onClick="onClick_01btn"
-            android:textColor="@color/colorSelectedBlue"
+            android:textColor="@color/colorCyanMain"
             android:background="@drawable/shape_radius_rect_selected_blue"/>
 
         <Button
@@ -103,7 +103,7 @@
             android:textSize="20dp"
             android:id="@+id/btn02"
             android:onClick="onClick_02btn"
-            android:textColor="@color/colorLightGray"
+            android:textColor="@color/colorBlueGray1"
             android:background="@android:color/transparent"/>
 
         <Button
@@ -115,7 +115,7 @@
             android:textSize="20dp"
             android:id="@+id/btn03"
             android:onClick="onClick_03btn"
-            android:textColor="@color/colorLightGray"
+            android:textColor="@color/colorBlueGray1"
             android:background="@android:color/transparent"/>
     </LinearLayout>
 
@@ -155,7 +155,7 @@
                         android:id="@+id/morning_et"
                         android:textSize="20dp"
                         android:text="내용을 입력하세요"
-                        android:textColor="@color/colorLightGray"
+                        android:textColor="@color/colorBlueGray1"
                         android:background="@android:color/transparent"/>
                 </LinearLayout>
                 <LinearLayout
@@ -178,7 +178,7 @@
                         android:id="@+id/afternoon_et"
                         android:textSize="20dp"
                         android:text="내용을 입력하세요"
-                        android:textColor="@color/colorLightGray"
+                        android:textColor="@color/colorBlueGray1"
                         android:background="@android:color/transparent"/>
                 </LinearLayout>
                 <LinearLayout
@@ -201,7 +201,7 @@
                         android:gravity="top"
                         android:textSize="20dp"
                         android:text="내용을 입력하세요"
-                        android:textColor="@color/colorLightGray"
+                        android:textColor="@color/colorBlueGray1"
                         android:background="@android:color/transparent"/>
                 </LinearLayout>
             </LinearLayout>
@@ -261,7 +261,7 @@
                         android:text="많음"
                         android:textSize="20dp"
                         android:id="@+id/btn11"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_11btn"/>
                     <Button
@@ -272,7 +272,7 @@
                         android:text="정량"
                         android:textSize="20dp"
                         android:id="@+id/btn12"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_12btn"/>
                     <Button
@@ -283,7 +283,7 @@
                         android:text="적음"
                         android:textSize="20dp"
                         android:id="@+id/btn13"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_13btn"/>
                     <Button
@@ -295,7 +295,7 @@
                         android:text="금식"
                         android:textSize="20dp"
                         android:id="@+id/btn14"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_14btn"/>
                 </LinearLayout>
@@ -323,7 +323,7 @@
                         android:text="많음"
                         android:textSize="20dp"
                         android:id="@+id/btn21"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_21btn"/>
                     <Button
@@ -334,7 +334,7 @@
                         android:text="정량"
                         android:textSize="20dp"
                         android:id="@+id/btn22"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_22btn"/>
                     <Button
@@ -345,7 +345,7 @@
                         android:text="적음"
                         android:textSize="20dp"
                         android:id="@+id/btn23"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_23btn"/>
                     <Button
@@ -357,7 +357,7 @@
                         android:text="금식"
                         android:textSize="20dp"
                         android:id="@+id/btn24"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_24btn"/>
                 </LinearLayout>
@@ -365,7 +365,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@color/colorBgDefault">
+                    android:background="@color/colorGray1">
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -385,7 +385,7 @@
                         android:text="많음"
                         android:textSize="20dp"
                         android:id="@+id/btn31"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_31btn"/>
                     <Button
@@ -396,7 +396,7 @@
                         android:text="정량"
                         android:textSize="20dp"
                         android:id="@+id/btn32"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_32btn"/>
                     <Button
@@ -407,7 +407,7 @@
                         android:text="적음"
                         android:textSize="20dp"
                         android:id="@+id/btn33"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_33btn"/>
                     <Button
@@ -419,7 +419,7 @@
                         android:text="금식"
                         android:textSize="20dp"
                         android:id="@+id/btn34"
-                        android:textColor="@color/colorBackgroundGray"
+                        android:textColor="@color/colorGray2"
                         android:background="@android:color/transparent"
                         android:onClick="onClick_34btn"/>
                 </LinearLayout>

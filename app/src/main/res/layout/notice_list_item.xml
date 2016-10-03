@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="해맞이공원소풍"
-            android:textColor="@color/colorTitleBlack"
+            android:textColor="@color/colorBlueBlack"
             android:textSize="20dp"/>
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="시설"
-            android:textColor="@color/colorLeftMenu"
+            android:textColor="@color/colorBlueGray1"
             android:textSize="15dp"/>
     </LinearLayout>
 
@@ -48,7 +48,7 @@
             android:id="@+id/notice_day_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorLeftMenu"
+            android:textColor="@color/colorBlueGray1"
             android:textSize="15dp"
             android:text="2016년 09월 1일 (금)"
             android:layout_marginTop="10dp"/>
@@ -56,7 +56,7 @@
             android:id="@+id/notice_content_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorMidGray"
+            android:textColor="@color/colorBlueGray2"
             android:textSize="18dp"
             android:text="내용"
             android:layout_marginTop="15dp"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/writer_name_tv"
             android:text="윤고은 생활재활교사"
-            android:textColor="@color/colorSelectFont"/>
+            android:textColor="@color/colorCyanMain"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
             android:text="0"
             android:gravity="left"
             android:layout_marginRight="10dp"
-            android:textColor="@color/colorSelectFont"
+            android:textColor="@color/colorCyanMain"
             android:textSize="10dp"/>
     </LinearLayout>
 

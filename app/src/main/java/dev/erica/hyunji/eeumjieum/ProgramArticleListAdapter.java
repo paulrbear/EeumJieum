@@ -83,14 +83,14 @@ public class ProgramArticleListAdapter extends BaseAdapter {
         if(arr2[0].equals(null) ) {
             //default image setting
             //photo.setImageResource(R.drawable.s_pic_3);
-            photo.setImageResource(R.color.colorDarkGray);
+            photo.setImageResource(R.color.colorCyanDark);
         }else{
             if(arr2.length > 1) {
                 photo.setImageResource(Integer.parseInt(arr2[1]));
             }else{
                 //default image setting
                 //photo.setImageResource(R.drawable.s_pic_3);
-                photo.setImageResource(R.color.colorDarkGray);
+                photo.setImageResource(R.color.colorCyanDark);
             }
         }
 

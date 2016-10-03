@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@color/colorBgDefault">
+    android:background="@color/colorGray1">
 
     <ImageView
         android:id="@+id/front_exist_iv"
@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="07.09"
-        android:textColor="@color/colorTitleBlack"
+        android:textColor="@color/colorBlueBlack"
         android:textSize="20dp"/>
 
     <LinearLayout
@@ -42,7 +42,7 @@
                 android:id="@+id/schedule_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorTitleBlack"
+                android:textColor="@color/colorBlueBlack"
                 android:textSize="15dp"
                 android:text="title"
                 android:layout_marginTop="5dp"/>
@@ -50,7 +50,7 @@
                 android:id="@+id/schedule_time_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorLeftMenu"
+                android:textColor="@color/colorBlueGray1"
                 android:textSize="10dp"
                 android:text="time"
                 android:layout_marginBottom="5dp" />

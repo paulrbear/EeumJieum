@@ -10,37 +10,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="@color/colorSelectFont">
+        android:background="@color/colorCyanMain">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:orientation="horizontal">
-            <Button
+            <ImageView
                 android:id="@+id/backbtn"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="0dp"
-                android:layout_height = "40dp"
-                android:layout_weight="1"
-                android:background="@drawable/back_w_btn"
+                android:layout_marginLeft="16dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back_w_btn"
                 android:onClick="onClick_backbtn"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="식단표"
+                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="25dp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"/>
-            <Button
+            <ImageView
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_height = "40dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"/>
+                android:layout_marginRight="16dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/blank"/>
         </LinearLayout>
     </FrameLayout>
 
@@ -62,12 +61,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:orientation="horizontal"
-                android:background="@color/colorBgDefault">
+                android:background="@color/colorGray1">
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorMagenta"
                     android:text=""
                     android:drawableLeft="@drawable/ss_arr_prev"
                     android:background="@android:color/transparent"
@@ -84,7 +83,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorMagenta"
                     android:text=""
                     android:drawableRight="@drawable/ss_arr_next"
                     android:background="@android:color/transparent"
@@ -94,16 +93,16 @@
                 android:id="@+id/gridview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorSelectFont"
+                android:background="@color/colorCyanMain"
                 android:numColumns="7">
             </GridView>
         </LinearLayout>
         <ListView
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_below="@id/calender_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="@color/colorBackgroundGray"
+            android:divider="@color/colorGray2"
             android:dividerHeight="1dp"
             android:id="@+id/diet_listview">
         </ListView>

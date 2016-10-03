@@ -12,7 +12,7 @@
             android:layout_height="60dp"
             android:orientation="horizontal"
             android:id="@+id/top_titlebar_color_layout"
-            android:background="@color/colorSelectedBlue">
+            android:background="@color/colorCyanMain">
             <Button
                 android:id="@+id/cancelbtn"
                 android:layout_marginTop="10dp"
@@ -85,7 +85,7 @@
             android:layout_marginLeft="155dp"
             android:layout_marginTop="5dp"
             android:gravity="right"
-            android:textColor="@color/colorSelectedBlue"/>
+            android:textColor="@color/colorCyanMain"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             android:text="/10"
             android:layout_marginLeft="170dp"
             android:layout_marginTop="5dp"
-            android:textColor="@color/colorDarkGray"/>
+            android:textColor="@color/colorCyanDark"/>
     </FrameLayout>
 
     </LinearLayout>

@@ -33,7 +33,7 @@
             android:layout_alignParentRight="true"
             android:text="완료"
             android:textSize="20dp"
-            android:textColor="@color/colorSelectedBlue"
+            android:textColor="@color/colorCyanMain"
             android:background="@android:color/transparent"
             android:onClick="onClick_donebtn"/>
 
@@ -68,7 +68,7 @@
         android:layout_below="@id/pick_date_btn"
         android:background="@drawable/shape_white_bggray_bottomline"
         android:paddingLeft="20dp"
-        android:textColor="@color/colorLightGray"
+        android:textColor="@color/colorBlueGray1"
         android:text="제목을 입력하세요"/>
     <EditText
         android:id="@+id/location_et"
@@ -77,7 +77,7 @@
         android:layout_height="50dp"
         android:background="@drawable/shape_white_bggray_bottomline"
         android:paddingLeft="20dp"
-        android:textColor="@color/colorLightGray"
+        android:textColor="@color/colorBlueGray1"
         android:text="장소를 입력하세요"/>
 </RelativeLayout>
 
@@ -99,7 +99,7 @@
             android:textSize="20dp"
             android:paddingLeft="20dp"
             android:text="내용을 입력하세요"
-            android:textColor="@color/colorLightGray"
+            android:textColor="@color/colorBlueGray1"
             android:background="@drawable/shape_lightgray_bottomline">
         </EditText>
         <LinearLayout
@@ -161,7 +161,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:onClick="onClick_roomlist"
             android:text="시설전체"
             />
@@ -173,7 +173,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_marginTop="50dp"
             android:onClick="onClick_roomlist"
             android:visibility="gone"
@@ -187,7 +187,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_marginTop="100dp"
             android:onClick="onClick_roomlist"
             android:visibility="gone"
@@ -200,7 +200,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_marginTop="150dp"
             android:onClick="onClick_roomlist"
             android:visibility="gone"
@@ -213,7 +213,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_marginTop="200dp"
             android:onClick="onClick_roomlist"
             android:visibility="gone"

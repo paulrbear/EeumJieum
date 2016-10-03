@@ -295,7 +295,7 @@ public class DietCalnedarViewActivity extends FragmentActivity {
                 Integer today = mCal.get(Calendar.DAY_OF_MONTH);
                 String sToday = String.valueOf(today);
                 if (sToday.equals(getItem(position))) { //오늘 day 텍스트 컬러 변경
-                    holder.day_tv.setTextColor(getResources().getColor(R.color.colorSelectFont));
+                    holder.day_tv.setTextColor(getResources().getColor(R.color.colorCyanMain));
                     holder.day_tv.setBackgroundResource(R.drawable.shape_oval_white);
 
                 }

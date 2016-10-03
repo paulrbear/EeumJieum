@@ -65,14 +65,14 @@ public class ImageListActivity extends FragmentActivity {
 
         if(mode.equals("program")) {
             LinearLayout tll = (LinearLayout) findViewById(R.id.top_titlebar_color_layout);
-            tll.setBackgroundResource(R.color.colorSkyBlue);
+            tll.setBackgroundResource(R.color.colorCyanMain);
             TextView tv = (TextView) findViewById(R.id.total_limit_tfd);
             tv.setText("/50");
             tv = (TextView) findViewById(R.id.title_tfd);
             tv.setText("프로그램 일지");
         }else if(mode.equals("diet")){
             LinearLayout tll = (LinearLayout) findViewById(R.id.top_titlebar_color_layout);
-            tll.setBackgroundResource(R.color.colorSkyBlue);
+            tll.setBackgroundResource(R.color.colorCyanMain);
             TextView tv = (TextView) findViewById(R.id.title_tfd);
             tv.setText("식단 선택");
 
@@ -80,7 +80,7 @@ public class ImageListActivity extends FragmentActivity {
 
         }else {
             LinearLayout tll = (LinearLayout) findViewById(R.id.top_titlebar_color_layout);
-            tll.setBackgroundResource(R.color.colorSkyBlue);
+            tll.setBackgroundResource(R.color.colorCyanMain);
             TextView tv = (TextView) findViewById(R.id.total_limit_tfd);
             tv.setText("/50");
             tv = (TextView) findViewById(R.id.title_tfd);

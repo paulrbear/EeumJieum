@@ -82,7 +82,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
             detailview.setOnClickListener(HomeActivity.detailViewListener);
         }else{
-            img.setBackgroundResource(R.color.colorSkyBlue);
+            img.setBackgroundResource(R.color.colorCyanMain);
             subtitle.setText("없음");
             title.setText("오늘 등록된 글이 없습니다");
             content.setText("");

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/top_titlebar"
         android:orientation="horizontal"
-        android:background="@color/colorSelectedBlue">
+        android:background="@color/colorCyanMain">
         <Button
             android:id="@+id/backbtn"
             android:layout_marginTop="10dp"
@@ -50,7 +50,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:text="hi"
-        android:textColor="@color/colorTitleBlack"
+        android:textColor="@color/colorBlueBlack"
         android:textStyle="bold"
         android:textSize="25dp"
         android:visibility="gone"/>
@@ -64,7 +64,7 @@
         android:id="@+id/article_date_tv"
         android:text="2016년 9월 22일"
         android:textSize="15dp"
-        android:textColor="@color/colorBackgroundGray"
+        android:textColor="@color/colorGray2"
         android:visibility="gone"/>
 
 

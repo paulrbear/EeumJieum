@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBgDefault"
+    android:background="@color/colorGray1"
 
     tools:context="dev.erica.hyunji.eeumjieum.JoinActivity">
     <Button
@@ -12,7 +12,7 @@
         android:layout_height="0px"
         android:layout_weight="1"
         android:paddingTop="7dp"
-        android:background="@color/colorBgDefault"
+        android:background="@color/colorGray1"
         android:drawableLeft="@drawable/ssback_b_btn"
         android:id="@+id/backbtn"
         android:layout_marginLeft="25dp"
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="5"
-        android:background="@color/colorBgDefault"
+        android:background="@color/colorGray1"
         android:src="@drawable/ssparentbtn"
         android:adjustViewBounds="true"
         android:id="@+id/parentbtn"
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="5"
-        android:background="@color/colorDarkGray"
+        android:background="@color/colorCyanDark"
         android:src="@drawable/ssworkerbtn"
         android:adjustViewBounds="true"
         android:id="@+id/workerbtn"

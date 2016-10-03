@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="@color/colorSelectedBlue">
+        android:background="@color/colorCyanMain">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -59,41 +59,41 @@
             android:layout_marginTop="60dp"
             android:orientation="horizontal">
 
-            <Button android:background="@color/colorBgDefault"
+            <Button android:background="@color/colorGray1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.3"/>
-            <Button android:background="@color/colorBackgroundGray"
+            <Button android:background="@color/colorGray2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_sun_1"/>
-            <Button android:background="@color/colorBackgroundGray"
+            <Button android:background="@color/colorGray2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_mon_1"/>
-            <Button android:background="@color/colorBackgroundGray"
+            <Button android:background="@color/colorGray2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_tue_1"/>
-            <Button android:background="@color/colorBackgroundGray"
+            <Button android:background="@color/colorGray2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_wed_1"/>
-            <Button android:background="@color/colorBackgroundGray"
+            <Button android:background="@color/colorGray2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_thu_1"/>
-            <Button android:background="@color/colorBackgroundGray"
+            <Button android:background="@color/colorGray2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_fri_1"/>
-            <Button android:background="@color/colorBackgroundGray"
+            <Button android:background="@color/colorGray2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -109,14 +109,14 @@
             android:background="@android:color/white">
 
             <Button
-                android:background="@color/colorBgDefault"
+                android:background="@color/colorGray1"
                 android:text="1000"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.3"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:textColor="@color/colorLightGray"
+                android:textColor="@color/colorBlueGray1"
                 android:textSize="8pt"
                 android:id="@+id/cal_year"/>
             <Button
@@ -125,7 +125,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorMagenta"
                 android:textSize="10pt"
                 android:id="@+id/cal_sun_2"/>
             <Button
@@ -185,14 +185,14 @@
             android:orientation="horizontal"
             android:background="@android:color/white">
             <Button
-                android:background="@color/colorBgDefault"
+                android:background="@color/colorGray1"
                 android:text="00"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_weight="1.3"
-                android:textColor="@color/colorDarkGray"
+                android:textColor="@color/colorCyanDark"
                 android:textSize="12pt"
                 android:id="@+id/cal_month"/>
             <Button
@@ -201,7 +201,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorMagenta"
                 android:textSize="12pt"
                 android:id="@+id/cal_sun_3"
                 android:onClick="onClick_calendar"/>
@@ -299,7 +299,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="305dp"
         android:orientation="vertical"
-        android:background="@color/colorBackgroundGray">
+        android:background="@color/colorGray2">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
@@ -316,7 +316,7 @@
                 android:layout_weight="1"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:textColor="@color/colorSelectedBlue"
+                android:textColor="@color/colorCyanMain"
                 android:text="현원"/>
             <TextView
                 android:layout_width="0dp"
@@ -354,7 +354,7 @@
                 android:layout_weight="1"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:textColor="@color/colorSelectedBlue"
+                android:textColor="@color/colorCyanMain"
                 android:id="@+id/normal_count_tv"
                 android:text="현원"/>
             <TextView
@@ -397,7 +397,7 @@
             android:textSize="20dp"
             android:id="@+id/btn01"
             android:onClick="onClick_01btn"
-            android:textColor="@color/colorSelectedBlue"
+            android:textColor="@color/colorCyanMain"
             android:background="@drawable/shape_radius_rect_selected_blue"/>
 
         <Button
@@ -409,7 +409,7 @@
             android:textSize="20dp"
             android:id="@+id/btn02"
             android:onClick="onClick_02btn"
-            android:textColor="@color/colorLightGray"
+            android:textColor="@color/colorBlueGray1"
             android:background="@android:color/transparent"/>
 
         <Button
@@ -421,7 +421,7 @@
             android:textSize="20dp"
             android:id="@+id/btn03"
             android:onClick="onClick_03btn"
-            android:textColor="@color/colorLightGray"
+            android:textColor="@color/colorBlueGray1"
             android:background="@android:color/transparent"/>
     </LinearLayout>
 
@@ -433,7 +433,7 @@
         android:layout_marginTop="405dp"
         android:layout_marginBottom="70dp"
         android:dividerHeight="4dp"
-        android:divider="@color/colorBackgroundGray"
+        android:divider="@color/colorGray2"
         />
 
     //second tab image grid view
@@ -486,7 +486,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="405dp"
         android:orientation="horizontal"
-        android:background="@color/colorBgDefault"
+        android:background="@color/colorGray1"
         android:id="@+id/third_tab_linearlayout"
         android:visibility="gone">
 
@@ -575,7 +575,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:onClick="onClick_roomlist"
             />
         <Button
@@ -586,7 +586,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_marginTop="50dp"
             android:onClick="onClick_roomlist"
             android:visibility="gone"
@@ -599,7 +599,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="10pt"
             android:textColor="@android:color/black"
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_marginTop="100dp"
             android:onClick="onClick_roomlist"
             android:visibility="gone"/>

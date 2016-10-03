@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/objName_item"
         android:textSize="15dp"
-        android:textColor="@color/colorLightGray"
+        android:textColor="@color/colorBlueGray1"
         android:paddingTop="5dp"
         android:paddingLeft="10dp" />
 

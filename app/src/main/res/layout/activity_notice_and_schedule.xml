@@ -18,7 +18,7 @@
             android:text="공지사항"
             android:id="@+id/tab1_btn"
             android:textStyle="bold"
-            android:textColor="@color/colorBackgroundGray"
+            android:textColor="@color/colorGray2"
             android:onClick="onClick_tab1"
             android:background="@android:color/transparent"/>
         <Button
@@ -28,7 +28,7 @@
             android:text="시설일정"
             android:id="@+id/tab2_btn"
             android:textStyle="bold"
-            android:textColor="@color/colorSelectFont"
+            android:textColor="@color/colorCyanMain"
             android:onClick="onClick_tab2"
             android:background="@android:color/transparent"/>
     </LinearLayout>
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/firsttab_listview"
-        android:divider="@color/colorBgDefault"
+        android:divider="@color/colorGray1"
         android:dividerHeight="5dp">
 
     </ListView>
@@ -63,12 +63,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:orientation="horizontal"
-                android:background="@color/colorBgDefault">
+                android:background="@color/colorGray1">
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorMagenta"
                     android:text="이전달"
                     android:drawableLeft="@drawable/ss_arr_prev"
                     android:background="@android:color/transparent"
@@ -85,7 +85,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorMagenta"
                     android:text="다음달"
                     android:drawableRight="@drawable/ss_arr_next"
                     android:background="@android:color/transparent"
@@ -99,7 +99,7 @@
             </GridView>
         </LinearLayout>
         <ListView
-            android:background="@color/colorBgDefault"
+            android:background="@color/colorGray1"
             android:layout_below="@id/secondtab_calender_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

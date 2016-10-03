@@ -38,7 +38,7 @@
         android:layout_toRightOf="@id/userImg_item"
         android:layout_below="@+id/userName_item"
         android:textSize="15dp"
-        android:textColor="@color/colorLightGray"
+        android:textColor="@color/colorBlueGray1"
         android:paddingTop="5dp"
         android:paddingLeft="10dp" />
 

@@ -21,7 +21,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -105,8 +104,8 @@ public class NoticeAndScheduleActivity extends FragmentActivity {
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setColorNormalResId(R.color.colorRedOrange);
-        fab.setColorPressedResId(R.color.colorBgDefault);
+        fab.setColorNormalResId(R.color.colorMagenta);
+        fab.setColorPressedResId(R.color.colorGray1);
 
 
 
@@ -272,15 +271,15 @@ public class NoticeAndScheduleActivity extends FragmentActivity {
         ListView tmpll = (ListView) findViewById(R.id.firsttab_listview);
 
         if(mode.equals("schedule")){
-            tab1btn.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
-            tab2btn.setTextColor(getResources().getColor(R.color.colorSelectFont));
+            tab1btn.setTextColor(getResources().getColor(R.color.colorGray2));
+            tab2btn.setTextColor(getResources().getColor(R.color.colorCyanMain));
             tmpll.setVisibility(View.GONE);
             tmprl.setVisibility(View.VISIBLE);
             //sadapter.notifyDataSetChanged();
 
         }else{
-            tab1btn.setTextColor(getResources().getColor(R.color.colorSelectFont));
-            tab2btn.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            tab1btn.setTextColor(getResources().getColor(R.color.colorCyanMain));
+            tab2btn.setTextColor(getResources().getColor(R.color.colorGray2));
             tmpll.setVisibility(View.VISIBLE);
             tmprl.setVisibility(View.GONE);
             //nadapter.notifyDataSetChanged();
@@ -471,7 +470,7 @@ public class NoticeAndScheduleActivity extends FragmentActivity {
                 holder.ex_article_iv.setImageDrawable(null);
             }
 
-            holder.day_tv.setTextColor(getResources().getColor(R.color.colorTitleBlack));
+            holder.day_tv.setTextColor(getResources().getColor(R.color.colorBlueDark));
             holder.day_tv.setBackground(null);
 
 

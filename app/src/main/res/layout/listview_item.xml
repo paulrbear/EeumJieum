@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/colorSelectedBlue"
+        android:textColor="@color/colorCyanMain"
         android:textSize="20dp"/>
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/colorLeftMenu"
+        android:textColor="@color/colorBlueGray1"
         android:textSize="15dp"
         android:layout_marginBottom="40dp"/>
 
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/colorLeftMenu"
+        android:textColor="@color/colorBlueGray1"
         android:textSize="30dp"
         android:layout_marginBottom="30dp"/>
 

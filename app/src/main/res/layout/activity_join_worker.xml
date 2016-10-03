@@ -7,7 +7,7 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:paddingTop="10dp"
-    android:background="@color/colorDarkGray"
+    android:background="@color/colorCyanDark"
     android:id="@+id/join_worker_mainview"
     tools:context="dev.erica.hyunji.eeumjieum.JoinWorkerActivity">
 
@@ -35,7 +35,7 @@
         android:layout_marginRight="40dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
         />
 
     <EditText
@@ -52,7 +52,7 @@
         android:padding="7dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_top_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
         />
 
     <EditText
@@ -70,7 +70,7 @@
         android:padding="7dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_center_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
         />
 
     <EditText
@@ -89,7 +89,7 @@
         android:padding="7dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_bottom_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
         />
 
     <Button
@@ -102,7 +102,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/shape_darkblue_btn"
-        android:textColor="@color/colorBgDefault"
+        android:textColor="@color/colorGray1"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:onClick="onClick_joinbtn" />
@@ -113,7 +113,7 @@
         android:id="@+id/backbtn"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorDarkGray"
+        android:background="@color/colorCyanDark"
         android:src="@drawable/ssback_w_btn"
         android:onClick="onClick_backbtn" />
 

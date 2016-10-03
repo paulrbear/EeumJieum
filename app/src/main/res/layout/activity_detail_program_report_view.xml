@@ -35,7 +35,7 @@
                 android:text="프로그램 일지"
                 android:textAlignment="center"
                 android:textSize="25dp"
-                android:textColor="@color/colorLightGray"/>
+                android:textColor="@color/colorBlueGray1"/>
             <Button
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -62,7 +62,7 @@
             android:text="거제 해수욕장"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:textColor="@color/colorSkyBlue"/>
+            android:textColor="@color/colorCyanMain"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
             android:layout_below="@id/title_tv"
             android:text="2016년 06월 15일 (목)"
             android:textSize="15dp"
-            android:textColor="@color/colorDarkGray"/>
+            android:textColor="@color/colorCyanDark"/>
 
     </RelativeLayout>
 
@@ -155,7 +155,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorBackgroundGray">
+                android:background="@color/colorGray2">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/comment_num_tv"
-                    android:textColor="@color/colorSelectFont"
+                    android:textColor="@color/colorCyanMain"
                     android:layout_marginLeft="5dp"
                     android:textSize="20dp"
                     android:text="0"/>
@@ -176,7 +176,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/commentlist"
-                    android:background="@color/colorBackgroundGray" >
+                    android:background="@color/colorGray2" >
 
                 </ListView>
 

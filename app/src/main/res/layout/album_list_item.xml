@@ -43,7 +43,7 @@
         android:paddingBottom="50dp"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/colorSkyBlue"
+        android:textColor="@color/colorCyanMain"
         android:text="해맞이 공원 소풍"
         android:layout_gravity="bottom"/>
 

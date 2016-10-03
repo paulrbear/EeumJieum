@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="dev.erica.hyunji.eeumjieum.SearchObservReportActivity"
-    android:background="@color/colorBackgroundGray">
+    android:background="@color/colorGray2">
 
 //top title bar
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="@color/colorSelectedBlue">
+        android:background="@color/colorCyanMain">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -61,7 +61,7 @@
         android:id="@+id/username"
         android:text="최해영 가족"
         android:textSize="20dp"
-        android:textColor="@color/colorSelectedBlue" />
+        android:textColor="@color/colorCyanMain" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
         android:layout_marginLeft="185dp"
         android:text=" | 은혜방"
         android:textSize="20dp"
-        android:textColor="@color/colorLightGray" />
+        android:textColor="@color/colorBlueGray1" />
 
     <ListView
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
         android:layout_marginTop="150dp"
         android:layout_marginBottom="70dp"
         android:dividerHeight="4dp"
-        android:divider="@color/colorBackgroundGray"/>
+        android:divider="@color/colorGray2"/>
 
 
     //bottom pop-menu (message)

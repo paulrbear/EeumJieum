@@ -159,7 +159,7 @@ public class WriteObservReport2Activity extends FragmentActivity {
             }
             if(mThumbIds.size() > 0) {
                 gridView.setVisibility(View.VISIBLE);
-                photobtn.setBackgroundResource(R.color.colorAccent);
+                photobtn.setBackgroundResource(R.color.colorMagenta);
                 mAdapter.notifyDataSetChanged();
             }
         }
@@ -213,7 +213,7 @@ public class WriteObservReport2Activity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorDDarkGray));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();
@@ -225,7 +225,7 @@ public class WriteObservReport2Activity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorDDarkGray));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();
@@ -312,110 +312,110 @@ public class WriteObservReport2Activity extends FragmentActivity {
     public void onClick_11btn(View v){
         if(btn12.isSelected()){
             btn12.setSelected(false);
-            btn12.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn12.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn13.isSelected()){
             btn13.setSelected(false);
-            btn13.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn13.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn11.setTextColor(getResources().getColor(R.color.colorSelectedBlue));
+        btn11.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn11.setSelected(true);
         mood = 1;
     }
     public void onClick_12btn(View v){
         if(btn11.isSelected()){
             btn11.setSelected(false);
-            btn11.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn11.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn13.isSelected()){
             btn13.setSelected(false);
-            btn13.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn13.setTextColor(getResources().getColor(R.color.colorGray2));
         }
 
-        btn12.setTextColor(getResources().getColor(R.color.colorLightGray));
+        btn12.setTextColor(getResources().getColor(R.color.colorBlueGray1));
         btn12.setSelected(true);
         mood = 2;
     }
     public void onClick_13btn(View v){
         if(btn11.isSelected()){
             btn11.setSelected(false);
-            btn11.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn11.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn12.isSelected()){
             btn12.setSelected(false);
-            btn12.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn12.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn13.setTextColor(getResources().getColor(R.color.colorRedOrange));
+        btn13.setTextColor(getResources().getColor(R.color.colorMagenta));
         btn13.setSelected(true);
         mood = 3;
     }
     public void onClick_21btn(View v){
         if(btn22.isSelected()){
             btn22.setSelected(false);
-            btn22.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn22.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn23.isSelected()){
             btn23.setSelected(false);
-            btn23.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn23.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn21.setTextColor(getResources().getColor(R.color.colorSelectedBlue));
+        btn21.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn21.setSelected(true);
         activity = 1;
     }
     public void onClick_22btn(View v){
         if(btn21.isSelected()){
             btn21.setSelected(false);
-            btn21.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn21.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn23.isSelected()){
             btn23.setSelected(false);
-            btn23.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn23.setTextColor(getResources().getColor(R.color.colorGray2));
         }
 
-        btn22.setTextColor(getResources().getColor(R.color.colorLightGray));
+        btn22.setTextColor(getResources().getColor(R.color.colorBlueGray1));
         btn22.setSelected(true);
         activity = 2;
     }
     public void onClick_23btn(View v){
         if(btn21.isSelected()){
             btn21.setSelected(false);
-            btn21.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn21.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn22.isSelected()){
             btn22.setSelected(false);
-            btn22.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn22.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn23.setTextColor(getResources().getColor(R.color.colorRedOrange));
+        btn23.setTextColor(getResources().getColor(R.color.colorMagenta));
         btn23.setSelected(true);
         activity = 3;
     }
     public void onClick_31btn(View v){
         if(btn32.isSelected()){
             btn32.setSelected(false);
-            btn32.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn32.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn33.isSelected()){
             btn33.setSelected(false);
-            btn33.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn33.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn31.setTextColor(getResources().getColor(R.color.colorSelectedBlue));
+        btn31.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn31.setSelected(true);
         sleep = 1;
     }
     public void onClick_32btn(View v){
         if(btn31.isSelected()){
             btn31.setSelected(false);
-            btn31.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn31.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn33.isSelected()){
             btn33.setSelected(false);
-            btn33.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn33.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn32.setTextColor(getResources().getColor(R.color.colorLightGray));
+        btn32.setTextColor(getResources().getColor(R.color.colorBlueGray1));
         btn32.setSelected(true);
         sleep = 2;
     }
     public void onClick_33btn(View v){
         if(btn31.isSelected()){
             btn31.setSelected(false);
-            btn31.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn31.setTextColor(getResources().getColor(R.color.colorGray2));
         }else if(btn32.isSelected()){
             btn32.setSelected(false);
-            btn32.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn32.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn33.setTextColor(getResources().getColor(R.color.colorRedOrange));
+        btn33.setTextColor(getResources().getColor(R.color.colorMagenta));
         btn33.setSelected(true);
         sleep = 3;
     }

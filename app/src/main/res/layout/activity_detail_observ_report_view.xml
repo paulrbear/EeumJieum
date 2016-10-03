@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/colorSelectedBlue">
+            android:background="@color/colorCyanMain">
             <Button
                 android:id="@+id/backbtn"
                 android:layout_marginTop="10dp"
@@ -69,7 +69,7 @@
                 android:textSize="15dp"
                 android:id="@+id/countPhoto"
                 android:onClick="onClick_countPhoto"
-                android:textColor="@color/colorSelectedBlue"
+                android:textColor="@color/colorCyanMain"
                 android:background="@drawable/shape_white_radius_rectangle"/>
         </FrameLayout>
             <!-- text mood/activity/sleep -->
@@ -164,7 +164,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorBackgroundGray">
+            android:background="@color/colorGray2">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -175,7 +175,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/comment_num_tv"
-                android:textColor="@color/colorSelectFont"
+                android:textColor="@color/colorCyanMain"
                 android:layout_marginLeft="5dp"
                 android:textSize="20dp"
                 android:text="0"/>
@@ -185,7 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/commentlist"
-                android:background="@color/colorBackgroundGray">
+                android:background="@color/colorGray2">
 
             </ListView>
 

@@ -178,63 +178,63 @@ public class DetailObservReportViewActivity extends Activity {
         switch (selected_day) {
             case 1:
                 tmp_btn = (Button) findViewById(R.id.cal_sun_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_sun_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_sun_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 2:
                 tmp_btn = (Button) findViewById(R.id.cal_mon_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_mon_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_mon_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 3:
                 tmp_btn = (Button) findViewById(R.id.cal_tue_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_tue_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_tue_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 4:
                 tmp_btn = (Button) findViewById(R.id.cal_wed_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_wed_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_wed_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 5:
                 tmp_btn = (Button) findViewById(R.id.cal_thu_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_thu_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_thu_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 6:
                 tmp_btn = (Button) findViewById(R.id.cal_fri_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_fri_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_fri_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 7:
                 tmp_btn = (Button) findViewById(R.id.cal_sat_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_sat_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_sat_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
@@ -261,7 +261,7 @@ public class DetailObservReportViewActivity extends Activity {
             tmp = (ImageView) findViewById(R.id.main_image_view);
             //tmp.setLayoutParams(new LinearLayout.LayoutParams(800, 400));
             tmp.setScaleType(ImageView.ScaleType.FIT_XY);
-            tmp.setImageResource(R.color.colorDarkGray);     //default image
+            tmp.setImageResource(R.color.colorCyanDark);     //default image
 
             Button tmpbtn = (Button) findViewById(R.id.countPhoto);
             tmpbtn.setVisibility(View.GONE);

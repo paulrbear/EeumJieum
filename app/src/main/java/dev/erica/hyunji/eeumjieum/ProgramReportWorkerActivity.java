@@ -77,8 +77,8 @@ public class ProgramReportWorkerActivity extends FragmentActivity {
         menudown = AnimationUtils.loadAnimation(this, R.anim.note_down_animation);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setColorNormalResId(R.color.colorRedOrange);
-        fab.setColorPressedResId(R.color.colorBgDefault);
+        fab.setColorNormalResId(R.color.colorMagenta);
+        fab.setColorPressedResId(R.color.colorGray1);
 
 
         listinit();

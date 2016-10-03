@@ -9,7 +9,7 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:paddingTop="10dp"
-    android:background="@color/colorBgDefault"
+    android:background="@color/colorGray1"
     android:id="@+id/join_parent_mainview"
     tools:context="dev.erica.hyunji.eeumjieum.JoinParentActivity">
 
@@ -37,7 +37,7 @@
         android:layout_marginRight="40dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
         />
 <!--
 android:onClick="onClick_compNumtfd"
@@ -61,7 +61,7 @@ android:onClick="onClick_repwdtfd"
         android:padding="7dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_top_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
          />
 
     <EditText
@@ -79,7 +79,7 @@ android:onClick="onClick_repwdtfd"
         android:padding="7dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_center_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
          />
 
     <EditText
@@ -98,7 +98,7 @@ android:onClick="onClick_repwdtfd"
         android:padding="7dp"
         android:gravity="center_horizontal|center_vertical"
         android:background="@drawable/shape_bottom_tfd"
-        android:textColor="@color/colorDarkGray"
+        android:textColor="@color/colorCyanDark"
         />
 
     <Button
@@ -111,7 +111,7 @@ android:onClick="onClick_repwdtfd"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/shape_darkgray_btn"
-        android:textColor="@color/colorBgDefault"
+        android:textColor="@color/colorGray1"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:onClick="onClick_joinbtn" />
@@ -122,7 +122,7 @@ android:onClick="onClick_repwdtfd"
         android:id="@+id/backbtn"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorBgDefault"
+        android:background="@color/colorGray1"
         android:src="@drawable/ssback_b_btn"
         android:onClick="onClick_backbtn" />
 

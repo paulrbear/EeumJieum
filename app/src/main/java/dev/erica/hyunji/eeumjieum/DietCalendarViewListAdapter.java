@@ -97,7 +97,7 @@ public class DietCalendarViewListAdapter extends BaseAdapter{
         //System.out.println("오늘 날짜 : " + cal.getTime());
 
         if(today == intday){
-            day.setTextColor(mContext.getResources().getColor(R.color.colorSelectFont));
+            day.setTextColor(mContext.getResources().getColor(R.color.colorCyanMain));
         }
 
         day.setText(arr[2]);

@@ -37,7 +37,7 @@
                     android:layout_alignParentRight="true"
                     android:text="완료"
                     android:textSize="20dp"
-                    android:textColor="@color/colorSelectedBlue"
+                    android:textColor="@color/colorCyanMain"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_donebtn"/>
 
@@ -60,7 +60,7 @@
                 android:text="가족명"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:textColor="@color/colorSelectedBlue"/>
+                android:textColor="@color/colorCyanMain"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 android:id="@+id/write_object_room_tfd"
                 android:text="방이름"
                 android:textSize="20dp"
-                android:textColor="@color/colorLightGray"/>
+                android:textColor="@color/colorBlueGray1"/>
         </RelativeLayout>
     </RelativeLayout>
 
@@ -92,7 +92,7 @@
             android:id="@+id/content_tfd"
             android:textSize="20dp"
             android:text="  내용을 입력하세요"
-            android:textColor="@color/colorLightGray"
+            android:textColor="@color/colorBlueGray1"
             android:background="@drawable/shape_lightgray_bottomline">
         </EditText>
         <LinearLayout
@@ -168,7 +168,7 @@
                     android:text="좋음"
                     android:textSize="20dp"
                     android:id="@+id/btn11"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_11btn"/>
                 <Button
@@ -180,7 +180,7 @@
                     android:text="보통"
                     android:textSize="20dp"
                     android:id="@+id/btn12"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_12btn"/>
                 <Button
@@ -192,7 +192,7 @@
                     android:text="나쁨"
                     android:textSize="20dp"
                     android:id="@+id/btn13"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                 android:onClick="onClick_13btn"/>
             </LinearLayout>
@@ -222,7 +222,7 @@
                     android:text="좋음"
                     android:textSize="20dp"
                     android:id="@+id/btn21"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_21btn"/>
                 <Button
@@ -234,7 +234,7 @@
                     android:text="보통"
                     android:textSize="20dp"
                     android:id="@+id/btn22"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_22btn"/>
                 <Button
@@ -246,7 +246,7 @@
                     android:text="나쁨"
                     android:textSize="20dp"
                     android:id="@+id/btn23"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_23btn"/>
             </LinearLayout>
@@ -254,7 +254,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/colorBgDefault">
+                android:background="@color/colorGray1">
                 <Button
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
@@ -276,7 +276,7 @@
                     android:text="좋음"
                     android:textSize="20dp"
                     android:id="@+id/btn31"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_31btn"/>
                 <Button
@@ -288,7 +288,7 @@
                     android:text="보통"
                     android:textSize="20dp"
                     android:id="@+id/btn32"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_32btn"/>
                 <Button
@@ -300,7 +300,7 @@
                     android:text="나쁨"
                     android:textSize="20dp"
                     android:id="@+id/btn33"
-                    android:textColor="@color/colorBackgroundGray"
+                    android:textColor="@color/colorGray2"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_33btn"/>
             </LinearLayout>

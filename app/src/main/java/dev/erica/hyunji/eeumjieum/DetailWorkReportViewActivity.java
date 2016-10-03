@@ -187,63 +187,63 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
         switch (selected_day) {
             case 1:
                 tmp_btn = (Button) findViewById(R.id.cal_sun_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_sun_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_sun_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 2:
                 tmp_btn = (Button) findViewById(R.id.cal_mon_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_mon_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_mon_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 3:
                 tmp_btn = (Button) findViewById(R.id.cal_tue_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_tue_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_tue_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 4:
                 tmp_btn = (Button) findViewById(R.id.cal_wed_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_wed_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_wed_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 5:
                 tmp_btn = (Button) findViewById(R.id.cal_thu_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_thu_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_thu_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 6:
                 tmp_btn = (Button) findViewById(R.id.cal_fri_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_fri_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_fri_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
                 break;
             case 7:
                 tmp_btn = (Button) findViewById(R.id.cal_sat_1);
-                tmp_btn.setBackgroundResource(R.color.colorRedOrange);
+                tmp_btn.setBackgroundResource(R.color.colorMagenta);
                 tmp_btn = (Button) findViewById(R.id.cal_sat_2);
-                tmp_btn.setTextColor(getResources().getColor(R.color.colorRedOrange));
+                tmp_btn.setTextColor(getResources().getColor(R.color.colorMagenta));
                 tmp_btn = (Button) findViewById(R.id.cal_sat_3);
                 tmp_btn.setTextColor(Color.WHITE);
                 tmp_btn.setBackgroundResource(R.drawable.shape_oval_date);
@@ -453,11 +453,11 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
 
             if(personaldata.get(position).getStatus() == 1){      //go out person
                 holder.enabled = false;
-                holder.userName.setTextColor(getResources().getColor(R.color.colorLightGray));
+                holder.userName.setTextColor(getResources().getColor(R.color.colorBlueGray1));
                 holder.disabledimg.setVisibility(View.VISIBLE);
             }else if(personaldata.get(position).getStatus() == 2){    //hospital
                 holder.enabled = false;
-                holder.userName.setTextColor(getResources().getColor(R.color.colorLightGray));
+                holder.userName.setTextColor(getResources().getColor(R.color.colorBlueGray1));
                 holder.disabledimg.setVisibility(View.VISIBLE);
             }else{
                 holder.enabled = true;
@@ -501,14 +501,14 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
     public void onClick_01btn(View v){
         if(btn02.isSelected()){
             btn02.setSelected(false);
-            btn02.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn02.setTextColor(getResources().getColor(R.color.colorGray2));
             btn02.setBackgroundColor(Color.TRANSPARENT);
         }else if(btn03.isSelected()){
             btn03.setSelected(false);
-            btn03.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn03.setTextColor(getResources().getColor(R.color.colorGray2));
             btn03.setBackgroundColor(Color.TRANSPARENT);
         }
-        btn01.setTextColor(getResources().getColor(R.color.colorSelectedBlue));
+        btn01.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn01.setBackgroundResource(R.drawable.shape_radius_rect_selected_blue);
         btn01.setSelected(true);
         selected_tab = 1;
@@ -517,14 +517,14 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
     public void onClick_02btn(View v){
         if(btn01.isSelected()){
             btn01.setSelected(false);
-            btn01.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn01.setTextColor(getResources().getColor(R.color.colorGray2));
             btn01.setBackgroundColor(Color.TRANSPARENT);
         }else if(btn03.isSelected()){
             btn03.setSelected(false);
-            btn03.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn03.setTextColor(getResources().getColor(R.color.colorGray2));
             btn03.setBackgroundColor(Color.TRANSPARENT);
         }
-        btn02.setTextColor(getResources().getColor(R.color.colorSelectedBlue));
+        btn02.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn02.setBackgroundResource(R.drawable.shape_radius_rect_selected_blue);
         btn02.setSelected(true);
         selected_tab = 2;
@@ -535,14 +535,14 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
     public void onClick_03btn(View v){
         if(btn01.isSelected()){
             btn01.setSelected(false);
-            btn01.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn01.setTextColor(getResources().getColor(R.color.colorGray2));
             btn01.setBackgroundColor(Color.TRANSPARENT);
         }else if(btn02.isSelected()){
             btn02.setSelected(false);
-            btn02.setTextColor(getResources().getColor(R.color.colorBackgroundGray));
+            btn02.setTextColor(getResources().getColor(R.color.colorGray2));
             btn02.setBackgroundColor(Color.TRANSPARENT);
         }
-        btn03.setTextColor(getResources().getColor(R.color.colorSelectedBlue));
+        btn03.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn03.setBackgroundResource(R.drawable.shape_radius_rect_selected_blue);
         btn03.setSelected(true);
         selected_tab = 3;

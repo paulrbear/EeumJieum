@@ -175,7 +175,7 @@ public class WriteProgramReportActivity extends FragmentActivity {
                     content_et.setVisibility(View.GONE);
 
                     gridView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-                    gridView.setBackgroundColor(getResources().getColor(R.color.colorBgDefault));
+                    gridView.setBackgroundColor(getResources().getColor(R.color.colorGray1));
                 }
 
                 gridView.setVisibility(View.VISIBLE);
@@ -258,7 +258,7 @@ public class WriteProgramReportActivity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorDDarkGray));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();
@@ -269,7 +269,7 @@ public class WriteProgramReportActivity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorDDarkGray));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();

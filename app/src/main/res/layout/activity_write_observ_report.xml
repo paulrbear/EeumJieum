@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="@color/colorSelectedBlue">
+        android:background="@color/colorCyanMain">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -56,11 +56,11 @@
             android:layout_weight="2.5"
             android:layout_height="match_parent"
             android:id="@+id/leftroom"
-            android:background="@color/colorDarkGray">
+            android:background="@color/colorCyanDark">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/colorDarkBlue"
+                android:background="@color/colorBlueDark"
                 android:text="전체"
                 android:id="@+id/totaltv"
                 android:textColor="@android:color/white"
@@ -127,7 +127,7 @@
                 android:paddingRight="30dp"
                 android:drawableRight="@drawable/sssearch"
                 android:background="@drawable/shape_search_bar_tfd"
-                android:textColor="@color/colorLightGray"
+                android:textColor="@color/colorBlueGray1"
                 android:id="@+id/search_name"
                 android:text="이름으로 검색"
                 android:focusable="false"
@@ -138,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="60dp"
-                android:divider="@color/colorLightGray"
+                android:divider="@color/colorBlueGray1"
                 android:choiceMode="singleChoice"/>
 
         </FrameLayout>
