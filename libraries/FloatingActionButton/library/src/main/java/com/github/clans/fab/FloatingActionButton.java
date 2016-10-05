@@ -117,8 +117,8 @@ public class FloatingActionButton extends ImageButton {
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
         TypedArray attr = context.obtainStyledAttributes(attrs, R.styleable.FloatingActionButton, defStyleAttr, 0);
-        mColorNormal = attr.getColor(R.styleable.FloatingActionButton_fab_colorNormal, 0xFFDA4336);
-        mColorPressed = attr.getColor(R.styleable.FloatingActionButton_fab_colorPressed, 0xFFE75043);
+        mColorNormal = attr.getColor(R.styleable.FloatingActionButton_fab_colorNormal, 0xFFFC768E);
+        mColorPressed = attr.getColor(R.styleable.FloatingActionButton_fab_colorPressed, 0xFFFFFFFF);
         mColorDisabled = attr.getColor(R.styleable.FloatingActionButton_fab_colorDisabled, 0xFFAAAAAA);
         mColorRipple = attr.getColor(R.styleable.FloatingActionButton_fab_colorRipple, 0x99FFFFFF);
         mShowShadow = attr.getBoolean(R.styleable.FloatingActionButton_fab_showShadow, true);

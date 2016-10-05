@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.github.clans.fab.FloatingActionButton;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
@@ -71,6 +72,10 @@ public class DietActivity extends FragmentActivity {
         //bottom pop-menu
         menuup = AnimationUtils.loadAnimation(this, R.anim.note_up_animation);
         menudown = AnimationUtils.loadAnimation(this, R.anim.note_down_animation);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setColorNormalResId(R.color.colorMagenta);
+        fab.setColorPressedResId(R.color.colorGray1);
 
         initlist();
 

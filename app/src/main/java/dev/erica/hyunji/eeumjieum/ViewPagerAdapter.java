@@ -1,5 +1,6 @@
 package dev.erica.hyunji.eeumjieum;
 
+
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static dev.erica.hyunji.eeumjieum.R.id.detailview_btn;
 import static dev.erica.hyunji.eeumjieum.R.id.title_tv;
 
 /**
@@ -63,19 +65,16 @@ public class ViewPagerAdapter extends PagerAdapter {
         // TODO Auto-generated method stub
         View view = inflater.inflate(R.layout.view_pager_item, null);
 
-        System.out.println("i'm here******************************************" +
-                "*********************************************************");
 
         FrameLayout img = (FrameLayout) view.findViewById(R.id.fullscreen_layout);
         TextView subtitle = (TextView) view.findViewById(R.id.sub_title_tv);
         TextView title = (TextView) view.findViewById(title_tv);
         TextView content = (TextView) view.findViewById(R.id.content_tv);
         TextView articlekey = (TextView) view.findViewById(R.id.invisible_content_key);
-        Button detailview = (Button) view.findViewById(R.id.detailview_btn);
+        Button detailview = (Button) view.findViewById(detailview_btn);
 
 
         ViewPagerItem tmp = mListData.get(position);
-        //ViewPagerItem sizeoftext = mListData.get(content_tv);
 
 
         if(mListData.size() > 0) {
@@ -128,4 +127,9 @@ public class ViewPagerAdapter extends PagerAdapter {
     public int getCurrentArticlekey(int position){
         return mListData.get(position).getArticlekey();
     }
+
+
+
+
 }
+

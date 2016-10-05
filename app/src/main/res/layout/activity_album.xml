@@ -60,13 +60,13 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="470dp">
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="530dp">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/dual_write_btn"
             android:onClick="onClick_fabbtn"
             />

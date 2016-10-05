@@ -18,29 +18,27 @@
             android:background="@color/colorCyanMain">
             <Button
                 android:id="@+id/backbtn"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="0dp"
-                android:layout_height = "40dp"
-                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_width="30dp"
+                android:layout_height = "30dp"
                 android:background="@drawable/menu" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:layout_marginTop="10dp"
-                android:text="앨범(전체)"
+                android:layout_marginTop="14dp"
+                android:text="식단표"
                 android:textAlignment="center"
-                android:textSize="25dp"
+                android:textSize="22dp"
                 android:textColor="@android:color/white"/>
             <Button
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_height = "40dp"
-                android:layout_weight="1"
-                android:background="@drawable/work_report_w"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height = "30dp"
+                android:background="@drawable/dietcalendarbtn"
                 android:onClick="onClick_calenderview"/>
         </LinearLayout>
     </FrameLayout>
@@ -56,8 +54,8 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="470dp">
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="530dp">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab"

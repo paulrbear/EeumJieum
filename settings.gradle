@@ -1,3 +1,4 @@
-include ':app'
+include ':app', 'autofittextview', ':library'
 include ':libraries:ActionBarSherlock'
 include ':libraries:SlidingMenu:library'
+project(':library').projectDir = new File('libraries/android-autofittextview/library')
