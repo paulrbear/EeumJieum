@@ -65,6 +65,11 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //Bottom Nav Indicator
+        Button temp_btn;
+        temp_btn = (Button) findViewById(R.id.homebtn);
+        temp_btn.setBackgroundResource(R.drawable.home_click);
+
         // left menu init and set the menu
         lvNavList = (ListView) findViewById(R.id.lv_activity_main_nav_list);
         flContainer = (FrameLayout) findViewById(R.id.fl_activity_main_container);
@@ -551,8 +556,6 @@ public class HomeActivity extends Activity {
             dlDrawer.closeDrawer(lvNavList);
         }
     }
-
-
 
 
     //bottom menu click listener

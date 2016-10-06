@@ -3,10 +3,12 @@
 
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="white">#FFFFFF</color>
 
     //Main Color
     <color name="colorMagenta">#FC768E</color>
     <color name="colorCyanMain">#1BCCCC</color>
+    <color name="colorCyanLight">#49d6d6</color>
     <color name="colorCyanDark">#263238</color>
 
     //Gray

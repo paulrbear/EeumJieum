@@ -126,8 +126,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/notice_btn"
-            android:layout_marginTop="430dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="560dp"
+            android:layout_marginLeft="15dp"
             android:onClick="onClick_noticebtn"
             android:visibility="gone"
             android:background="@drawable/dual_notice_btn"/>
@@ -135,19 +135,19 @@
             android:layout_width="115dp"
             android:layout_height="50dp"
             android:id="@+id/notice_label"
-            android:layout_marginTop="445dp"
-            android:layout_marginLeft="70dp"
+            android:layout_marginTop="575dp"
+            android:layout_marginLeft="75dp"
             android:text="공지사항"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@android:color/white"/>
+            android:textColor="@color/colorBlueDark"/>
 
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/schedule_btn"
-            android:layout_marginTop="360dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="490dp"
+            android:layout_marginLeft="15dp"
             android:onClick="onClick_scheduletbtn"
             android:visibility="gone"
             android:background="@drawable/dual_schedule_btn"/>
@@ -155,27 +155,28 @@
             android:layout_width="115dp"
             android:layout_height="50dp"
             android:id="@+id/schedule_label"
-            android:layout_marginTop="375dp"
-            android:layout_marginLeft="70dp"
+            android:layout_marginTop="505dp"
+            android:layout_marginLeft="75dp"
             android:text="시설일정"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@android:color/white"/>
+            android:textColor="@color/colorBlueDark"/>
 
 
     </FrameLayout>
 
     //bottom pop-menu (note)
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
 
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/program_btn"
-            android:layout_marginTop="430dp"
-            android:layout_marginLeft="230dp"
+            android:layout_marginTop="560dp"
+            android:layout_marginLeft="260dp"
             android:onClick="onClick_programbtn"
             android:visibility="gone"
             android:background="@drawable/dual_program_btn"/>
@@ -183,19 +184,20 @@
             android:layout_width="115dp"
             android:layout_height="50dp"
             android:id="@+id/program_label"
-            android:layout_marginTop="445dp"
-            android:layout_marginLeft="290dp"
+            android:layout_marginTop="575dp"
+            android:layout_marginLeft="135dp"
             android:text="프로그램일지"
+            android:textAlignment="textEnd"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@android:color/white"/>
+            android:textColor="@color/colorBlueDark"/>
 
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/observ_report_btn"
-            android:layout_marginTop="360dp"
-            android:layout_marginLeft="230dp"
+            android:layout_marginTop="490dp"
+            android:layout_marginLeft="260dp"
             android:onClick="onClick_observreportbtn"
             android:visibility="gone"
             android:background="@drawable/dual_observ_report_btn"/>
@@ -203,19 +205,19 @@
             android:layout_width="115dp"
             android:layout_height="50dp"
             android:id="@+id/observ_report_label"
-            android:layout_marginTop="375dp"
-            android:layout_marginLeft="290dp"
+            android:layout_marginTop="505dp"
+            android:layout_marginLeft="185dp"
             android:text="관찰일지"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@android:color/white"/>
+            android:textColor="@color/colorBlueDark"/>
 
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/work_report_btn"
-            android:layout_marginTop="290dp"
-            android:layout_marginLeft="230dp"
+            android:layout_marginTop="420dp"
+            android:layout_marginLeft="260dp"
             android:onClick="onClick_workreportbtn"
             android:visibility="gone"
             android:background="@drawable/dual_work_report_btn"/>
@@ -223,12 +225,12 @@
             android:layout_width="115dp"
             android:layout_height="50dp"
             android:id="@+id/work_report_label"
-            android:layout_marginTop="305dp"
-            android:layout_marginLeft="290dp"
+            android:layout_marginTop="435dp"
+            android:layout_marginLeft="185dp"
             android:text="근무일지"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@android:color/white"/>
+            android:textColor="@color/colorBlueDark"/>
 
     </FrameLayout>
 

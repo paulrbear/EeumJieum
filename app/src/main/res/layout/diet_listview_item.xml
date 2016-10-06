@@ -3,18 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/diet_day_tv"
-        android:text="5월 22일 (일)"
-        android:layout_margin="15dp"/>
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/diet_day_tv"
+            android:text="5월 22일 (일)"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/shape_bggray_bottomline1">
+        </TextView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:background="@color/white">
 
         <TextView
             android:layout_width="0dp"
@@ -22,14 +37,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="아침"
+            android:textSize="16dp"
+            android:textStyle="bold"
             android:gravity="center" />
-
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="점심"
+            android:textSize="16dp"
+            android:textStyle="bold"
             android:layout_gravity="center"
             android:gravity="center" />
 
@@ -38,6 +56,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="저녁"
+            android:textSize="16dp"
+            android:textStyle="bold"
             android:layout_gravity="center"
             android:gravity="center" />
 
@@ -46,36 +66,53 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shape_bggray_bottomline2">
 
-        <ImageView
-            android:id="@+id/morning_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/pic_20"
-            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/morning_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/pic_20"
+                android:scaleType="centerCrop"/>
 
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/afternoon_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/pic_20"
+                android:scaleType="centerCrop"/>
 
-        <ImageView
-            android:id="@+id/afternoon_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/pic_20"
-            android:scaleType="centerCrop"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/night_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/pic_20"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
 
-
-        <ImageView
-            android:id="@+id/night_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/pic_20"
-            android:scaleType="centerCrop"/>
 
     </LinearLayout>
 

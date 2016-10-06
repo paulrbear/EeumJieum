@@ -64,6 +64,11 @@ public class NoticeAndScheduleActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice_and_schedule);
 
+        //Bottom Nav Indicator
+        Button temp_btn;
+        temp_btn = (Button) findViewById(R.id.messagebtn);
+        temp_btn.setBackgroundResource(R.drawable.message_click);
+
         Intent intent = getIntent();
         savedMode = intent.getExtras().getInt("userMode");
         savedID = intent.getExtras().getString("userID");

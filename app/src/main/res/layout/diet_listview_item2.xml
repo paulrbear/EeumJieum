@@ -17,16 +17,17 @@
             android:id="@+id/day_tv"
             android:text="6"
             android:textSize="30dp"
-            android:textColor="@color/colorGray3"
+            android:textColor="@color/colorBlueGray1"
             android:gravity="center"
-            android:paddingTop="15dp"/>
+            android:paddingTop="10dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/day_of_week_tv"
             android:text="월요일"
-            android:textSize="10dp"
-            android:textColor="@color/colorBlueGray1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorGray2"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"/>
@@ -38,7 +39,7 @@
         android:layout_weight="1.2"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10dp">
+        android:layout_margin="11dp">
 
         <TextView
             android:layout_width="match_parent"

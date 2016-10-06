@@ -47,6 +47,11 @@ public class AlbumActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
+        //Bottom Nav Indicator
+        Button temp_btn;
+        temp_btn = (Button) findViewById(R.id.albumbtn);
+        temp_btn.setBackgroundResource(R.drawable.album_click);
+
         //user mode and ID setting
         Intent intent = getIntent();
         savedMode = intent.getExtras().getInt("userMode");

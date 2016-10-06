@@ -50,6 +50,11 @@ public class ProgramReportWorkerActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_program_report_worker);
 
+        //Bottom Nav Indicator
+        Button temp_btn;
+        temp_btn = (Button) findViewById(R.id.notebtn);
+        temp_btn.setBackgroundResource(R.drawable.note_click);
+
         //user mode and ID setting
         Intent intent = getIntent();
         savedMode = intent.getExtras().getInt("userMode");

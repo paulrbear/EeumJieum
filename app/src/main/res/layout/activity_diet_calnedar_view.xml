@@ -13,13 +13,13 @@
         android:background="@color/colorCyanMain">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/backbtn"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="15dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/back_w_btn"
@@ -28,15 +28,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="14dp"
                 android:text="식단표"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textColor="@android:color/white"/>
             <ImageView
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="15dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/blank"/>
@@ -51,7 +51,7 @@
         //calender linear layout
         <LinearLayout
             android:id="@+id/calender_linearlayout"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -59,17 +59,16 @@
             //month
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:orientation="horizontal"
-                android:background="@color/colorGray1">
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textColor="@color/colorMagenta"
-                    android:text=""
-                    android:drawableLeft="@drawable/ss_arr_prev"
-                    android:background="@android:color/transparent"
+                android:background="@color/colorCyanLight">
+                <ImageView
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="15dp"
+                    android:scaleType="centerInside"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ss_arr_prev"
                     android:onClick="onClick_prevbtn"/>
                 <TextView
                     android:layout_width="0dp"
@@ -77,18 +76,20 @@
                     android:layout_weight="2"
                     android:id="@+id/month_tv"
                     android:text="07월"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:gravity="center"/>
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textColor="@color/colorMagenta"
-                    android:text=""
-                    android:drawableRight="@drawable/ss_arr_next"
-                    android:background="@android:color/transparent"
+                <ImageView
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="15dp"
+                    android:scaleType="centerInside"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ss_arr_next"
                     android:onClick="onClick_nextbtn"/>
             </LinearLayout>
+
             <GridView
                 android:id="@+id/gridview"
                 android:layout_width="match_parent"
@@ -97,6 +98,7 @@
                 android:numColumns="7">
             </GridView>
         </LinearLayout>
+
         <ListView
             android:background="@color/colorGray1"
             android:layout_below="@id/calender_linearlayout"
@@ -106,9 +108,25 @@
             android:dividerHeight="1dp"
             android:id="@+id/diet_listview">
         </ListView>
+
     </RelativeLayout>
 
+    //floating action button
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="335dp"
+        android:layout_marginTop="390dp">
 
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dual_write_btn"
+            android:onClick="onClick_fabbtn"
+            />
+
+    </FrameLayout>
 
 
 

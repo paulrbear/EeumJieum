@@ -17,6 +17,7 @@ import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.github.clans.fab.FloatingActionButton;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
@@ -64,6 +65,10 @@ public class DietCalnedarViewActivity extends FragmentActivity {
 
         month_tv = (TextView) findViewById(R.id.month_tv);
         gridView = (GridView) findViewById(R.id.gridview);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setColorNormalResId(R.color.colorMagenta);
+        fab.setColorPressedResId(R.color.colorGray1);
 
         initlist();
         initcalendarView();
@@ -117,6 +122,7 @@ public class DietCalnedarViewActivity extends FragmentActivity {
         }
         adapter.notifyDataSetChanged();
     }
+
 
 
     public void initcalendarView(){
@@ -327,5 +333,15 @@ public class DietCalnedarViewActivity extends FragmentActivity {
         }
     };
 
+    //fab button (wirte btn)
+    public void onClick_fabbtn(View v){
+        Intent intent = new Intent(this, WriteDietActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        intent.putExtra("mode", "write");
+        intent.putExtra("articleKey", 0);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+    }
 
 }

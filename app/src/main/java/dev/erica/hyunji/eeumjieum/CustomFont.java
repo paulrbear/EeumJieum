@@ -13,6 +13,6 @@ public class CustomFont extends Application{
         Typekit.getInstance()
                 .addNormal(Typekit.createFromAsset(this, "SpoqaHanSans-Regular.ttf"))
                 .addBold(Typekit.createFromAsset(this, "SpoqaHanSans-Bold.ttf"))
-                .addCustom1(Typekit.createFromAsset(this, "SpoqaHanSans-Thin.ttf"));// "fonts/폰트.ttf"
+                .addItalic(Typekit.createFromAsset(this, "SpoqaHanSans-Thin.ttf"));// "fonts/폰트.ttf"
     }
 }

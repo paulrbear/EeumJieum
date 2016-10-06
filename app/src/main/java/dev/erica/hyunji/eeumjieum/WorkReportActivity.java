@@ -57,6 +57,11 @@ public class WorkReportActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work_report);
 
+        //Bottom Nav Indicator
+        Button temp_btn;
+        temp_btn = (Button) findViewById(R.id.notebtn);
+        temp_btn.setBackgroundResource(R.drawable.note_click);
+
         Intent intent = getIntent();
         savedMode = intent.getExtras().getInt("userMode");
         savedID = intent.getExtras().getString("userID");

@@ -47,6 +47,8 @@ public class DietActivity extends FragmentActivity {
         setContentView(R.layout.activity_diet);
 
 
+        //Bottom Nav Indicatorfab
+
         //user mode and ID setting
         Intent intent = getIntent();
         savedMode = intent.getExtras().getInt("userMode");
@@ -147,7 +149,6 @@ public class DietActivity extends FragmentActivity {
 
         }
     };
-
 
 
     //fab button (wirte btn)

@@ -81,7 +81,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/top_two_line"
         android:id="@+id/section_linearlayout"
-        android:background="@drawable/shape_bggray_bottomline">
+        android:background="@drawable/shape_bggray_bottomline1">
         <Button
             android:layout_width="100dp"
             android:layout_height="40dp"
@@ -124,7 +124,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_below="@id/section_linearlayout"
-        android:background="@drawable/shape_bggray_bottomline">
+        android:background="@drawable/shape_bggray_bottomline1">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -141,7 +141,7 @@
                     android:minHeight="100dp"
                     android:orientation="horizontal"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/shape_bggray_bottomline">
+                    android:background="@drawable/shape_bggray_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                     android:minHeight="100dp"
                     android:orientation="horizontal"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/shape_bggray_bottomline">
+                    android:background="@drawable/shape_bggray_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -187,7 +187,7 @@
                     android:minHeight="100dp"
                     android:orientation="horizontal"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/shape_bggray_bottomline">
+                    android:background="@drawable/shape_bggray_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -232,7 +232,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_bggray_bottomline"
+            android:background="@drawable/shape_bggray_bottomline1"
             android:id="@+id/meal_linearlayout"
             android:orientation="vertical"
             android:visibility="gone">
@@ -241,7 +241,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@drawable/shape_bggray_bottomline">
+                    android:background="@drawable/shape_bggray_bottomline1">
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -303,7 +303,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@drawable/shape_bggray_bottomline">
+                    android:background="@drawable/shape_bggray_bottomline1">
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
