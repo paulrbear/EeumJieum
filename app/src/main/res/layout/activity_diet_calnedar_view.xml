@@ -92,10 +92,12 @@
 
             <GridView
                 android:id="@+id/gridview"
+                android:layout_centerInParent="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorCyanMain"
-                android:numColumns="7">
+                android:numColumns="7"
+                android:paddingLeft="15dp">
             </GridView>
         </LinearLayout>
 

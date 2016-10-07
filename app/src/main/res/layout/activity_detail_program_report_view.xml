@@ -93,7 +93,7 @@
                     android:layout_height="200dp"
                     android:id="@+id/image"
                     android:src="@drawable/s_pic_2"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:visibility="gone"
                     />
                 <Button

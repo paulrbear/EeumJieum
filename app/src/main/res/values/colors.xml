@@ -7,8 +7,14 @@
 
     //Main Color
     <color name="colorMagenta">#FC768E</color>
+
+    <!--
     <color name="colorCyanMain">#1BCCCC</color>
     <color name="colorCyanLight">#49d6d6</color>
+    -->
+
+    <color name="colorCyanMain">#18b3b3</color>
+    <color name="colorCyanLight">#19bbbb</color>
     <color name="colorCyanDark">#263238</color>
 
     //Gray

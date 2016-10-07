@@ -124,7 +124,7 @@ public class AlbumListAdapter extends BaseAdapter{
         if(position == firstitem){
             open_photo.setVisibility(View.VISIBLE);
             open_overlay_iv.setVisibility(View.VISIBLE);
-            open_photo.setScaleType(ImageView.ScaleType.FIT_XY);
+            open_photo.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
             overlay_iv.setVisibility(View.GONE);
             background_iv.setVisibility(View.GONE);

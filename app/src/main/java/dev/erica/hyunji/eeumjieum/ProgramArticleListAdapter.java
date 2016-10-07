@@ -97,7 +97,7 @@ public class ProgramArticleListAdapter extends BaseAdapter {
         if(position == firstitem){
             //Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.image_scaleup_animation);
             photo.setVisibility(View.VISIBLE);
-            photo.setScaleType(ImageView.ScaleType.FIT_XY);
+            photo.setScaleType(ImageView.ScaleType.CENTER_CROP);
             //photo.startAnimation(animation);
         }else{
             photo.setVisibility(View.GONE);

@@ -260,7 +260,7 @@ public class DetailObservReportViewActivity extends Activity {
 
             tmp = (ImageView) findViewById(R.id.main_image_view);
             //tmp.setLayoutParams(new LinearLayout.LayoutParams(800, 400));
-            tmp.setScaleType(ImageView.ScaleType.FIT_XY);
+            tmp.setScaleType(ImageView.ScaleType.CENTER_CROP);
             tmp.setImageResource(R.color.colorCyanDark);     //default image
 
             Button tmpbtn = (Button) findViewById(R.id.countPhoto);
@@ -271,7 +271,7 @@ public class DetailObservReportViewActivity extends Activity {
             photourl = Integer.parseInt(arr[1]);
             tmp = (ImageView) findViewById(R.id.main_image_view);
             //tmp.setLayoutParams(new LinearLayout.LayoutParams(300, 200));
-            tmp.setScaleType(ImageView.ScaleType.FIT_XY);
+            tmp.setScaleType(ImageView.ScaleType.CENTER_CROP);
             tmp.setImageResource(photourl);
         }
 

@@ -47,7 +47,10 @@ public class DietActivity extends FragmentActivity {
         setContentView(R.layout.activity_diet);
 
 
-        //Bottom Nav Indicatorfab
+        //Bottom Nav Indicator
+        Button temp_btn;
+        temp_btn = (Button) findViewById(R.id.foodbtn);
+        temp_btn.setBackgroundResource(R.drawable.food_click);
 
         //user mode and ID setting
         Intent intent = getIntent();

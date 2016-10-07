@@ -103,7 +103,7 @@ public class AlbumActivity extends FragmentActivity {
         Iterator iterator = articlelist.iterator();
         int i = 0;
         while (iterator.hasNext()){
-            data.add((ProgramArticleItem) iterator.next());
+            data.add(0,(ProgramArticleItem) iterator.next());
         }
 
         adapter = new AlbumListAdapter(this, R.layout.album_list_item, data);
@@ -130,7 +130,7 @@ public class AlbumActivity extends FragmentActivity {
         Iterator iterator = articlelist.iterator();
 
         while (iterator.hasNext()){
-            data.add((ProgramArticleItem) iterator.next());
+            data.add(0,(ProgramArticleItem) iterator.next());
         }
 
         adapter.notifyDataSetChanged();

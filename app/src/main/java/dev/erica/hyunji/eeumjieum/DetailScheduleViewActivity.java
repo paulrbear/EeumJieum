@@ -118,13 +118,13 @@ public class DetailScheduleViewActivity extends FragmentActivity {
             if ((arr[0]).equals("0")) {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 tmp = (ImageView) findViewById(R.id.main_image_view);
-                tmp.setScaleType(ImageView.ScaleType.FIT_XY);
+                tmp.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 tmp.setImageResource(R.color.colorCyanDark);     //default image
             } else {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 int photourl = Integer.parseInt(arr[1]);
                 tmp = (ImageView) findViewById(R.id.main_image_view);
-                tmp.setScaleType(ImageView.ScaleType.FIT_XY);
+                tmp.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 tmp.setImageResource(photourl);
             }
 
@@ -170,13 +170,13 @@ public class DetailScheduleViewActivity extends FragmentActivity {
             if ((arr[0]).equals("0")) {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 tmp = (ImageView) findViewById(R.id.main_image_view);
-                tmp.setScaleType(ImageView.ScaleType.FIT_XY);
+                tmp.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 tmp.setImageResource(R.color.colorCyanDark);     //default image
             } else {
                 totalPhotoNum = Integer.parseInt(arr[0]);
                 int photourl = Integer.parseInt(arr[1]);
                 tmp = (ImageView) findViewById(R.id.main_image_view);
-                tmp.setScaleType(ImageView.ScaleType.FIT_XY);
+                tmp.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 tmp.setImageResource(photourl);
             }
 

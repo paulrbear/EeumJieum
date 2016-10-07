@@ -105,7 +105,7 @@
         android:layout_below="@id/day_btn"
         android:src="@color/colorGray2"
         android:id="@+id/morning_iv"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:onClick="onClick_photo"/>
     <ImageView
         android:layout_width="130dp"
@@ -116,7 +116,7 @@
         android:layout_below="@id/morning_iv"
         android:src="@color/colorGray2"
         android:id="@+id/afternoon_iv"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:onClick="onClick_photo"/>
     <ImageView
         android:layout_width="130dp"
@@ -127,7 +127,7 @@
         android:layout_below="@id/afternoon_iv"
         android:src="@color/colorGray2"
         android:id="@+id/night_iv"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:onClick="onClick_photo"/>
 
 

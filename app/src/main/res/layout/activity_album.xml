@@ -15,7 +15,8 @@
         android:dividerHeight="1dp"
         android:divider="@android:color/transparent"
         android:clipToPadding="false"
-        android:paddingBottom="500dp"/>
+        android:paddingBottom="500dp"
+        android:background="@android:color/black"/>
 
     //top title bar
     <FrameLayout
@@ -50,7 +51,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_width="30dp"
                 android:layout_height = "30dp"
-                android:background="@drawable/alarm"/>
+                android:background="@drawable/blank"/>
         </LinearLayout>
     </FrameLayout>
 
