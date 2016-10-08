@@ -66,7 +66,8 @@
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
         <activity
             android:name=".WriteProgramReportActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".SelectMultiRoomUserActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />

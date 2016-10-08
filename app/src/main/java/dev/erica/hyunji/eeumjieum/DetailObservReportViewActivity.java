@@ -405,7 +405,6 @@ public class DetailObservReportViewActivity extends Activity {
 
         int month = cal.get(Calendar.MONTH) + 1;
 
-
         String commentContent = et.getText().toString();
         MyDBHandler handler = MyDBHandler.open(getApplicationContext());
 

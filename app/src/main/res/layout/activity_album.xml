@@ -3,27 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dev.erica.hyunji.eeumjieum.AlbumActivity">
+    tools:context="dev.erica.hyunji.eeumjieum.AlbumActivity"
+    android:background="@color/colorBlueDark">
 
     //article container
     <ListView
+        android:layout_marginTop="55dp"
         android:id="@+id/articlelistview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="60dp"
         android:choiceMode="singleChoice"
         android:dividerHeight="1dp"
         android:divider="@android:color/transparent"
-        android:clipToPadding="false"
         android:paddingBottom="500dp"
-        android:background="@android:color/black"/>
+        android:clipToPadding="false"
+        android:background="@android:color/transparent"/>
 
     //top title bar
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_gravity="top"
-        android:background="@android:color/transparent">
+        android:background="@color/colorCyanMain">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="55dp"
@@ -205,7 +207,12 @@
 
         </dev.erica.hyunji.eeumjieum.BottomTabNavi>
     </FrameLayout>
-
+<!--
+<ScrollView
+    android:id="@+id/albumscroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+-->
 
 
 </FrameLayout>

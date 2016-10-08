@@ -66,9 +66,12 @@ public class WriteProgramReportActivity extends FragmentActivity {
 
         if(mode.equals("album")){
             TextView title_tv = (TextView) findViewById(R.id.title_tv);
-            title_tv.setText("앨범");
+            title_tv.setText("앨범작성");
             EditText content_et = (EditText) findViewById(R.id.content_et);
             content_et.setText("소중한 순간을 올려주세요");
+            content_et.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            content_et.setPadding(0,400,0,0);
+            content_et.setTextColor(getResources().getColor(R.color.colorGray2));
             content_et.setFocusable(false);
 
         }

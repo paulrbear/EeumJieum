@@ -31,6 +31,7 @@
     //Alpha
     <color name="colorCyanDarkAlpha">#99263238</color>
     <color name="colorBlueDarkAlpha">#9913191C</color>
+    <color name="colorBlueMediumAlpha">#6613191C</color>
 
 
 </resources>

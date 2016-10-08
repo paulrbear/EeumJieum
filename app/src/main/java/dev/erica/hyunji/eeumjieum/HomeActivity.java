@@ -421,10 +421,46 @@ public class HomeActivity extends Activity {
             int articleKey = adapter.getCurrentArticlekey(position);
             int articleType = adapter.getCurrentArticleType(position);
             Toast.makeText(v.getContext(), "article key : " + articleKey + ", type : "+ articleType, Toast.LENGTH_SHORT).show();
-
         }
     };
 
+    public void onClick_Gotobtn(View v) {
+        int position = mPager.getCurrentItem();
+        int articleKey = adapter.getCurrentArticlekey(position);
+        int articleType = adapter.getCurrentArticleType(position);
+
+        switch(articleType){
+            case 0:
+                break;
+            case 1:
+                Toast.makeText(v.getContext(),"boo",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, DetailScheduleViewActivity.class);
+                intent.putExtra("userID", savedID);
+                intent.putExtra("articleKey", articleKey);
+                intent.putExtra("mode", "Notice");
+                startActivity(intent);
+                overridePendingTransition(0,0);
+            case 2:
+                Intent intentSchedule = new Intent(getApplicationContext(), DetailScheduleViewActivity.class);
+                intentSchedule.putExtra("userID", savedID);
+                intentSchedule.putExtra("articleKey", articleKey);
+                intentSchedule.putExtra("mode", "schedule");
+                startActivity(intentSchedule);
+                overridePendingTransition(0,0);
+            case 3:
+                Intent intentObserve = new Intent(getApplicationContext(), DetailObservReportViewActivity.class);
+                intentObserve.putExtra("userID", savedID);
+                intentObserve.putExtra("articleKey", articleKey);
+                //intentObserve.putExtra("selected_date",);
+                //intentObserve.putExtra("selected_day",);
+                startActivity(intentObserve);
+                overridePendingTransition(0,0);
+
+            case 4:
+                break;
+
+        }
+    }
 
 
 ///////left navi menu setting
@@ -566,7 +602,6 @@ public class HomeActivity extends Activity {
                 break;
             case 1:
                 setAnimation(1, View.GONE, menudown);       //messagebtn menu param = 1
-
                 selected_menu = 0;
                 temp_btn = (Button) findViewById(R.id.messagebtn);
                 temp_btn.setBackgroundResource(R.drawable.message);

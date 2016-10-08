@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
-    android:layout_height="150dp"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
     android:background="@color/colorGray1">
 
     <TextView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
         android:id="@+id/dialog_tfd"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:gravity="center_horizontal"
-        android:paddingTop="25dp"
-        android:paddingBottom="25dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:lineSpacingExtra="5dp"
         android:text="작성 중인 일지를 \n 취소하시겠습니까?"/>
 
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="뒤로"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:id="@+id/btn1"
         android:layout_below="@id/dialog_tfd"
         android:layout_alignParentBottom="true"
@@ -29,16 +30,16 @@
         android:background="@drawable/shape_gray_stroke_btn" />
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="취소"
-        android:textSize="20dp"
-        android:textColor="@color/colorCyanMain"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:id="@+id/btn2"
         android:layout_toRightOf="@id/btn1"
         android:layout_below="@id/dialog_tfd"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@drawable/shape_gray_stroke_btn" />
+        android:background="@color/colorCyanMain" />
 
 </RelativeLayout>

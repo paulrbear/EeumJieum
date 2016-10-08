@@ -25,7 +25,7 @@
             android:layout_height="45dp"
             android:id="@+id/sub_title_tv"
             android:gravity="center"
-            android:text="sampe title"
+            android:text="sample title"
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
         <TextView
@@ -73,7 +73,7 @@
         android:textSize="16sp"
         android:textColor="@android:color/white"
         android:background="@drawable/shape_oval_room"
-        android:onClick="onclick_"/>
+        android:onClick="onClick_Gotobtn"/>
 
 
 </FrameLayout>

@@ -13,9 +13,9 @@
         android:visibility="gone"/>
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="90dp"
         android:id="@+id/open_overlay_iv"
-        android:src="#33263238"
+        android:background="@color/colorBlueDarkAlpha"
         android:layout_gravity="bottom"
         android:visibility="gone"/>
 
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
-        android:src = "#E6263238"
+        android:background="@color/colorBlueDarkAlpha"
         android:layout_gravity="bottom"/>
 
     <TextView
