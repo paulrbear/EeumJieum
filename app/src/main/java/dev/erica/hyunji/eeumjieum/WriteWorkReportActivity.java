@@ -25,6 +25,10 @@ import java.util.Iterator;
 public class WriteWorkReportActivity extends FragmentActivity {
     String savedID;
     int savedMode;
+
+    String mode;    //modify and write
+    int updatearticlekey;
+
     String string_selected_day;
     ArrayList<UserListItem> data = new ArrayList<>();
     ArrayList<Integer> statusdata = new ArrayList<>();      //  normal 0/ out 1/ hospital 2/ etc 3
@@ -88,6 +92,9 @@ public class WriteWorkReportActivity extends FragmentActivity {
         Intent intent = getIntent();
         savedID = intent.getExtras().getString("userID");
         savedMode = intent.getExtras().getInt("userMode");
+        mode = intent.getExtras().getString("mode");
+
+
         data = intent.getParcelableArrayListExtra("UserListItem");
         statusdata = intent.getIntegerArrayListExtra("StatusList");
         selected_room = intent.getStringExtra("selectedRoom");
@@ -132,7 +139,20 @@ public class WriteWorkReportActivity extends FragmentActivity {
         mAdapter = new ImageAdapter(this);
         gridView.setAdapter(mAdapter);
 
-        listinit();
+
+
+        if(mode.equals("modify")){
+            meal1 = intent.getExtras().getIntArray("meal1");
+            meal2 = intent.getExtras().getIntArray("meal2");
+            meal3 = intent.getExtras().getIntArray("meal3");
+            programContent = intent.getExtras().getStringArray("programContent");
+            userContent = intent.getExtras().getStringArray("userContent");
+            updatearticlekey = intent.getExtras().getInt("articleKey");
+
+            listappend();
+        }else if(mode.equals("write")){
+            listinit();
+        }
         setTabView();
     }
 
@@ -170,6 +190,27 @@ public class WriteWorkReportActivity extends FragmentActivity {
         }
 
     }
+
+    public void listappend(){
+        statuslist = new int[len];
+
+        Iterator iterator = data.iterator();
+
+        while(iterator.hasNext()){
+            UserListItem tmp = (UserListItem) iterator.next();
+            mThumbIds.add(tmp.getuImg());
+            userNamelist.add(tmp.getName());
+        }
+
+        for(int i = 0; i < len ; i++){
+            if(statusdata.get(i) == 0 || statusdata.get(i) == 3){
+                selected_user = i;
+                et.setText(userContent[i]);
+                break;
+            }
+        }
+    }
+
 
    private class ImageAdapter extends BaseAdapter {
         private LayoutInflater mInflater;
@@ -417,12 +458,21 @@ public class WriteWorkReportActivity extends FragmentActivity {
         saveCurrentViewState();
         setDBdata();
         CustomDialog dialog = new CustomDialog(this);
-        dialog.setBtn1Text("뒤로");
-        dialog.setBtn2Text("등록");
         dialog.setMode(3);      //mode 2 for work report registeration
-        dialog.setWorkReportData(selected_room, string_selected_day, normalperson, outperson, hospitalperson, etcperson, total_program_text, objectNamelist, statuslist,
-                userContent, meal1, meal2, meal3, objectImagelist);
-        dialog.setDialogMsg("근무 일지를 \n등록하시겠습니까?");
+        if(mode.equals("modify")){
+            dialog.setBtn1Text("뒤로");
+            dialog.setBtn2Text("수정");
+            dialog.setUpdatearticlekey(updatearticlekey);
+            dialog.setWorkReportData(selected_room, string_selected_day, normalperson, outperson, hospitalperson, etcperson, total_program_text, objectNamelist, statuslist,
+                    userContent, meal1, meal2, meal3, objectImagelist);
+            dialog.setDialogMsg("근무 일지를 \n수정하시겠습니까?");
+        }else {
+            dialog.setBtn1Text("뒤로");
+            dialog.setBtn2Text("등록");
+            dialog.setWorkReportData(selected_room, string_selected_day, normalperson, outperson, hospitalperson, etcperson, total_program_text, objectNamelist, statuslist,
+                    userContent, meal1, meal2, meal3, objectImagelist);
+            dialog.setDialogMsg("근무 일지를 \n등록하시겠습니까?");
+        }
         dialog.show();
     }
 

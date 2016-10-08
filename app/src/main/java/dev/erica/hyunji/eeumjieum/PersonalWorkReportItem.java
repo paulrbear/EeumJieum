@@ -50,5 +50,6 @@ public class PersonalWorkReportItem {
     public int getMeal2(){return meal2;}
     public int getMeal3(){return meal3;}
     public int getReportkey(){return reportkey;}
+    public String getObjectRoom(){return objectRoom;   }
 
 }

@@ -35,7 +35,7 @@
                 android:textSize="25dp"
                 android:textColor="@android:color/white"/>
             <Button
-                android:id="@+id/search"
+                android:id="@+id/mod_btn"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="0dp"
@@ -44,7 +44,20 @@
                 android:text="수정"
                 android:textSize="20dp"
                 android:textColor="@android:color/white"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:onClick="onClick_modbtn"/>
+            <Button
+                android:id="@+id/del_btn"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height = "40dp"
+                android:layout_weight="1"
+                android:text="삭제"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_delbtn"/>
         </LinearLayout>
     </FrameLayout>
 
