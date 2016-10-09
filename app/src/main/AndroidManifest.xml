@@ -66,8 +66,7 @@
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
         <activity
             android:name=".WriteProgramReportActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="adjustResize"/>
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
         <activity
             android:name=".SelectMultiRoomUserActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
@@ -91,13 +90,13 @@
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
         <activity
             android:name=".WriteScheduleActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity
             android:name=".DetailScheduleViewActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
         <activity
             android:name=".WriteNoticeActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity
             android:name=".AlbumActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />

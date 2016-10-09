@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,6 +53,15 @@ public class WriteProgramReportActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //set content view AFTER ABOVE sequence (to avoid crash)
+        //this.setContentView(R.layout.activity_write_program_report);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_program_report);
 
@@ -261,7 +271,7 @@ public class WriteProgramReportActivity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray4));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();
@@ -272,7 +282,7 @@ public class WriteProgramReportActivity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray4));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();

@@ -49,27 +49,31 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp">
         //calender linear layout
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/calender_linearlayout"
             android:layout_marginTop="45dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@android:color/transparent">
-            //month
+            //month select
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:background="@color/colorCyanLight">
-                <ImageView
-                    android:layout_marginTop="7dp"
-                    android:layout_marginLeft="15dp"
-                    android:scaleType="centerInside"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ss_arr_prev"
-                    android:onClick="onClick_prevbtn"/>
+                <LinearLayout
+                    android:paddingTop="7dp"
+                    android:paddingLeft="15dp"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:onClick="onClick_prevbtn">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ss_arr_prev"/>
+                </LinearLayout>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -80,30 +84,38 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
-                <ImageView
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="15dp"
-                    android:scaleType="centerInside"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ss_arr_next"
-                    android:onClick="onClick_nextbtn"/>
+                <LinearLayout
+                    android:paddingTop="7dp"
+                    android:paddingRight="15dp"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:gravity="right"
+                    android:onClick="onClick_nextbtn">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ss_arr_next"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <GridView
-                android:id="@+id/gridview"
-                android:layout_centerInParent="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorCyanMain"
-                android:numColumns="7"
-                android:paddingLeft="15dp">
-            </GridView>
-        </LinearLayout>
 
+        </RelativeLayout>
+        <GridView
+            android:layout_below="@+id/calender_linearlayout"
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCyanMain"
+            android:numColumns="7"
+            android:paddingLeft="15dp"
+            android:paddingBottom="20dp">
+        </GridView>
+
+        //floating action button
         <ListView
             android:background="@color/colorGray1"
-            android:layout_below="@id/calender_linearlayout"
+            android:layout_below="@id/gridview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:divider="@color/colorGray2"
@@ -111,24 +123,26 @@
             android:id="@+id/diet_listview">
         </ListView>
 
-    </RelativeLayout>
-
-    //floating action button
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="335dp"
-        android:layout_marginTop="390dp">
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fab"
+        <FrameLayout
+            android:layout_below="@+id/gridview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dual_write_btn"
-            android:onClick="onClick_fabbtn"
-            />
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="-40dp">
 
-    </FrameLayout>
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dual_write_btn"
+                android:onClick="onClick_fabbtn"
+                />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
 
 
 

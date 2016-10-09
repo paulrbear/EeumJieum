@@ -275,7 +275,7 @@ public class WriteNoticeActivity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray4));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();
@@ -287,7 +287,7 @@ public class WriteNoticeActivity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray4));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();

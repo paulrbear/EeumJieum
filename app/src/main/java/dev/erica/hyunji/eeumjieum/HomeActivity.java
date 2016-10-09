@@ -227,7 +227,7 @@ public class HomeActivity extends Activity {
                 }else{
                     //default image setting
                     //photo = R.drawable.pic_20;
-                    photo = R.color.colorCyanDark;
+                    photo = R.color.colorMagenta;
                 }
             }
             String subtitle = stmp.getDay();
@@ -255,14 +255,14 @@ public class HomeActivity extends Activity {
             if(arr2[0].equals(null) ) {
                 //default image setting
                 //photo = R.drawable.pic_20;
-                photo = R.color.colorCyanDark;
+                photo = R.color.colorCyanMain;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
                 }else{
                     //default image setting
                     //photo = R.drawable.pic_20;
-                    photo = R.color.colorCyanDark;
+                    photo = R.color.colorCyanMain;
                 }
             }
             String subtitle = otmp.getDay();

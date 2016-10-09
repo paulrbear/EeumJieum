@@ -6,11 +6,21 @@
     <color name="white">#FFFFFF</color>
 
     //Main Color
+    ff7471
     <color name="colorMagenta">#FC768E</color>
 
     <!--
+    <color name="colorMagenta">#FC768E</color>
+    <color name="colorCyanMain">#18b3b3</color>
+    <color name="colorCyanLight">#19bbbb</color>
+
     <color name="colorCyanMain">#1BCCCC</color>
     <color name="colorCyanLight">#49d6d6</color>
+
+
+    <color name="colorCyanMain">#01bfa5</color>
+    <color name="colorCyanLight">#19d1b2</color>
+    <color name="colorMagenta">#ff7471</color>
     -->
 
     <color name="colorCyanMain">#18b3b3</color>
@@ -20,7 +30,8 @@
     //Gray
     <color name="colorGray1">#F7F7F7</color>
     <color name="colorGray2">#D8D8D8</color>
-    <color name="colorGray3">#414042</color>
+    <color name="colorGray3">#D3D3D3</color>
+    <color name="colorGray4">#414042</color>
 
     //Blue Gray
     <color name="colorBlueGray1">#7D8488</color>
@@ -29,7 +40,7 @@
     <color name="colorBlueBlack">#13191C</color>
 
     //Alpha
-    <color name="colorCyanDarkAlpha">#99263238</color>
+    <color name="colorCyanDarkAlpha">#66263238</color>
     <color name="colorBlueDarkAlpha">#9913191C</color>
     <color name="colorBlueMediumAlpha">#6613191C</color>
 

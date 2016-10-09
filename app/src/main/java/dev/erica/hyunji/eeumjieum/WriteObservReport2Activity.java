@@ -206,14 +206,14 @@ public class WriteObservReport2Activity extends FragmentActivity {
 
                 convertView.setTag(holder);
 
-                holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(220,220));
+                holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(240,240));
                 holder.imageview.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 holder.selectedimg.setLayoutParams(new FrameLayout.LayoutParams(220,220));
                 holder.selectedimg.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray4));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();
@@ -225,7 +225,7 @@ public class WriteObservReport2Activity extends FragmentActivity {
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setBackgroundResource(R.drawable.shape_oval_photo_delete);
-                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray3));
+                holder.selectedtxt.setTextColor(getResources().getColor(R.color.colorGray4));
                 holder.selectedtxt.setText("X");
                 holder.selectedimg.bringToFront();
                 holder.selectedtxt.bringToFront();
