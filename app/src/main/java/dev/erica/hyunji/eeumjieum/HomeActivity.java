@@ -30,6 +30,8 @@ import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 
+
+
 public class HomeActivity extends Activity {
 
     //private final String[] navItems = {"Brown", "Cadet Blue", "Dark Olive Green", "Dark Orange", "Golden Rod"};
@@ -65,6 +67,7 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
         //Bottom Nav Indicator
         Button temp_btn;
         temp_btn = (Button) findViewById(R.id.homebtn);
@@ -78,7 +81,6 @@ public class HomeActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(), "open", Toast.LENGTH_SHORT).show();
                 dlDrawer.openDrawer(lvNavList);
             }
         });
@@ -147,6 +149,8 @@ public class HomeActivity extends Activity {
         mPager.setAdapter(adapter);
     }
 
+
+
     public void initViewPagerData(){
 
         ArrayList<ProgramArticleItem> p_list = new ArrayList<>();
@@ -170,6 +174,48 @@ public class HomeActivity extends Activity {
 
     }
 
+/*
+    LayoutInflater inflater;
+    View view = inflater.inflate(R.layout.view_pager_item, null);
+    ImageView overlay = (ImageView) view.findViewById(R.id.image);
+    overlay.setBackgroundResource(colorCyanDarkAlpha);
+*/
+    /*
+public void noticeArticleAdd(String day){
+    ArrayList<NoticeListItem> n_list = new ArrayList<>();
+    ViewPagerItem tmp;
+    MyDBHandler handler = MyDBHandler.open(getApplicationContext());
+
+    n_list = handler.getNoticebyDay(day);
+    Iterator iterator = n_list.iterator();
+    while (iterator.hasNext()){
+        NoticeListItem ntmp = (NoticeListItem) iterator.next();
+        int artkey = ntmp.getArticlekey();
+        int photo;
+        String tmpphoto = ntmp.getPhoto();
+        String[] arr2 = tmpphoto.split("/");
+        if(arr2[0].equals(0) ) {
+            //default image setting
+            //photo = R.drawable.pic_20;
+            photo = R.color.colorCyanDark;
+        }else{
+            if(arr2.length > 1) {
+                photo = Integer.parseInt(arr2[1]);
+            }else {
+                //default image setting
+                //photo = R.drawable.pic_20;
+                photo = R.color.colorCyanMain;
+            }
+        }
+        String subtitle = "시설공지";
+        String title = ntmp.getTitle();
+        String content = ntmp.getContent();
+
+        tmp = new ViewPagerItem(1, subtitle, title, content, artkey, photo);
+        data.add(tmp);
+    }
+}
+*/
     public void noticeArticleAdd(String day){
         ArrayList<NoticeListItem> n_list = new ArrayList<>();
         ViewPagerItem tmp;
@@ -181,26 +227,39 @@ public class HomeActivity extends Activity {
             NoticeListItem ntmp = (NoticeListItem) iterator.next();
             int artkey = ntmp.getArticlekey();
             int photo;
+            int bgcolor;
             String tmpphoto = ntmp.getPhoto();
             String[] arr2 = tmpphoto.split("/");
-            if(arr2[0].equals(null) ) {
+
+            int[] intArray = new int[arr2.length];
+            for (int i = 0; i < arr2.length; i++) {
+                String numberAsString = arr2[i];
+                intArray[i] = Integer.parseInt(numberAsString);
+            }
+
+            if(intArray[0] == 0 ) {
                 //default image setting
                 //photo = R.drawable.pic_20;
-                photo = R.color.colorCyanDark;
+                photo = 0;
+                bgcolor = R.color.colorCyanMain;
             }else{
-                if(arr2.length > 1) {
+                if(intArray.length > 1) {
+                    //ImageView layout =(ImageView) findViewById(R.id.image);
+                    //layout.setBackgroundResource(colorBlueDarkAlpha);
                     photo = Integer.parseInt(arr2[1]);
+                    bgcolor = 0;
                 }else {
                     //default image setting
                     //photo = R.drawable.pic_20;
-                    photo = R.color.colorCyanDark;
+                    photo = 0;
+                    bgcolor = R.color.colorCyanMain;
                 }
             }
             String subtitle = "시설공지";
             String title = ntmp.getTitle();
             String content = ntmp.getContent();
 
-            tmp = new ViewPagerItem(1, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(1, subtitle, title, content, artkey, photo, bgcolor);
             data.add(tmp);
         }
     }
@@ -211,34 +270,41 @@ public class HomeActivity extends Activity {
 
         s_list = handler.getSchedulebyDay(day);
         Iterator iterator = s_list.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             ScheduleListItem stmp = (ScheduleListItem) iterator.next();
             int artkey = stmp.getArticlekey();
             int photo;
+            int bgcolor;
             String tmpphoto = stmp.getPhoto();
             String[] arr2 = tmpphoto.split("/");
-            if(arr2[0].equals(null) ) {
+
+             if(arr2[0].equals(null) ) {
                 //default image setting
-                //photo = R.drawable.pic_20;
-                photo = R.color.colorCyanDark;
+                //photo = R.drawable.pic_20;'
+                 photo = 0;
+                bgcolor = R.color.colorMagenta;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
+                    bgcolor = 0;
                 }else{
                     //default image setting
                     //photo = R.drawable.pic_20;
-                    photo = R.color.colorMagenta;
+                    photo = 0;
+                    bgcolor = R.color.colorMagenta;
                 }
             }
             String subtitle = stmp.getDay();
             String title = stmp.getTitle();
             String content = stmp.getContent();
 
-            tmp = new ViewPagerItem(2, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(2, subtitle, title, content, artkey, photo, bgcolor);
             data.add(tmp);
         }
 
     }
+
+
     public void observereportArticleAdd(String day){
         ViewPagerItem tmp;
         ArrayList<ObservArticleItem> o_list = new ArrayList<>();
@@ -250,19 +316,23 @@ public class HomeActivity extends Activity {
             ObservArticleItem otmp = (ObservArticleItem) iterator.next();
             int artkey = otmp.getArticleid();
             int photo;
+            int bgcolor;
             String tmpphoto = otmp.getPhoto();
             String[] arr2 = tmpphoto.split("/");
             if(arr2[0].equals(null) ) {
                 //default image setting
                 //photo = R.drawable.pic_20;
-                photo = R.color.colorCyanMain;
+                photo = 0;
+                bgcolor = R.color.colorOrange;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
+                    bgcolor = 0;
                 }else{
                     //default image setting
                     //photo = R.drawable.pic_20;
-                    photo = R.color.colorCyanMain;
+                    photo = 0;
+                    bgcolor = R.color.colorOrange;
                 }
             }
             String subtitle = otmp.getDay();
@@ -309,7 +379,7 @@ public class HomeActivity extends Activity {
             }
 
 
-            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo, bgcolor);
             data.add(tmp);
         }
     }
@@ -324,19 +394,23 @@ public class HomeActivity extends Activity {
             ObservArticleItem otmp = (ObservArticleItem) iterator.next();
             int artkey = otmp.getArticleid();
             int photo;
+            int bgcolor;
             String tmpphoto = otmp.getPhoto();
             String[] arr2 = tmpphoto.split("/");
             if(arr2[0].equals(null) ) {
                 //default image setting
                 //photo = R.drawable.pic_20;
-                photo = R.color.colorCyanDark;
+                photo = 0;
+                bgcolor = R.color.colorCyanDark;
             }else{
                 if(arr2.length > 1) {
                     photo = Integer.parseInt(arr2[1]);
+                    bgcolor = 0;
                 }else{
                     //default image setting
                     //photo = R.drawable.pic_20;
-                    photo = R.color.colorCyanDark;
+                    photo = 0;
+                    bgcolor = R.color.colorCyanDark;
                 }
             }
             String subtitle = otmp.getDay();
@@ -383,7 +457,7 @@ public class HomeActivity extends Activity {
             }
 
 
-            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo, bgcolor);
             data.add(tmp);
         }
     }
@@ -451,8 +525,7 @@ public class HomeActivity extends Activity {
                 Intent intentObserve = new Intent(getApplicationContext(), DetailObservReportViewActivity.class);
                 intentObserve.putExtra("userID", savedID);
                 intentObserve.putExtra("articleKey", articleKey);
-                //intentObserve.putExtra("selected_date",);
-                //intentObserve.putExtra("selected_day",);
+                //intentObserve.putExtra("day", data.get(position).getDay());
                 startActivity(intentObserve);
                 overridePendingTransition(0,0);
 
@@ -533,7 +606,7 @@ public class HomeActivity extends Activity {
             addInfo.uClass = uClass;
             addInfo.mText = mText;
 
-            mListData.add(addInfo);
+            mListData.add(0,addInfo);
         }
         @Override
         public long getItemId(int position) {
