@@ -10,14 +10,16 @@ public class ViewPagerItem {
     String content;
     int articlekey;
     int main_photo;
+    int bgcolor;
 
-    ViewPagerItem(int articleType, String subtitle, String title, String content, int articlekey, int main_photo){
+    ViewPagerItem(int articleType, String subtitle, String title, String content, int articlekey, int main_photo, int bgcolor){
         this.articleType = articleType;
         this.subtitle = subtitle;
         this.title = title;
         this.content = content;
         this.articlekey = articlekey;
         this.main_photo = main_photo;
+        this.bgcolor = bgcolor;
     }
 
     public int getArticleType() {
@@ -43,4 +45,6 @@ public class ViewPagerItem {
     public int getMain_photo() {
         return main_photo;
     }
+
+    public int getBgcolor() { return bgcolor; }
 }

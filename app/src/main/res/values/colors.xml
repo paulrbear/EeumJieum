@@ -8,24 +8,13 @@
     //Main Color
     ff7471
     <color name="colorMagenta">#FC768E</color>
-
-    <!--
-    <color name="colorMagenta">#FC768E</color>
-    <color name="colorCyanMain">#18b3b3</color>
-    <color name="colorCyanLight">#19bbbb</color>
-
-    <color name="colorCyanMain">#1BCCCC</color>
-    <color name="colorCyanLight">#49d6d6</color>
-
-
-    <color name="colorCyanMain">#01bfa5</color>
-    <color name="colorCyanLight">#19d1b2</color>
-    <color name="colorMagenta">#ff7471</color>
-    -->
+    <color name="colorOrange">#FFAA33</color>
 
     <color name="colorCyanMain">#18b3b3</color>
     <color name="colorCyanLight">#19bbbb</color>
     <color name="colorCyanDark">#263238</color>
+
+
 
     //Gray
     <color name="colorGray1">#F7F7F7</color>
@@ -46,3 +35,17 @@
 
 
 </resources>
+
+    <!--
+       <color name="colorMagenta">#FC768E</color>
+       <color name="colorCyanMain">#18b3b3</color>
+       <color name="colorCyanLight">#19bbbb</color>
+
+       <color name="colorCyanMain">#1BCCCC</color>
+       <color name="colorCyanLight">#49d6d6</color>
+
+
+       <color name="colorCyanMain">#01bfa5</color>
+       <color name="colorCyanLight">#19d1b2</color>
+       <color name="colorMagenta">#ff7471</color>
+       -->
