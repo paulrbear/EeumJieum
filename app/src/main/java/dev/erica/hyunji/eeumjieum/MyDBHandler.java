@@ -114,6 +114,37 @@ public class MyDBHandler {
             db.close();
     }
 
+
+    public void updateWorkReport(int articlekey, String objectroom, String day, String normalperson, String outperson, String hospitalperson, String etcperson, String programtxt){
+
+        //UPDATE Cars SET Name='Skoda Octavia' WHERE Id=3;
+        // db.execSQL("CREATE TABLE WORKREPORT (_id INTEGER PRIMARY KEY AUTOINCREMENT, objectroom TEXT, day TEXT, normalperson TEXT,
+        // outperson TEXT, hospitalperson TEXT, etcperson TEXT, programtxt TEXT);");
+       //db.execSQL("CREATE TABLE PERSONALWORKREPORT (_id INTEGER PRIMARY KEY AUTOINCREMENT, reportkey INTEGER, objectname TEXT, objectroom TEXT, objectimg INTEGER,
+        // status INTEGER, content TEXT, meal1 INTEGER, meal2 INTEGER, meal3 INTEGER);");
+
+
+        SQLiteDatabase db = helper.getWritableDatabase();
+        db.execSQL("UPDATE WORKREPORT SET objectroom='"+ objectroom + "', day='" + day + "', normalperson='" + normalperson + "', outperson='" + outperson
+                + "', hospitalperson='" + hospitalperson + "', etcperson='" + etcperson + "', programtxt='" + programtxt + "' WHERE _id=" + articlekey + ";");
+        db.close();
+    }
+
+    public void deletePersonalWorkReportbyReportkey(int reportkey){
+        SQLiteDatabase db = helper.getWritableDatabase();
+        db.execSQL("DELETE FROM PERSONALWORKREPORT WHERE reportkey=" + reportkey + ";");
+        db.close();
+    }
+
+    public void deleteWorkReport(int articlekey){
+        SQLiteDatabase db = helper.getWritableDatabase();
+        db.execSQL("DELETE FROM WORKREPORT WHERE _id=" + articlekey + ";");
+        db.execSQL("DELETE FROM PERSONALWORKREPORT WHERE reportkey=" + articlekey + ";");
+        db.close();
+
+    }
+
+
     public ArrayList<DietListItem> getDietbyDay(String day){
         ArrayList<DietListItem> tmpArticle = new ArrayList<>();
         SQLiteDatabase db = helper.getReadableDatabase();

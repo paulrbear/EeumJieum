@@ -33,6 +33,7 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
     int dayorder;
     String title;
     int mode = 1;   //1 :observe report, 2: program report, 3: work report
+
     String normalperson;
     String outperson;
     String hosplitalperson;
@@ -45,6 +46,8 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
     int[] meal2;
     int[] meal3;
     int[] objectImg;
+
+    int updatearticlekey;
 
     String morning, afternoon, night;
     int photo1, photo2, photo3;
@@ -97,9 +100,10 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
                     WorkReportArticleItem tmp = handler.getWorkReportbyRoomDay(objectroom, day);
                     int articlekey = tmp.getArticleid();
 
-                    for(int i = 0 ; i < objectNamelist.length; i++){
+                    for (int i = 0; i < objectNamelist.length; i++) {
                         handler.insertPersonalWorkReport(articlekey, objectNamelist[i], objectroom, objectImg[i], objectStatuslist[i], objectContentlist[i], meal1[i], meal2[i], meal3[i]);
                     }
+
                     ((Activity) context).setResult(3);
                     ((Activity) context).finish();
                 }
@@ -131,6 +135,27 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
                     ((Activity) context).setResult(7);
                     ((Activity) context).finish();
                 }
+            }else if(btn2.getText().equals("수정") && mode == 3){
+                if (context instanceof Activity) {
+                    MyDBHandler handler = MyDBHandler.open(context);
+                    handler.updateWorkReport(updatearticlekey, objectroom, day, normalperson, outperson, hosplitalperson, etcperson, programtxt);
+
+                    handler.deletePersonalWorkReportbyReportkey(updatearticlekey);
+                    for (int i = 0; i < objectNamelist.length; i++) {
+                        handler.insertPersonalWorkReport(updatearticlekey, objectNamelist[i], objectroom, objectImg[i], objectStatuslist[i], objectContentlist[i], meal1[i], meal2[i], meal3[i]);
+                    }
+                    ((Activity) context).setResult(3);
+                    ((Activity) context).finish();
+                }
+            }else if(btn2.getText().equals("삭제") && mode == 3) {
+                if (context instanceof Activity) {
+                    MyDBHandler handler = MyDBHandler.open(context);
+
+                    handler.deleteWorkReport(updatearticlekey);
+
+                    ((Activity) context).setResult(-1);
+                    ((Activity) context).finish();
+                }
             }
 
         }
@@ -152,6 +177,9 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
     public void setMode(int mode){
         this.mode = mode;
     }
+
+    public void setUpdatearticlekey(int key){this.updatearticlekey = key;}
+
 
     public void setObservReportData(String objectname, String objectroom, String writer, String writerroom, int mood, int activity, int sleep, String day, int dayorder, String tfdcontent, String photo){
         this.dbName = "OBSERVE";

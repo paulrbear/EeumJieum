@@ -37,6 +37,7 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
 
     Button btn01, btn02, btn03;
     String savedID;
+    int savedMode;
     int articleKey, selected_day, selected_date;
     int selected_tab = 1;
 
@@ -47,7 +48,7 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
     ListView firsttab_listview;
     GridView secondtab_gridView;
     LinearLayout thirdtab, secondtab_iv;
-
+    String[] program_strarr;
 
     ArrayList<PersonalWorkReportItem> personaldata = new ArrayList<>();
     PersonalWorkReportAdapter adapter;
@@ -79,6 +80,7 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
 
         Intent intent = getIntent();
         savedID = intent.getExtras().getString("userID");
+        savedMode = intent.getExtras().getInt("savedMode");
         articleKey = intent.getExtras().getInt("articleKey");
         selected_day = intent.getExtras().getInt("selected_day");
         selected_date = intent.getExtras().getInt("selected_date");
@@ -116,7 +118,6 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
         menudown = AnimationUtils.loadAnimation(this, R.anim.note_down_animation);
         roomdown = AnimationUtils.loadAnimation(this, R.anim.roomlist_down_animation);
         roomup = AnimationUtils.loadAnimation(this, R.anim.roomlist_up_animation);
-
 
         mAdapter = new ImageAdapter(this);
         secondtab_gridView.setAdapter(mAdapter);
@@ -305,13 +306,14 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
             tmptv.setText("한지은 선생님, 윤고은 선생님");
         }
 
-        String[] strarr = dbresult.getProgramtxtList();
+        program_strarr = dbresult.getProgramtxtList();
         tmptv = (TextView) findViewById(R.id.morning_program_tv);
-        tmptv.setText(strarr[0]);
+        tmptv.setText(program_strarr[0]);
+
         tmptv = (TextView) findViewById(R.id.afternoon_program_tv);
-        tmptv.setText(strarr[1]);
+        tmptv.setText(program_strarr[1]);
         tmptv = (TextView) findViewById(R.id.night_program_tv);
-        tmptv.setText(strarr[2]);
+        tmptv.setText(program_strarr[2]);
     }
 
     public void setTabView(){
@@ -497,6 +499,77 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
         }
 
     }
+
+    public void onClick_modbtn(View v){
+
+       // data = intent.getParcelableArrayListExtra("UserListItem");
+        //statusdata = intent.getIntegerArrayListExtra("StatusList");
+        //selected_room = intent.getStringExtra("selectedRoom");
+        //string_selected_day = intent.getExtras().getString("selectedDay");
+
+        ArrayList<UserListItem> userlistdata = new ArrayList<>();
+        ArrayList<Integer> statusdata = new ArrayList<>();
+        int meal1[] = new int[personaldata.size()];
+        int meal2[] = new int[personaldata.size()];
+        int meal3[] = new int[personaldata.size()];
+        String usercontent[] = new String[personaldata.size()];
+
+
+        Iterator iterator = personaldata.iterator();
+        int i = 0;
+        while (iterator.hasNext()){
+            PersonalWorkReportItem tmpitem = (PersonalWorkReportItem) iterator.next();
+            String tmpname = tmpitem.getObjectName();
+            String tmproom = tmpitem.getObjectRoom();
+            int tmpimg = tmpitem.getObjectImg();
+
+            UserListItem tmpuser = new UserListItem(tmpimg, tmpname, tmproom);
+            userlistdata.add(tmpuser);
+            statusdata.add(tmpitem.getStatus());
+            meal1[i] = tmpitem.getMeal1();
+            meal2[i] = tmpitem.getMeal2();
+            meal3[i] = tmpitem.getMeal3();
+            usercontent[i] = tmpitem.getObjectContext();
+            i++;
+        }
+
+        Intent intent;
+        intent = new Intent(getApplicationContext(), WriteWorkReportActivity.class);
+
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+
+        intent.putExtra("mode", "modify");
+        intent.putExtra("articleKey", articleKey);
+        intent.putParcelableArrayListExtra("UserListItem", userlistdata);
+        intent.putExtra("StatusList", statusdata);
+
+        intent.putExtra("selectedDay", string_selected_day);
+        intent.putExtra("selectedRoom", selected_room);
+
+        intent.putExtra("meal1", meal1);
+        intent.putExtra("meal2", meal2);
+        intent.putExtra("meal3", meal3);
+        intent.putExtra("userContent", usercontent);
+        intent.putExtra("programContent", program_strarr);
+
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+
+    }
+
+    public void onClick_delbtn(View v){
+        CustomDialog dialog = new CustomDialog(this);
+        dialog.setMode(3);      //mode 2 for work report registeration
+        dialog.setBtn1Text("뒤로");
+        dialog.setBtn2Text("삭제");
+        dialog.setUpdatearticlekey(articleKey);
+        dialog.setDialogMsg("근무 일지를 \n삭제하시겠습니까?");
+
+        dialog.show();
+    }
+
+
 
     public void onClick_01btn(View v){
         if(btn02.isSelected()){

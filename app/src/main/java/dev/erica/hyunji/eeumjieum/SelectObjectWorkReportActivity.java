@@ -24,6 +24,9 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
     int savedMode;
     String string_selected_day;
 
+    String mode;//write/modify
+
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
@@ -38,8 +41,13 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
         savedID = intent.getExtras().getString("userID");
         savedMode = intent.getExtras().getInt("userMode");
         string_selected_day = intent.getExtras().getString("selectedDay");
+        mode = intent.getExtras().getString("mode");
 
-        listinint();
+        if(mode.equals("modify")){
+
+        }else {
+            listinint();
+        }
     }
 
     public void listinint(){
@@ -81,8 +89,6 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
 
         selectedRoom = 1;
         tmp_btn1.setBackgroundResource(R.drawable.shape_oval_room);
-
-
     }
 
     private AdapterView.OnItemClickListener itemClickListenerOfUserList = new AdapterView.OnItemClickListener() {
@@ -211,6 +217,7 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
         intent.putParcelableArrayListExtra("UserListItem", data);
         intent.putExtra("StatusList",statusdata);
         intent.putExtra("userMode", savedMode);
+        intent.putExtra("mode", "write");
         intent.putExtra("selectedDay", string_selected_day);
 
         switch (selectedRoom){

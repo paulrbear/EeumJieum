@@ -108,12 +108,14 @@ public class WorkReportActivity extends FragmentActivity {
             Intent intent = new Intent(getApplicationContext(), DetailWorkReportViewActivity.class);
 
             intent.putExtra("userID", savedID);
+            intent.putExtra("savedMode", savedMode);
             intent.putExtra("articleKey", articleKey);
             intent.putExtra("selected_day", selected_day);
             intent.putExtra("selected_date", selected_date);
 
 
-            startActivity(intent);
+            //startActivity(intent);
+            startActivityForResult(intent,0);
             overridePendingTransition(0,0);     //activity transition animation delete
 
         }
@@ -305,6 +307,7 @@ public class WorkReportActivity extends FragmentActivity {
         intent.putExtra("userID",savedID);
         intent.putExtra("userMode", savedMode);
         intent.putExtra("selectedDay", string_selected_day);
+        intent.putExtra("mode", "write");
         startActivityForResult(intent,0);
         overridePendingTransition(0,0);     //activity transition animation delete
         //Toast.makeText(getApplicationContext(), "fabbtn clicked", Toast.LENGTH_SHORT).show();
@@ -313,10 +316,14 @@ public class WorkReportActivity extends FragmentActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (resultCode) {
-            case 3:     //diet registration complete
+            case 3:
                 setArticleSelected(selected_date);
                 break;
+            case -1:
+                setArticleSelected(selected_date);
+                System.out.println("delete");
             default:
+                setArticleSelected(selected_date);
                 break;
         }
     }
