@@ -7,45 +7,42 @@
     tools:context="dev.erica.hyunji.eeumjieum.ObservReportWorkerActivity">
 
     //top title bar
+    //top title bar
     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
             android:background="@color/colorCyanMain">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/backbtn"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_height = "40dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/back_w_btn"
-                    android:onClick="onClick_backbtn"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:layout_marginTop="10dp"
-                    android:text="관찰일지"
-                    android:textAlignment="center"
-                    android:textSize="25dp"
-                    android:textColor="@android:color/white"/>
-                <Button
-                    android:id="@+id/search"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="0dp"
-                    android:layout_height = "40dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/search_s"
-                    android:onClick="onClick_serach"/>
-            </LinearLayout>
-        </FrameLayout>
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
+                android:layout_marginLeft="@dimen/topBar_Icon_Margin"
+                android:layout_width="@dimen/topBar_Icon_Width"
+                android:layout_height = "@dimen/topBar_Icon_Height"
+                android:background="@drawable/menu" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="@dimen/topBar_Title_Margin_Top"
+                android:text="관찰일지"
+                android:textAlignment="center"
+                android:textSize="@dimen/topBar_Title_Size"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+            <Button
+                android:id="@+id/search"
+                android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
+                android:layout_marginRight="@dimen/topBar_Icon_Margin"
+                android:layout_width="@dimen/topBar_Icon_Width"
+                android:layout_height = "@dimen/topBar_Icon_Height"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </FrameLayout>
 
     //top calender
     <LinearLayout
@@ -54,214 +51,328 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_marginTop="60dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="55dp"
             android:orientation="horizontal">
 
-            <Button android:background="@color/colorGray1"
+            <Button
+                android:background="@color/colorGray1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.3"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_sun_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_mon_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_tue_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_wed_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_thu_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_fri_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_sat_1"/>
+        </LinearLayout>
+    </LinearLayout>
+    //END OF CALENDAR TOP
 
+    REST OF THE CALENDAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="59dp"
+        android:layout_height="wrap_content">
 
+        YEAR AND MONTH
+        <LinearLayout
+            android:layout_weight="1.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            YEAR
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+                <Button
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorGray1"
+                    android:text="1000"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="18sp"
+                    android:id="@+id/cal_year"/>
+            </LinearLayout>
+            MONTH
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <Button
+                    android:layout_gravity="top"
+                    android:background="@color/colorGray1"
+                    android:text="00"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/colorCyanMain"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:id="@+id/cal_month"/>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@android:color/white">
 
-            <Button
-                android:background="@color/colorGray1"
-                android:text="1000"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.3"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textColor="@color/colorBlueGray1"
-                android:textSize="8pt"
-                android:id="@+id/cal_year"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="일"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/colorMagenta"
-                android:textSize="10pt"
-                android:id="@+id/cal_sun_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="월"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_mon_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="화"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_tue_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="수"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_wed_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="목"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_thu_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="금"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_fri_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="토"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/holo_blue_light"
-                android:textSize="10pt"
-                android:id="@+id/cal_sat_2"/>
-        </LinearLayout>
-
+        NAME AND DATE
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:orientation="vertical"
             android:background="@android:color/white">
-            <Button
-                android:background="@color/colorGray1"
-                android:text="00"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:layout_weight="1.3"
-                android:textColor="@color/colorCyanDark"
-                android:textSize="12pt"
-                android:id="@+id/cal_month"/>
-            <Button
+            NAME
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:orientation="horizontal"
                 android:background="@android:color/white"
-                android:text="4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/colorMagenta"
-                android:textSize="12pt"
-                android:id="@+id/cal_sun_3"
-                android:onClick="onClick_calendar"/>
-            <Button
+                android:gravity="bottom">
+                <Button
+                    android:background="@android:color/white"
+                    android:text="일"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorMagenta"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_sun_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="월"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_mon_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="화"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_tue_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="수"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_wed_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="목"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_thu_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="금"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_fri_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="토"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_sat_2" />
+            </LinearLayout>
+
+            DATE
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="horizontal"
                 android:background="@android:color/white"
-                android:text="5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_mon_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_tue_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_wed_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="8"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_thu_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="9"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_fri_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/holo_blue_light"
-                android:textSize="12pt"
-                android:id="@+id/cal_sat_3"
-                android:onClick="onClick_calendar"/>
+                android:paddingBottom="4dp">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/white"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorMagenta"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_sun_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/white"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_mon_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/white"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_tue_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/white"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_wed_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/white"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_thu_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/white"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_fri_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/white"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_sat_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //article container
     <ListView
@@ -326,17 +437,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="320dp"
         android:layout_marginTop="530dp">
-
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dual_write_btn"
-            android:onClick="onClick_fabbtn"
-          />
+            android:scaleType="fitCenter"
+            android:onClick="onClick_fabbtn"/>
 
-
-
+        <ImageView
+            android:layout_marginTop="-2dp"
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sswrite"/>
     </FrameLayout>
 
     //bottom pop-menu (message)
@@ -362,7 +475,7 @@
             android:text="공지사항"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
         <Button
             android:layout_width="50dp"
@@ -382,7 +495,7 @@
             android:text="시설일정"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
 
     </FrameLayout>
@@ -412,7 +525,7 @@
             android:textAlignment="textEnd"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
         <Button
             android:layout_width="50dp"
@@ -432,7 +545,7 @@
             android:text="관찰일지"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
         <Button
             android:layout_width="50dp"
@@ -452,7 +565,7 @@
             android:text="근무일지"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
     </FrameLayout>
 

@@ -5,56 +5,51 @@
     android:layout_height="match_parent"
     tools:context="dev.erica.hyunji.eeumjieum.SelectObjectWorkReportActivity">
 
-    //top title bar
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:background="@color/colorCyanMain">
+        android:layout_gravity="top">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:background="@color/colorCyanMain">
             <Button
                 android:id="@+id/cancelbtn"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="0dp"
-                android:layout_height = "40dp"
-                android:layout_weight="1"
+                android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
+                android:layout_marginLeft="@dimen/topBar_Icon_Margin"
+                android:layout_width="@dimen/topBar_Button_Width"
+                android:layout_height = "@dimen/topBar_Button_Height"
                 android:textColor="@android:color/white"
                 android:background="@android:color/transparent"
+                android:textAlignment="textStart"
                 android:text="취소"
-                android:textSize="25dp"
+                android:textSize="@dimen/topBar_Button_Size"
                 android:onClick="onClick_backbtn"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/top_title"
-                android:layout_weight="2"
-                android:layout_marginTop="10dp"
+                android:layout_weight="4"
+                android:layout_marginTop="13dp"
                 android:text="근무일지"
-                android:gravity="center"
-                android:textSize="25dp"
+                android:textAlignment="center"
+                android:textSize="@dimen/topBar_Title_Size"
+                android:textStyle="bold"
                 android:textColor="@android:color/white"/>
             <Button
                 android:id="@+id/donebtn"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_height = "40dp"
-                android:layout_weight="1"
-                android:text="완료"
+                android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
+                android:layout_marginRight="@dimen/topBar_Icon_Margin"
+                android:layout_width="@dimen/topBar_Button_Width"
+                android:layout_height = "@dimen/topBar_Button_Height"
+                android:textColor="@android:color/white"
                 android:background="@android:color/transparent"
-                android:textSize="25dp"
-                android:onClick="onClick_donebtn"
-                android:textColor="@android:color/white"/>
-
+                android:textAlignment="textEnd"
+                android:text="다음"
+                android:textSize="@dimen/topBar_Button_Size"
+                android:onClick="onClick_donebtn"/>
         </LinearLayout>
     </FrameLayout>
-
 
     //main content
     <LinearLayout
@@ -62,8 +57,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:id="@+id/content_bg"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="55dp"
         android:focusableInTouchMode="true">
 
         //left room select
@@ -73,29 +67,30 @@
             android:layout_height="match_parent"
             android:id="@+id/leftroom"
             android:background="@color/colorCyanDark">
+            <!--
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/colorBlueDark"
-                android:text="전체"
+                android:text=""
                 android:id="@+id/totaltv"
                 android:textColor="@android:color/white"
                 android:textAlignment="center"
                 android:paddingTop="12dp"
                 android:paddingBottom="10dp"
                 android:textSize="20dp"/>
+            -->
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_oval_room"
                 android:layout_below="@id/totaltv"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/room1"
                 android:text="기쁨방"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:onClick="onClick_room1btn"/>
             <Button
@@ -103,13 +98,13 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:layout_below="@id/room1"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/room2"
                 android:text="믿음방"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:onClick="onClick_room2btn"/>
             <Button
@@ -117,13 +112,13 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:layout_below="@id/room2"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/room3"
                 android:text="은혜방"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:onClick="onClick_room3btn"/>
         </RelativeLayout>
@@ -133,7 +128,7 @@
             android:layout_width="0dp"
             android:layout_weight="7.5"
             android:layout_height="wrap_content">
-
+<!--
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -148,12 +143,11 @@
                 android:text="이름으로 검색"
                 android:focusable="false"
                 android:clickable="false"/>
-
+-->
             <ListView
                 android:id="@+id/userlistview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="60dp"
                 android:divider="@color/colorBlueGray1"
                 android:choiceMode="singleChoice"/>
 

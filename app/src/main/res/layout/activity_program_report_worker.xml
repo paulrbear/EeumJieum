@@ -104,17 +104,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="320dp"
         android:layout_marginTop="530dp">
-
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dual_write_btn"
-            android:onClick="onClick_fabbtn"
-            />
+            android:scaleType="fitCenter"
+            android:onClick="onClick_fabbtn"/>
 
-
-
+        <ImageView
+            android:layout_marginTop="-2dp"
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sswrite"/>
     </FrameLayout>
 
     //bottom pop-menu (message)
@@ -140,7 +142,7 @@
             android:text="공지사항"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
         <Button
             android:layout_width="50dp"
@@ -160,7 +162,7 @@
             android:text="시설일정"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
 
     </FrameLayout>
@@ -190,7 +192,7 @@
             android:textAlignment="textEnd"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
         <Button
             android:layout_width="50dp"
@@ -210,7 +212,7 @@
             android:text="관찰일지"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
         <Button
             android:layout_width="50dp"
@@ -230,7 +232,7 @@
             android:text="근무일지"
             android:textSize="18dp"
             android:visibility="gone"
-            android:textColor="@color/colorBlueDark"/>
+            android:textColor="@color/colorBlueDark2"/>
 
     </FrameLayout>
 

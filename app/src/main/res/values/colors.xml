@@ -9,22 +9,24 @@
 
     <color name="colorOrange">#FFAA33</color>
 
-    <color name="colorMagenta">#F96A73</color>
-    <color name="colorCyanMain">#2B9BA7</color>
-    <color name="colorCyanLight">#33a0ac</color>
-    <color name="colorCyanDark">#0b272a</color>
+    <color name="colorMagenta">#FF6278</color>
+    <color name="colorCyanMain">#00ACB4</color>
+    <color name="colorCyanLight">#03B1BB</color>
+    <color name="colorCyanDark">#081d1f</color>
 
 
     //Gray
     <color name="colorGray1">#F7F7F7</color>
     <color name="colorGray2">#D8D8D8</color>
     <color name="colorGray3">#D3D3D3</color>
-    <color name="colorGray4">#414042</color>
+    <color name="colorGray4">#939393</color>
+    <color name="colorGray5">#414042</color>
 
     //Blue Gray
     <color name="colorBlueGray1">#7D8488</color>
     <color name="colorBlueGray2">#515B60</color>
-    <color name="colorBlueDark">#1D262A</color>
+    <color name="colorBlueDark1">#536368</color>
+    <color name="colorBlueDark2">#1D262A</color>
     <color name="colorBlueBlack">#13191C</color>
 
     //Alpha
@@ -42,4 +44,11 @@
 
     <color name="colorMagenta">#F5696C</color>
     <color name="colorCyanMain">#2F939D</color>
+
+
+
+    <color name="colorMagenta">#F96A73</color>
+    <color name="colorCyanMain">#2B9BA7</color>
+    <color name="colorCyanLight">#33a0ac</color>
+    <color name="colorCyanDark">#0b272a</color>
        -->

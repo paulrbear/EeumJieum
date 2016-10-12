@@ -2,21 +2,25 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/shape_bggray_bottomline2">
 
-    <ImageView android:id="@+id/userImg_item"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/userImg_item"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circular_image"
+        android:layout_marginLeft="15dp"/>
 
     <Button android:id="@+id/status_btn"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="5dip"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
         android:focusable="false"
         android:clickable="false"
         android:background="@drawable/work_report_status_normal"/>
@@ -26,12 +30,12 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/userImg_item"
         android:textSize="20dp"
-        android:paddingTop="5dp"
+        android:paddingTop="15dp"
         android:paddingLeft="10dp"/>
 
     <TextView android:id="@+id/userClass_item"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_toRightOf="@id/userImg_item"
         android:layout_below="@+id/userName_item"
         android:textSize="15dp"

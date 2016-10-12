@@ -199,6 +199,9 @@ public class WriteWorkReportActivity extends FragmentActivity {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             final ViewHolder holder;
+
+            //Image Round Circular Clip
+
             if(convertView == null){
                 holder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.gridview_userlist_item, null);
@@ -206,6 +209,8 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 holder.disabledimg = (ImageView) convertView.findViewById(R.id.userImg_disabled_item);
                 holder.selectedimg = (ImageView) convertView.findViewById(R.id.userImg_selected_item);
                 holder.userName = (TextView) convertView. findViewById(R.id.userName_item);
+
+                holder.imageview.setClipToOutline(true);
 
                 convertView.setTag(holder);
 

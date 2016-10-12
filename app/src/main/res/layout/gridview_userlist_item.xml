@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-        <ImageView
-            android:id="@+id/userImg_selected_item"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/shape_oval_photo_selected"
-            android:visibility="gone"/>
+        <FrameLayout
+            android:id="@+id/userimgrelativeview"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center">
+                <ImageView
+                    android:id="@+id/userImg_selected_item"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/shape_oval_photo_selected"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
 
-        <ImageView
-            android:id="@+id/userImg_item"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/uimg_circle_1" />
+                <ImageView
+                    android:id="@+id/userImg_item"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circular_image" />
 
-        <ImageView
-            android:id="@+id/userImg_disabled_item"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/shape_oval_disable_photo"
-            android:visibility="gone"/>
+                <ImageView
+                    android:id="@+id/userImg_disabled_item"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/shape_oval_disable_photo"
+                    android:visibility="gone"/>
+        </FrameLayout>
 
         <TextView
             android:id="@+id/userName_item"
-            android:layout_width="70dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_marginTop="55dp"
-            android:layout_marginLeft="3dp"
+            android:layout_below="@id/userimgrelativeview"
+            android:textSize="15sp"
+            android:textAlignment="center"
             android:text="박현지"/>
 
 
 
-</FrameLayout>
+</RelativeLayout>

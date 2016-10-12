@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -44,7 +43,7 @@ public class WorkReportArticleListAdater extends BaseAdapter{
         }
         WorkReportArticleItem articlelistitem = mListData.get(position);
 
-        ImageView objimg = (ImageView)convertView.findViewById(R.id.room_image);
+        //ImageView objimg = (ImageView)convertView.findViewById(R.id.room_image);
         TextView roomname = (TextView) convertView.findViewById(R.id.room_name_tv);
         TextView workername = (TextView) convertView.findViewById(R.id.worker_name_tv);
         TextView artkey = (TextView) convertView.findViewById(R.id.invisible_content_key);
@@ -55,7 +54,7 @@ public class WorkReportArticleListAdater extends BaseAdapter{
         TextView etccount = (TextView) convertView.findViewById(R.id.etc_count_tv);
 
         //default image
-        objimg.setImageResource(R.drawable.s_pic_3);
+        //objimg.setImageResource(R.drawable.s_pic_3);
         String tmp = articlelistitem.getObjectroom();
         roomname.setText(tmp);
         if(tmp.equals("은혜방")){

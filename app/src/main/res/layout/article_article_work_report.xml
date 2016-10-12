@@ -1,26 +1,125 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:background="@drawable/shape_bggray_bottomline2">
+<!--
     <ImageView android:id="@+id/room_image"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
         android:scaleType="centerCrop"
         android:src = "@drawable/s_pic_2"/>
-
-    <TextView
-        android:id="@+id/room_name_tv"
-        android:paddingLeft="20dp"
-        android:paddingBottom="20dp"
+-->
+    <LinearLayout
+        android:id="@+id/room_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/room_image"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:text="hihi"/>
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/room_name_tv"
+                android:paddingTop="23dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorBlueDark2"
+                android:textStyle="bold"
+                android:text="hihi"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:paddingEnd="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/normal_tv"
+                android:layout_toRightOf="@id/room_image"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/colorGray4"
+                android:text="현원"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/normal_count_tv"
+                android:layout_toRightOf="@id/normal_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/colorCyanMain"
+                android:text="3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/out_tv"
+                android:layout_toRightOf="@id/normal_count_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/colorGray4"
+                android:text="외출"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/out_count_tv"
+                android:layout_toRightOf="@id/out_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/colorCyanMain"
+                android:text="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hospital_tv"
+                android:layout_toRightOf="@id/out_count_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/colorGray4"
+                android:text="입원"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hospital_count_tv"
+                android:layout_toRightOf="@id/hospital_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/colorCyanMain"
+                android:text="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etc_tv"
+                android:layout_toRightOf="@id/hospital_count_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/colorGray4"
+                android:text="기타"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etc_count_tv"
+                android:layout_toRightOf="@id/etc_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/colorCyanMain"
+                android:text="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
 
     <TextView
         android:id="@+id/invisible_content_key"
@@ -32,87 +131,12 @@
         android:id="@+id/worker_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/room_name_tv"
+        android:layout_below="@id/room_name"
         android:layout_toRightOf="@id/room_image"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/colorGray4"
         android:text="생활재활교사"/>
 
-    <TextView
-       android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/normal_tv"
-        android:layout_toRightOf="@id/room_image"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="현원"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/normal_count_tv"
-        android:layout_toRightOf="@id/normal_tv"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:textColor="@color/colorCyanMain"
-        android:text="3"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/out_tv"
-        android:layout_toRightOf="@id/normal_count_tv"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:text="외출"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/out_count_tv"
-        android:layout_toRightOf="@id/out_tv"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:textColor="@color/colorCyanMain"
-        android:text="1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/hospital_tv"
-        android:layout_toRightOf="@id/out_count_tv"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:text="입원"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/hospital_count_tv"
-        android:layout_toRightOf="@id/hospital_tv"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:textColor="@color/colorCyanMain"
-        android:text="1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/etc_tv"
-        android:layout_toRightOf="@id/hospital_count_tv"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:text="기타"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/etc_count_tv"
-        android:layout_toRightOf="@id/etc_tv"
-        android:layout_below="@id/worker_name_tv"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:textColor="@color/colorCyanMain"
-        android:text="1"/>
 
 </RelativeLayout>

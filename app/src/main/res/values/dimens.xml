@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -9,10 +9,27 @@
     <dimen name = "textSizeMedium">20sp</dimen>
     <dimen name = "textSizeBig">22sp</dimen>
 
+    <!-- Top Bar -->
+    <dimen name = "topBar_Icon_Margin_Top">12dp</dimen>
+    <dimen name = "topBar_Icon_Margin">15dp</dimen>
+
+    <dimen name = "topBar_Icon_Height">30dp</dimen>
+    <dimen name = "topBar_Icon_Width">30dp</dimen>
+
+    <dimen name = "topBar_Title_Size">19sp</dimen>
+    <dimen name = "topBar_Title_Margin_Top">14dp</dimen>
+
+    <dimen name = "topBar_Button_Size">19sp</dimen>
+    <dimen name = "topBar_Button_Height">30dp</dimen>
+    <dimen name = "topBar_Button_Width">70dp</dimen>
+
+    <!-- Calendar -->
+    <dimen name = "calendar_Date_Name_Size">14sp</dimen>
+    <dimen name = "calendar_Date_Number_Size">19sp</dimen>
 
 
-
-
-
+    <!-- FAB
+    <dimen name="design_fab_image_size" tools:override="true">5dp</dimen>
+    -->
 
 </resources>

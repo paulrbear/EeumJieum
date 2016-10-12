@@ -358,7 +358,7 @@ public class FloatingActionButton extends ImageButton {
 
         int iconSize = -1;
         if (getIconDrawable() != null) {
-            iconSize = Math.max(getIconDrawable().getIntrinsicWidth(), getIconDrawable().getIntrinsicHeight());
+            iconSize = Math.max((getIconDrawable().getIntrinsicWidth()), (getIconDrawable().getIntrinsicHeight()));
         }
         int iconOffset = (getCircleSize() - (iconSize > 0 ? iconSize : mIconSize)) / 2;
         int circleInsetHorizontal = hasShadow() ? mShadowRadius + Math.abs(mShadowXOffset) : 0;

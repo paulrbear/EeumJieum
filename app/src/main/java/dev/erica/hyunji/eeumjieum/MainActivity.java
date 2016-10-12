@@ -90,7 +90,7 @@ public class MainActivity extends FragmentActivity {
                 return false;
             }
         });
-
+// TODO Find all EditText and include this code
         temp_pwd = (EditText)findViewById(R.id.pwdtfd);
         temp_pwd.setOnTouchListener(new View.OnTouchListener() {
             @Override

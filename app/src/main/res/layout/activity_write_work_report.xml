@@ -11,69 +11,63 @@
         android:layout_height="wrap_content"
         android:id="@+id/top_two_line">
         //top title bar
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:id="@+id/topbar"
-            android:layout_gravity="top"
             android:background="@drawable/shape_lightgray_bottomline">
             <Button
                 android:id="@+id/cancelbtn"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height = "40dp"
-                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
+                android:layout_marginLeft="@dimen/topBar_Icon_Margin"
+                android:layout_width="@dimen/topBar_Button_Width"
+                android:layout_height = "@dimen/topBar_Button_Height"
+                android:textColor="@color/colorBlueGray1"
+                android:background="@android:color/transparent"
+                android:textAlignment="textStart"
                 android:text="취소"
-                android:textSize="20dp"
-                android:background="@android:color/transparent"
+                android:textSize="@dimen/topBar_Button_Size"
                 android:onClick="onClick_cancelbtn"/>
-            <Button
-                android:id="@+id/savebtn"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height = "40dp"
-                android:layout_toLeftOf="@id/donebtn"
-                android:text="저장"
-                android:textSize="20dp"
-                android:textColor="@color/colorCyanMain"
-                android:background="@android:color/transparent" />
-
-            <Button
-                android:id="@+id/donebtn"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height = "40dp"
-                android:layout_alignParentRight="true"
-                android:text="완료"
-                android:textSize="20dp"
-                android:textColor="@color/colorCyanMain"
-                android:background="@android:color/transparent"
-                android:onClick="onClick_donebtn"/>
-
-        </RelativeLayout>
-
-        //write object
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/topbar"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:paddingLeft="30dp"
-            android:background="@drawable/shape_lightgray_bottomline"
-            android:onClick="onClick_objectlayout">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_weight="4"
+                android:layout_marginTop="@dimen/topBar_Title_Margin_Top"
+                android:text="근무일지 작성"
+                android:textAlignment="center"
+                android:textSize="@dimen/topBar_Title_Size"
+                android:textColor="@color/colorBlueGray1"/>
+            <Button
+                android:id="@+id/donebtn"
+                android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
+                android:layout_marginRight="@dimen/topBar_Icon_Margin"
+                android:layout_width="@dimen/topBar_Button_Width"
+                android:layout_height = "@dimen/topBar_Button_Height"
+                android:textAlignment="textEnd"
+                android:text="완료"
+                android:textSize="@dimen/topBar_Button_Size"
+                android:textColor="@color/colorCyanMain"
+                android:background="@android:color/transparent"
+                android:onClick="onClick_donebtn"/>
+        </LinearLayout>
+
+        //write object
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/topbar"
+            android:background="@drawable/shape_bggray_bottomline1"
+            android:onClick="onClick_objectlayout"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/write_room_tv"
                 android:text="방이름"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorCyanMain"/>
-        </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 
     <LinearLayout
@@ -82,42 +76,59 @@
         android:layout_below="@id/top_two_line"
         android:id="@+id/section_linearlayout"
         android:background="@drawable/shape_bggray_bottomline1">
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:text="전달사항"
-            android:textSize="20dp"
-            android:id="@+id/btn01"
-            android:onClick="onClick_01btn"
-            android:textColor="@color/colorCyanMain"
-            android:background="@drawable/shape_radius_rect_selected_blue"/>
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:text="식사량"
-            android:textSize="20dp"
-            android:id="@+id/btn02"
-            android:onClick="onClick_02btn"
-            android:textColor="@color/colorBlueGray1"
-            android:background="@android:color/transparent"/>
-
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:text="프로그램 관련"
-            android:textSize="20dp"
-            android:id="@+id/btn03"
-            android:onClick="onClick_03btn"
-            android:textColor="@color/colorBlueGray1"
-            android:background="@android:color/transparent"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:text="전달사항"
+                android:textSize="16sp"
+                android:id="@+id/btn01"
+                android:onClick="onClick_01btn"
+                android:textColor="@color/colorCyanMain"
+                android:background="@drawable/shape_radius_rect_selected_blue"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:text="식사량"
+                android:textSize="16sp"
+                android:id="@+id/btn02"
+                android:onClick="onClick_02btn"
+                android:textColor="@color/colorBlueGray1"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:text="활동내역"
+                android:textSize="16sp"
+                android:id="@+id/btn03"
+                android:onClick="onClick_03btn"
+                android:textColor="@color/colorBlueGray1"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
     </LinearLayout>
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -138,22 +149,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="100dp"
+                    android:minHeight="80dp"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/shape_bggray_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="18sp"
                         android:text="오전"/>
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="top"
                         android:id="@+id/morning_et"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
+                        android:lineSpacingExtra="4dp"
                         android:text="내용을 입력하세요"
                         android:textColor="@color/colorBlueGray1"
                         android:background="@android:color/transparent"/>
@@ -161,22 +173,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="100dp"
+                    android:minHeight="80dp"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/shape_bggray_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="18sp"
                         android:text="오후"/>
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="top"
                         android:id="@+id/afternoon_et"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
+                        android:lineSpacingExtra="4dp"
                         android:text="내용을 입력하세요"
                         android:textColor="@color/colorBlueGray1"
                         android:background="@android:color/transparent"/>
@@ -184,50 +197,59 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="100dp"
+                    android:minHeight="80dp"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/shape_bggray_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="18sp"
                         android:text="저녁"/>
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/night_et"
                         android:gravity="top"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
+                        android:lineSpacingExtra="4dp"
                         android:text="내용을 입력하세요"
                         android:textColor="@color/colorBlueGray1"
                         android:background="@android:color/transparent"/>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
+
+
+
         //image grid view
         <GridView
             android:id="@+id/img_grid_view"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
             android:columnWidth="55dp"
-            android:numColumns="auto_fit"
+            android:layout_margin="15dp"
+            android:horizontalSpacing="5dp"
             android:verticalSpacing="2dp"
-            android:horizontalSpacing="2dp"
+            android:numColumns="auto_fit"
             android:stretchMode="columnWidth"
-            android:gravity="center"
-            android:drawSelectorOnTop="true"/>
+            android:gravity="top"
+            android:drawSelectorOnTop="true"
+            android:background="@drawable/shape_bggray_bottomline1"/>
         //first tab edit text
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/status_et"
             android:text="내용을 입력하세요"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:gravity="top"
-            android:textSize="15dp"
+            android:lineSpacingExtra="4dp"
+            android:textSize="18sp"
             android:background="@android:color/transparent"/>
+
+
         //second tab meal select status button layout
         <LinearLayout
             android:layout_width="match_parent"
