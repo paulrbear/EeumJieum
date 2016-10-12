@@ -67,6 +67,8 @@ public class ExtraImageActivity extends FragmentActivity {
             tv = (TextView) findViewById(R.id.article_date_tv);
             tv.setVisibility(View.VISIBLE);
             tv.setText(intent.getStringExtra("day"));
+            tv = (TextView) findViewById(R.id.top_title);
+            tv.setText("앨범");
 
             RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             p.addRule(RelativeLayout.BELOW, R.id.article_date_tv);

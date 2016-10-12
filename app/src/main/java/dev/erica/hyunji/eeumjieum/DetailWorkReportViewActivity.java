@@ -569,8 +569,6 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
         dialog.show();
     }
 
-
-
     public void onClick_01btn(View v){
         if(btn02.isSelected()){
             btn02.setSelected(false);

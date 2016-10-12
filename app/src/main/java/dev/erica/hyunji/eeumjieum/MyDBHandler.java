@@ -715,6 +715,7 @@ public class MyDBHandler {
         return tmpArticle;
     }
 
+
     public ArrayList<ProgramArticleItem> getAlbumArticlebyDay(String day){
         ArrayList<ProgramArticleItem> tmpArticle = new ArrayList<ProgramArticleItem>();
         SQLiteDatabase db = helper.getReadableDatabase();

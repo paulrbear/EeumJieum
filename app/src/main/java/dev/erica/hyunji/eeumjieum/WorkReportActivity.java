@@ -27,25 +27,21 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-
 public class WorkReportActivity extends FragmentActivity {
 
     private Button program_btn, observ_report_btn, work_report_btn, notice_btn, schedule_btn;
     private TextView notice_lb, schedule_lb, program_lb, observ_report_lb, work_report_lb;
     private Animation menuup, menudown;
     private int selected_menu = 0;
-
     private String savedID;
     private int savedMode;
     private String string_selected_day;
-
     private int selected_day = -1;   //1:sun, 2:mon, 3:tue, 4:wed, 5:thu, 6:fri, 7:sat
     private int selected_date = 0;
     private int TOTALROOM = 3;
 
     ArrayList<WorkReportArticleItem> data = new ArrayList<>();
     WorkReportArticleListAdater adapter;
-
 
     @Override
     protected void attachBaseContext(Context newBase) {

@@ -43,11 +43,14 @@ public class HomeActivity extends Activity {
     private Animation menuup, menudown, fastmenudown;
     private int selected_menu = 0;
 
-    private String savedID;
+    private static String savedID;
     private int savedMode;
     String userName;
     String userRoom;
     int imgurl;
+
+    private static int today_day;
+    private static int today_date;
 
 
     ArrayList<ViewPagerItem> data = new ArrayList<>();
@@ -152,16 +155,23 @@ public class HomeActivity extends Activity {
         int intday = mCal.get(mCal.DAY_OF_MONTH);
 
         String day = year + "/" + month + "/" + intday;
+        today_date = intday;
+        today_day = mCal.get(mCal.DAY_OF_WEEK);
 
         noticeArticleAdd(day);
         scheduleArticleAdd(day);
-        //observereport and program report should be selected by user mode
+
+        //observereport report should be selected by user mode
         if(savedMode == 1){//parent
             observereportArticleAdd(savedID, day);
         }else{
             observereportArticleAdd(day);
         }
-        Toast.makeText(getApplicationContext(),"total item : " + data.size(), Toast.LENGTH_SHORT).show();
+
+        programreportArticleAdd(day);
+        albumArticleAdd(day);
+
+       // Toast.makeText(getApplicationContext(),"total item : " + data.size(), Toast.LENGTH_SHORT).show();
 
     }
 
@@ -195,7 +205,7 @@ public class HomeActivity extends Activity {
             String title = ntmp.getTitle();
             String content = ntmp.getContent();
 
-            tmp = new ViewPagerItem(1, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(1, subtitle, title, content, artkey, photo,tmpphoto);
             data.add(tmp);
         }
     }
@@ -229,7 +239,7 @@ public class HomeActivity extends Activity {
             String title = stmp.getTitle();
             String content = stmp.getContent();
 
-            tmp = new ViewPagerItem(2, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(2, subtitle, title, content, artkey, photo, tmpphoto);
             data.add(tmp);
         }
 
@@ -304,7 +314,7 @@ public class HomeActivity extends Activity {
             }
 
 
-            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo, tmpphoto);
             data.add(tmp);
         }
     }
@@ -378,10 +388,80 @@ public class HomeActivity extends Activity {
             }
 
 
-            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo);
+            tmp = new ViewPagerItem(3, subtitle, title, content, artkey, photo, tmpphoto);
             data.add(tmp);
         }
     }
+
+    public void programreportArticleAdd(String day){
+        ViewPagerItem tmp;
+        ArrayList<ProgramArticleItem> p_list = new ArrayList<>();
+        MyDBHandler handler = MyDBHandler.open(getApplicationContext());
+
+        p_list = handler.getProgramArticlebyDay(day);
+        Iterator iterator = p_list.iterator();
+        while (iterator.hasNext()){
+            ProgramArticleItem ptmp = (ProgramArticleItem) iterator.next();
+            int artkey = ptmp.getArticleid();
+            int photo;
+            String tmpphoto = ptmp.getPhoto();
+            String[] arr2 = tmpphoto.split("/");
+            if(arr2[0].equals(null) ) {
+                //default image setting
+                //photo = R.drawable.pic_20;
+                photo = R.color.colorDarkGray;
+            }else{
+                if(arr2.length > 1) {
+                    photo = Integer.parseInt(arr2[1]);
+                }else{
+                    //default image setting
+                    //photo = R.drawable.pic_20;
+                    photo = R.color.colorDarkGray;
+                }
+            }
+            String subtitle = ptmp.getDay();
+            String title =  ptmp.getTitle();
+            String content = ptmp.getTfdcontent();
+
+            tmp = new ViewPagerItem(4, subtitle, title, content, artkey, photo, tmpphoto);
+            data.add(tmp);
+        }
+    }
+    public void albumArticleAdd(String day){
+        ViewPagerItem tmp;
+        ArrayList<ProgramArticleItem> a_list = new ArrayList<>();
+        MyDBHandler handler = MyDBHandler.open(getApplicationContext());
+
+        a_list = handler.getAlbumArticlebyDay(day);
+        Iterator iterator = a_list.iterator();
+        while (iterator.hasNext()){
+            ProgramArticleItem atmp = (ProgramArticleItem) iterator.next();
+            int artkey = atmp.getArticleid();
+            int photo;
+            String tmpphoto = atmp.getPhoto();
+            String[] arr2 = tmpphoto.split("/");
+            if(arr2[0].equals(null) ) {
+                //default image setting
+                //photo = R.drawable.pic_20;
+                photo = R.color.colorDarkGray;
+            }else{
+                if(arr2.length > 1) {
+                    photo = Integer.parseInt(arr2[1]);
+                }else{
+                    //default image setting
+                    //photo = R.drawable.pic_20;
+                    photo = R.color.colorDarkGray;
+                }
+            }
+            String subtitle = atmp.getDay();
+            String title = atmp.getTitle();
+            String content = "";
+
+            tmp = new ViewPagerItem(5, subtitle, title, content, artkey, photo, tmpphoto);
+            data.add(tmp);
+        }
+    }
+
 
     //onClick속성이 지정된 View를 클릭했을때 자동으로 호출되는 메소드
     public void mOnClick(View v) {
@@ -415,7 +495,49 @@ public class HomeActivity extends Activity {
             int position = mPager.getCurrentItem();
             int articleKey = adapter.getCurrentArticlekey(position);
             int articleType = adapter.getCurrentArticleType(position);
-            Toast.makeText(v.getContext(), "article key : " + articleKey + ", type : "+ articleType, Toast.LENGTH_SHORT).show();
+
+            Intent intent;
+
+           // Toast.makeText(v.getContext(), "article key : " + articleKey + ", type : "+ articleType, Toast.LENGTH_SHORT).show();
+            switch (articleType){
+                case 1: //notice
+                    intent = new Intent(v.getContext(), DetailScheduleViewActivity.class);
+                    intent.putExtra("userID", savedID);
+                    intent.putExtra("mode", "notice");
+                    intent.putExtra("articleKey", articleKey);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 2: //schedule
+                    intent = new Intent(v.getContext(), DetailScheduleViewActivity.class);
+                    intent.putExtra("userID", savedID);
+                    intent.putExtra("mode", "schedule");
+                    intent.putExtra("articleKey", articleKey);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 3: //observe report
+                    intent = new Intent(v.getContext(), DetailObservReportViewActivity.class);
+                    intent.putExtra("userID", savedID);
+                    intent.putExtra("articleKey", articleKey);
+                    intent.putExtra("selected_day", today_day);
+                    intent.putExtra("selected_date", today_date);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 4: //program report
+                    intent = new Intent(v.getContext(), DetailProgramReportViewActivity.class);
+                    intent.putExtra("userID", savedID);
+                    intent.putExtra("articleKey", articleKey);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 5:
+                    intent = new Intent(v.getContext(), ExtraImageActivity.class);
+                    intent.putExtra("photo",adapter.getCurrentTotalPhoto(position));
+                    intent.putExtra("mode", "album");
+                    intent.putExtra("title", adapter.getCurrentArticleTitle(position));
+                    intent.putExtra("day", adapter.getCurrentArticleSubtitle(position));
+                    v.getContext().startActivity(intent);
+                    break;
+
+            }
 
         }
     };
@@ -551,9 +673,6 @@ public class HomeActivity extends Activity {
             dlDrawer.closeDrawer(lvNavList);
         }
     }
-
-
-
 
     //bottom menu click listener
     public void onClick_messagebtn(View v) {
@@ -846,18 +965,19 @@ public class HomeActivity extends Activity {
                 selected_menu = 0;
                 tmp_btn = (Button) findViewById(R.id.notebtn);
                 tmp_btn.setBackgroundResource(R.drawable.note);
-
+                adapter.notifyDataSetChanged();
                 break;
-            case 2:     //ProgramReportWorkerActivity finished
+            case 2:     //ProgramReportWorkerActivity finish
+                adapter.notifyDataSetChanged();
                 break;
             case 3:     //WorkReportActivity finished
+                adapter.notifyDataSetChanged();
                 break;
             default:
+                adapter.notifyDataSetChanged();
                 break;
         }
     }
-
-
 
 
     //bottom pop-menu animation

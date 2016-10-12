@@ -123,4 +123,16 @@ public class ViewPagerAdapter extends PagerAdapter {
     public int getCurrentArticlekey(int position){
         return mListData.get(position).getArticlekey();
     }
+
+    public String getCurrentTotalPhoto(int position){
+        return mListData.get(position).getTotal_photo();
+    }
+
+    public String getCurrentArticleTitle(int position){
+        return mListData.get(position).getTitle();
+    }
+    public String getCurrentArticleSubtitle(int position){
+        return mListData.get(position).getSubtitle();
+    }
+
 }
