@@ -17,7 +17,7 @@ import java.util.List;
 
 public class SelectObjectWorkReportActivity extends FragmentActivity {
     ArrayList<UserListItem> data = new ArrayList<>();
-    ArrayList<Integer> statusdata = new ArrayList<>();
+    ArrayList<Integer> statusdata = new ArrayList<>();       //  normal 0/ out 1/ hospital 2/ etc 3
     int selectedRoom = 0;
     UserListAdapter2 adapter;
     String savedID;
@@ -25,6 +25,7 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
     String string_selected_day;
 
     String mode;//write/modify
+    String current_room;
 
 
     @Override
@@ -44,10 +45,71 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
         mode = intent.getExtras().getString("mode");
 
         if(mode.equals("modify")){
-
+            current_room = intent.getExtras().getString("currentRoom");
+            statusdata = intent.getExtras().getIntegerArrayList("currentStatus");
+            listappend();
         }else {
             listinint();
         }
+    }
+
+    public void listappend(){
+        MyDBHandler handler = MyDBHandler.open(getApplicationContext());
+        List<RoomUserItem> userlist;
+
+        userlist = handler.getRoomUser(current_room);
+        ListView listView = (ListView) findViewById(R.id.userlistview);
+
+        Iterator iterator = userlist.iterator();
+
+        while (iterator.hasNext()){
+            RoomUserItem tmpuser = (RoomUserItem) iterator.next();
+            UserListItem tmp = new UserListItem(tmpuser.getuImg(), tmpuser.getName(), current_room);
+            data.add(tmp);
+        }
+
+        adapter = new UserListAdapter2(this, R.layout.room_userlist_workreport_item, data, statusdata);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(itemClickListenerOfUserList);
+
+
+        Button tmp_btn1 = (Button) findViewById(R.id.room1);
+        Button tmp_btn2 = (Button) findViewById(R.id.room2);
+        Button tmp_btn3 = (Button) findViewById(R.id.room3);
+
+        if(current_room.equals("기쁨방")){
+            selectedRoom = 1;
+            tmp_btn1.setBackgroundResource(R.drawable.shape_oval_room);
+            tmp_btn2.setBackgroundResource(android.R.color.transparent);
+            tmp_btn2.setTextColor(getResources().getColor(R.color.colorMidGray));
+            tmp_btn2.setClickable(false);
+            tmp_btn3.setBackgroundResource(android.R.color.transparent);
+            tmp_btn3.setTextColor(getResources().getColor(R.color.colorMidGray));
+            tmp_btn3.setClickable(false);
+
+        }else if(current_room.equals("믿음방")){
+            selectedRoom = 2;
+            tmp_btn2.setBackgroundResource(R.drawable.shape_oval_room);
+            tmp_btn1.setBackgroundResource(android.R.color.transparent);
+            tmp_btn1.setTextColor(getResources().getColor(R.color.colorMidGray));
+            tmp_btn1.setClickable(false);
+            tmp_btn3.setBackgroundResource(android.R.color.transparent);
+            tmp_btn3.setTextColor(getResources().getColor(R.color.colorMidGray));
+            tmp_btn3.setClickable(false);
+
+        }else if(current_room.equals("은혜방")){
+            selectedRoom = 3;
+            tmp_btn3.setBackgroundResource(R.drawable.shape_oval_room);
+            tmp_btn1.setBackgroundResource(android.R.color.transparent);
+            tmp_btn1.setTextColor(getResources().getColor(R.color.colorMidGray));
+            tmp_btn1.setClickable(false);
+            tmp_btn2.setBackgroundResource(android.R.color.transparent);
+            tmp_btn2.setTextColor(getResources().getColor(R.color.colorMidGray));
+            tmp_btn2.setClickable(false);
+
+        }
+
+
     }
 
     public void listinint(){
@@ -101,8 +163,6 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
             adapter.notifyDataSetChanged();
         }
     };
-
-
 
 
     public void listViewSet(){
@@ -210,28 +270,36 @@ public class SelectObjectWorkReportActivity extends FragmentActivity {
         finish();
     }
     public void onClick_donebtn(View v){
-        Intent intent;
-        intent = new Intent(getApplicationContext(), WriteWorkReportActivity.class);
+        if(mode.equals("modify")){
+            Intent tmp = new Intent();
+            tmp.putExtra("StatusList", statusdata);
+            setResult(200, tmp);
+            finish();
 
-        intent.putExtra("userID",savedID);
-        intent.putParcelableArrayListExtra("UserListItem", data);
-        intent.putExtra("StatusList",statusdata);
-        intent.putExtra("userMode", savedMode);
-        intent.putExtra("mode", "write");
-        intent.putExtra("selectedDay", string_selected_day);
+        }else {
+            Intent intent;
+            intent = new Intent(getApplicationContext(), WriteWorkReportActivity.class);
 
-        switch (selectedRoom){
-            case 1: intent.putExtra("selectedRoom", "기쁨방");
-                break;
-            case 2: intent.putExtra("selectedRoom", "믿음방");
-                break;
-            case 3: intent.putExtra("selectedRoom", "은혜방");
-                break;
+            intent.putExtra("userID",savedID);
+            intent.putParcelableArrayListExtra("UserListItem", data);
+            intent.putExtra("StatusList",statusdata);
+            intent.putExtra("userMode", savedMode);
+            intent.putExtra("mode", "write");
+            intent.putExtra("selectedDay", string_selected_day);
+
+            switch (selectedRoom){
+                case 1: intent.putExtra("selectedRoom", "기쁨방");
+                    break;
+                case 2: intent.putExtra("selectedRoom", "믿음방");
+                    break;
+                case 3: intent.putExtra("selectedRoom", "은혜방");
+                    break;
+            }
+
+            startActivityForResult(intent,0);
+            overridePendingTransition(0,0);     //activity transition animation delete
+
         }
-
-        startActivityForResult(intent,0);
-        overridePendingTransition(0,0);     //activity transition animation delete
-
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

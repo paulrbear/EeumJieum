@@ -88,12 +88,10 @@ public class WriteWorkReportActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_work_report);
 
-
         Intent intent = getIntent();
         savedID = intent.getExtras().getString("userID");
         savedMode = intent.getExtras().getInt("userMode");
         mode = intent.getExtras().getString("mode");
-
 
         data = intent.getParcelableArrayListExtra("UserListItem");
         statusdata = intent.getIntegerArrayListExtra("StatusList");
@@ -138,8 +136,6 @@ public class WriteWorkReportActivity extends FragmentActivity {
 
         mAdapter = new ImageAdapter(this);
         gridView.setAdapter(mAdapter);
-
-
 
         if(mode.equals("modify")){
             meal1 = intent.getExtras().getIntArray("meal1");
@@ -211,7 +207,6 @@ public class WriteWorkReportActivity extends FragmentActivity {
         }
     }
 
-
    private class ImageAdapter extends BaseAdapter {
         private LayoutInflater mInflater;
         private Context mContext;
@@ -274,13 +269,16 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 holder.disabledimg.setVisibility(View.VISIBLE);
             }else{
                 holder.enabled = true;
+                holder.disabledimg.setVisibility(View.GONE);
+                holder.userName.setTextColor(getResources().getColor(R.color.colorTitleBlack));
+            }
+
+            if(pre_selected == position){
+                holder.selectedimg.setVisibility(View.GONE);
             }
 
             if(selected_user == position){
                 holder.selectedimg.setVisibility(View.VISIBLE);
-            }
-            if(pre_selected == position){
-                holder.selectedimg.setVisibility(View.GONE);
             }
 
             holder.imageview.setOnClickListener(new View.OnClickListener() {
@@ -544,7 +542,35 @@ public class WriteWorkReportActivity extends FragmentActivity {
     }
 
     public void onClick_objectlayout(View v){
+        Intent intent = new Intent(this, SelectObjectWorkReportActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        intent.putExtra("selectedDay", string_selected_day);
+        intent.putExtra("mode", "modify");
+        intent.putExtra("currentRoom", selected_room);
+        intent.putExtra("currentStatus", statusdata);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);     //activity transition animation delete
+    }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (resultCode) {
+            case 200:     //object status list changed
+                statusdata = data.getIntegerArrayListExtra("StatusList");
+                mAdapter.pre_selected = selected_user;
+                for(int i = 0; i < len ; i++){
+                    if(statusdata.get(i) == 0 || statusdata.get(i) == 3){
+                        selected_user = i;
+                        et.setText(userContent[i]);
+                        break;
+                    }
+                }
+                mAdapter.notifyDataSetChanged();
+                break;
+            default:
+                break;
+        }
     }
 
     public void saveCurrentViewState(){

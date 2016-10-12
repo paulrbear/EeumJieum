@@ -569,6 +569,22 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
         dialog.show();
     }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (resultCode) {
+            case 3:     //work report registration complete
+                setResult(3);
+                finish();
+                break;
+            default:
+                setResult(-1);
+                finish();
+                break;
+        }
+    }
+
+
+
     public void onClick_01btn(View v){
         if(btn02.isSelected()){
             btn02.setSelected(false);
