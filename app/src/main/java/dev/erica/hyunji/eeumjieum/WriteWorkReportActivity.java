@@ -353,11 +353,11 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 break;
             case 1:
                 btn11.setSelected(true);
-                btn11.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn11.setTextColor(getResources().getColor(R.color.colorCyanMain));
                 break;
             case 2:
                 btn12.setSelected(true);
-                btn12.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn12.setTextColor(getResources().getColor(R.color.colorBlueGray2));
                 break;
             case 3:
                 btn13.setSelected(true);
@@ -365,7 +365,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 break;
             case 4:
                 btn14.setSelected(true);
-                btn14.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn14.setTextColor(getResources().getColor(R.color.colorOrange));
                 break;
         }
 
@@ -374,11 +374,11 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 break;
             case 1:
                 btn21.setSelected(true);
-                btn21.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn21.setTextColor(getResources().getColor(R.color.colorCyanMain));
                 break;
             case 2:
                 btn22.setSelected(true);
-                btn22.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn22.setTextColor(getResources().getColor(R.color.colorBlueGray2));
                 break;
             case 3:
                 btn23.setSelected(true);
@@ -386,7 +386,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 break;
             case 4:
                 btn24.setSelected(true);
-                btn24.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn24.setTextColor(getResources().getColor(R.color.colorOrange));
                 break;
         }
 
@@ -395,11 +395,11 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 break;
             case 1:
                 btn31.setSelected(true);
-                btn31.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn31.setTextColor(getResources().getColor(R.color.colorCyanMain));
                 break;
             case 2:
                 btn32.setSelected(true);
-                btn32.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn32.setTextColor(getResources().getColor(R.color.colorBlueGray2));
                 break;
             case 3:
                 btn33.setSelected(true);
@@ -407,7 +407,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 break;
             case 4:
                 btn34.setSelected(true);
-                btn34.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn34.setTextColor(getResources().getColor(R.color.colorOrange));
                 break;
         }
     }
@@ -570,12 +570,12 @@ public class WriteWorkReportActivity extends FragmentActivity {
 
         switch(meal1[selected_user]){
             case 1:
-                btn11.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn11.setTextColor(getResources().getColor(R.color.colorCyanMain));
                 btn11.setSelected(true);
                 meal_morning = 1;
                 break;
             case 2:
-                btn12.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn12.setTextColor(getResources().getColor(R.color.colorOrange));
                 btn12.setSelected(true);
                 meal_morning = 2;
                 break;
@@ -585,19 +585,19 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 meal_morning = 3;
                 break;
             case 4:
-                btn14.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn14.setTextColor(getResources().getColor(R.color.colorBlueDark2));
                 btn14.setSelected(true);
                 meal_morning = 4;
                 break;
         }
         switch(meal2[selected_user]){
             case 1:
-                btn21.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn21.setTextColor(getResources().getColor(R.color.colorCyanMain));
                 btn21.setSelected(true);
                 meal_afternoon = 1;
                 break;
             case 2:
-                btn22.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn22.setTextColor(getResources().getColor(R.color.colorOrange));
                 btn22.setSelected(true);
                 meal_afternoon = 2;
                 break;
@@ -607,19 +607,19 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 meal_afternoon = 3;
                 break;
             case 4:
-                btn24.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn24.setTextColor(getResources().getColor(R.color.colorBlueDark2));
                 btn24.setSelected(true);
                 meal_afternoon = 4;
                 break;
         }
         switch(meal3[selected_user]){
             case 1:
-                btn31.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn31.setTextColor(getResources().getColor(R.color.colorCyanMain));
                 btn31.setSelected(true);
                 meal_night = 1;
                 break;
             case 2:
-                btn32.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn32.setTextColor(getResources().getColor(R.color.colorOrange));
                 btn32.setSelected(true);
                 meal_night = 2;
                 break;
@@ -629,7 +629,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
                 meal_night = 3;
                 break;
             case 4:
-                btn34.setTextColor(getResources().getColor(R.color.colorMagenta));
+                btn34.setTextColor(getResources().getColor(R.color.colorBlueDark2));
                 btn34.setSelected(true);
                 meal_night = 4;
                 break;
@@ -747,7 +747,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn14.setSelected(false);
             btn14.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn11.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn11.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn11.setSelected(true);
         meal_morning = 1;
         meal1[selected_user] = 1;
@@ -764,7 +764,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn14.setTextColor(getResources().getColor(R.color.colorGray2));
         }
 
-        btn12.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn12.setTextColor(getResources().getColor(R.color.colorOrange));
         btn12.setSelected(true);
         meal_morning = 2;
         meal1[selected_user] = 2;
@@ -796,7 +796,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn13.setSelected(false);
             btn13.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn14.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn14.setTextColor(getResources().getColor(R.color.colorBlueDark2));
         btn14.setSelected(true);
         meal_morning = 4;
         meal1[selected_user] = 4;
@@ -812,7 +812,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn24.setSelected(false);
             btn24.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn21.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn21.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn21.setSelected(true);
         meal_afternoon = 1;
         meal2[selected_user] = 1;
@@ -829,7 +829,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn24.setTextColor(getResources().getColor(R.color.colorGray2));
         }
 
-        btn22.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn22.setTextColor(getResources().getColor(R.color.colorOrange));
         btn22.setSelected(true);
         meal_afternoon = 2;
         meal2[selected_user] = 2;
@@ -860,7 +860,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn23.setSelected(false);
             btn23.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn24.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn24.setTextColor(getResources().getColor(R.color.colorBlueDark2));
         btn24.setSelected(true);
         meal_afternoon = 4;
         meal2[selected_user] = 4;
@@ -876,7 +876,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn34.setSelected(false);
             btn34.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn31.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn31.setTextColor(getResources().getColor(R.color.colorCyanMain));
         btn31.setSelected(true);
         meal_night = 1;
         meal3[selected_user] = 1;
@@ -892,7 +892,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn34.setSelected(false);
             btn34.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn32.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn32.setTextColor(getResources().getColor(R.color.colorOrange));
         btn32.setSelected(true);
         meal_night = 2;
         meal3[selected_user] = 2;
@@ -924,7 +924,7 @@ public class WriteWorkReportActivity extends FragmentActivity {
             btn33.setSelected(false);
             btn33.setTextColor(getResources().getColor(R.color.colorGray2));
         }
-        btn34.setTextColor(getResources().getColor(R.color.colorMagenta));
+        btn34.setTextColor(getResources().getColor(R.color.colorBlueDark2));
         btn34.setSelected(true);
         meal_night = 4;
         meal3[selected_user] = 4;

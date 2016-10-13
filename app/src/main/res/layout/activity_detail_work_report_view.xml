@@ -6,47 +6,64 @@
     tools:context="dev.erica.hyunji.eeumjieum.DetailWorkReportViewActivity">
 
     //top title bar
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:background="@color/colorCyanMain">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/topBar_Height"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/backbtn"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="0dp"
-                android:layout_height = "40dp"
+            <LinearLayout
                 android:layout_weight="1"
-                android:background="@drawable/back_w_btn"
-                android:onClick="onClick_backbtn"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:layout_marginTop="10dp"
-                android:text="근무일지"
-                android:textAlignment="center"
-                android:textSize="25dp"
-                android:textColor="@android:color/white"/>
-            <Button
-                android:id="@+id/search"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_width="0dp"
-                android:layout_height = "40dp"
+                android:layout_height="55dp">
+                <Button
+                    android:id="@+id/backbtn"
+                    android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
+                    android:layout_marginLeft="@dimen/topBar_Icon_Margin"
+                    android:layout_width="@dimen/topBar_Icon_Width"
+                    android:layout_height = "@dimen/topBar_Icon_Height"
+                    android:background="@drawable/back_w_btn"
+                    android:onClick="onClick_backbtn"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="55dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:layout_marginTop="15.2dp"
+                    android:text="근무일지"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/topBar_Title_Size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_weight="1"
-                android:text="수정"
-                android:textSize="20dp"
-                android:textColor="@android:color/white"
-                android:background="@android:color/transparent"/>
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:gravity="end">
+                <Button
+                    android:id="@+id/search"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="@dimen/topBar_Icon_Margin"
+                    android:layout_width="@dimen/topBar_TextButton_Width"
+                    android:layout_height = "@dimen/topBar_TextButton_Height"
+                    android:text="수정"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/topBar_Title_Size"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
         </LinearLayout>
-    </FrameLayout>
+    </RelativeLayout>
+
+
 
     //top calender
     <LinearLayout
@@ -55,251 +72,348 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_marginTop="60dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="55dp"
             android:orientation="horizontal">
 
-            <Button android:background="@color/colorGray1"
+            <Button
+                android:background="@color/colorGray1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.3"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_sun_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_mon_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_tue_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_wed_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_thu_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_fri_1"/>
-            <Button android:background="@color/colorGray2"
+            <Button
+                android:background="@android:color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/cal_sat_1"/>
-
-
         </LinearLayout>
+    </LinearLayout>
+    //END OF CALENDAR TOP
 
+    REST OF THE CALENDAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="59dp"
+        android:layout_height="wrap_content">
+
+        YEAR AND MONTH
+        <RelativeLayout
+            android:layout_weight="1.3"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:orientation="vertical"
+            android:background="@color/colorGray1">
+            YEAR
+            <LinearLayout
+                android:layout_marginTop="1dp"
+                android:id="@+id/cal_yearView"
+                android:layout_width="match_parent"
+                android:layout_height="18dp">
+                <Button
+                    android:paddingTop="1dp"
+                    android:layout_gravity="end"
+                    android:background="@color/colorGray1"
+                    android:text="1000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="16sp"
+                    android:id="@+id/cal_year"/>
+            </LinearLayout>
+            MONTH
+            <LinearLayout
+                android:layout_below="@id/cal_yearView"
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+                <Button
+                    android:layout_gravity="top"
+                    android:background="@color/colorGray1"
+                    android:text="00"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorCyanMain"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:id="@+id/cal_month"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        NAME AND DATE
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@android:color/white">
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:orientation="vertical"
+            android:background="@color/white">
+            NAME
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:gravity="bottom">
+                <Button
+                    android:background="@android:color/white"
+                    android:text="일"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorMagenta"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_sun_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="월"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_mon_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="화"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_tue_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="수"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_wed_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="목"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_thu_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="금"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlueGray1"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_fri_2"/>
+                <Button
+                    android:background="@android:color/white"
+                    android:text="토"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="@dimen/calendar_Date_Name_Size"
+                    android:id="@+id/cal_sat_2" />
+            </LinearLayout>
 
-            <Button
-                android:background="@color/colorGray1"
-                android:text="1000"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.3"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textColor="@color/colorBlueGray1"
-                android:textSize="8pt"
-                android:id="@+id/cal_year"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="일"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/colorMagenta"
-                android:textSize="10pt"
-                android:id="@+id/cal_sun_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="월"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_mon_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="화"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_tue_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="수"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_wed_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="목"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_thu_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="금"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10pt"
-                android:id="@+id/cal_fri_2"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="토"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/holo_blue_light"
-                android:textSize="10pt"
-                android:id="@+id/cal_sat_2"/>
-        </LinearLayout>
+            DATE
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_bggray_bottomline1"
+                android:paddingBottom="4dp">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorMagenta"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_sun_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_mon_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_tue_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_wed_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_thu_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_fri_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="@dimen/calendar_Date_Number_Size"
+                        android:textStyle="bold"
+                        android:id="@+id/cal_sat_3"
+                        android:onClick="onClick_calendar"/>
+                </LinearLayout>
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@android:color/white">
-            <Button
-                android:background="@color/colorGray1"
-                android:text="00"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:layout_weight="1.3"
-                android:textColor="@color/colorCyanDark"
-                android:textSize="12pt"
-                android:id="@+id/cal_month"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/colorMagenta"
-                android:textSize="12pt"
-                android:id="@+id/cal_sun_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_mon_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_tue_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_wed_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="8"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_thu_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="9"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12pt"
-                android:id="@+id/cal_fri_3"
-                android:onClick="onClick_calendar"/>
-            <Button
-                android:background="@android:color/white"
-                android:text="10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/holo_blue_light"
-                android:textSize="12pt"
-                android:id="@+id/cal_sat_3"
-                android:onClick="onClick_calendar"/>
         </LinearLayout>
 
     </LinearLayout>
 
-    //room image view
-    <ImageView
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="124dp">
+
+    //room name view
+    <LinearLayout
+        android:id="@+id/roomnameview"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginTop="195dp"
-        android:id="@+id/room_image"
-        android:src="@drawable/s_pic_2"
-        android:scaleType="centerCrop"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:layout_marginLeft="30dp"
-        android:id="@+id/room_name_tv"
-        android:textColor="@android:color/white"
-        android:text="은혜방"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="285dp"
-        android:layout_marginLeft="30dp"
-        android:id="@+id/room_worker_tv"
-        android:textColor="@android:color/white"
-        android:text="선생님"
-        android:textSize="15dp"
-        />
+        android:layout_height="45dp"
+        android:background="@drawable/shape_bggray_bottomline1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/room_name_tv"
+            android:text="방이름"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorCyanMain"/>
+    </LinearLayout>
 
     //count bar
     <LinearLayout
+        android:id="@+id/countbarview"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="305dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/roomnameview"
         android:orientation="vertical"
-        android:background="@color/colorGray2">
+        android:background="@drawable/shape_gray_sideline1"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
@@ -337,6 +451,7 @@
                 android:gravity="center"
                 android:text="기타"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
@@ -379,192 +494,222 @@
                 android:id="@+id/etc_count_tv"
                 android:text="기타"/>
         </LinearLayout>
-
     </LinearLayout>
 
+    //write mode selector
     <LinearLayout
+        android:id="@+id/writemodeselector"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="355dp"
-        android:id="@+id/section_linearlayout"
+        android:layout_below="@id/countbarview"
         android:background="@drawable/shape_bggray_bottomline1">
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:text="전달사항"
-            android:textSize="20dp"
-            android:id="@+id/btn01"
-            android:onClick="onClick_01btn"
-            android:textColor="@color/colorCyanMain"
-            android:background="@drawable/shape_radius_rect_selected_blue"/>
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:text="식사량"
-            android:textSize="20dp"
-            android:id="@+id/btn02"
-            android:onClick="onClick_02btn"
-            android:textColor="@color/colorBlueGray1"
-            android:background="@android:color/transparent"/>
-
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:text="프로그램 관련"
-            android:textSize="20dp"
-            android:id="@+id/btn03"
-            android:onClick="onClick_03btn"
-            android:textColor="@color/colorBlueGray1"
-            android:background="@android:color/transparent"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:text="전달사항"
+                android:textSize="16sp"
+                android:id="@+id/btn01"
+                android:onClick="onClick_01btn"
+                android:textColor="@color/colorCyanMain"
+                android:background="@drawable/shape_radius_rect_selected_blue"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:text="식사량"
+                android:textSize="16sp"
+                android:id="@+id/btn02"
+                android:onClick="onClick_02btn"
+                android:textColor="@color/colorBlueGray1"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:text="활동내역"
+                android:textSize="16sp"
+                android:id="@+id/btn03"
+                android:onClick="onClick_03btn"
+                android:textColor="@color/colorBlueGray1"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
     </LinearLayout>
 
-    //first tab article container
-    <ListView
-        android:id="@+id/firsttab_listview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="405dp"
-        android:layout_marginBottom="70dp"
-        android:dividerHeight="4dp"
-        android:divider="@color/colorGray2"
-        />
 
-    //second tab image grid view
-    <GridView
-        android:id="@+id/secondtab_grid_view"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="405dp"
-        android:columnWidth="55dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="2dp"
-        android:horizontalSpacing="2dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center"
-        android:drawSelectorOnTop="true"
-        android:visibility="gone"/>
-
-    //second tab bottom meal imageview
     <LinearLayout
+        android:layout_below="@id/writemodeselector"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="485dp"
-        android:padding="10dp"
-        android:id="@+id/secondtab_meal_linearview"
-        android:orientation="horizontal"
-        android:visibility="gone">
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        //first tab article container
+        <ListView
+            android:id="@+id/firsttab_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        //second tab image grid view
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bggray_bottomline1"
+            android:paddingLeft="8dp"
+            android:layout_centerInParent="true">
+            <GridView
+                android:id="@+id/secondtab_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:columnWidth="56dp"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="5dp"
+                android:horizontalSpacing="5dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:drawSelectorOnTop="true"
+                android:visibility="gone"/>
+        </LinearLayout>
+        //second tab bottom meal imageview
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id ="@+id/meal_iv_1"
-            android:src="@drawable/s_pic_3"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:id ="@+id/meal_iv_2"
-            android:src="@drawable/s_pic_3"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:id ="@+id/meal_iv_3"
-            android:src="@drawable/s_pic_3"/>
+            android:padding="15dp"
+            android:background="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/secondtab_meal_linearview"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <ImageView
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:id ="@+id/meal_iv_1"
+                    android:src="@drawable/s_pic_3"/>
+                <ImageView
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:id ="@+id/meal_iv_2"
+                    android:src="@drawable/s_pic_3"/>
+                <ImageView
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:id ="@+id/meal_iv_3"
+                    android:src="@drawable/s_pic_3"/>
+            </LinearLayout>
+        </LinearLayout>
+        //third tab linear layout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="405dp"
+            android:orientation="horizontal"
+            android:background="@color/colorGray1"
+            android:id="@+id/third_tab_linearlayout"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="오전"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/morning_program_tv"
+                    android:text="야외활동"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="오후"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/afternoon_program_tv"
+                    android:text="야외활동"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="저녁"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/night_program_tv"
+                    android:text="야외활동"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
     </LinearLayout>
 
-    //third tab linear layout
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="405dp"
-        android:orientation="horizontal"
-        android:background="@color/colorGray1"
-        android:id="@+id/third_tab_linearlayout"
-        android:visibility="gone">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:background="@android:color/white"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="오전"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:id="@+id/morning_program_tv"
-                android:text="야외활동"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:background="@android:color/white"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="오후"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:id="@+id/afternoon_program_tv"
-                android:text="야외활동"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:background="@android:color/white"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="저녁"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:id="@+id/night_program_tv"
-                android:text="야외활동"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-        </LinearLayout>
 
 
-    </LinearLayout>
+</RelativeLayout>
 
     //room select
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="155dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@android:color/transparent"
         >
         <Button
@@ -605,135 +750,4 @@
             android:visibility="gone"/>
 
     </FrameLayout>
-
-    //bottom pop-menu (message)
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/notice_btn"
-            android:layout_marginTop="430dp"
-            android:layout_marginLeft="10dp"
-            android:onClick="onClick_noticebtn"
-            android:visibility="gone"
-            android:background="@drawable/dual_notice_btn"/>
-        <TextView
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:id="@+id/notice_label"
-            android:layout_marginTop="445dp"
-            android:layout_marginLeft="70dp"
-            android:text="공지사항"
-            android:textSize="18dp"
-            android:visibility="gone"
-            android:textColor="@android:color/white"/>
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/schedule_btn"
-            android:layout_marginTop="360dp"
-            android:layout_marginLeft="10dp"
-            android:onClick="onClick_scheduletbtn"
-            android:visibility="gone"
-            android:background="@drawable/dual_schedule_btn"/>
-        <TextView
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:id="@+id/schedule_label"
-            android:layout_marginTop="375dp"
-            android:layout_marginLeft="70dp"
-            android:text="시설일정"
-            android:textSize="18dp"
-            android:visibility="gone"
-            android:textColor="@android:color/white"/>
-
-
-    </FrameLayout>
-
-    //bottom pop-menu (note)
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/program_btn"
-            android:layout_marginTop="430dp"
-            android:layout_marginLeft="230dp"
-            android:onClick="onClick_programbtn"
-            android:visibility="gone"
-            android:background="@drawable/dual_program_btn"/>
-        <TextView
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:id="@+id/program_label"
-            android:layout_marginTop="445dp"
-            android:layout_marginLeft="290dp"
-            android:text="프로그램일지"
-            android:textSize="18dp"
-            android:visibility="gone"
-            android:textColor="@android:color/white"/>
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/observ_report_btn"
-            android:layout_marginTop="360dp"
-            android:layout_marginLeft="230dp"
-            android:onClick="onClick_observreportbtn"
-            android:visibility="gone"
-            android:background="@drawable/dual_observ_report_btn"/>
-        <TextView
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:id="@+id/observ_report_label"
-            android:layout_marginTop="375dp"
-            android:layout_marginLeft="290dp"
-            android:text="관찰일지"
-            android:textSize="18dp"
-            android:visibility="gone"
-            android:textColor="@android:color/white"/>
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/work_report_btn"
-            android:layout_marginTop="290dp"
-            android:layout_marginLeft="230dp"
-            android:onClick="onClick_workreportbtn"
-            android:visibility="gone"
-            android:background="@drawable/dual_work_report_btn"/>
-        <TextView
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:id="@+id/work_report_label"
-            android:layout_marginTop="305dp"
-            android:layout_marginLeft="290dp"
-            android:text="근무일지"
-            android:textSize="18dp"
-            android:visibility="gone"
-            android:textColor="@android:color/white"/>
-
-    </FrameLayout>
-
-    //bottom menu
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
-
-        <dev.erica.hyunji.eeumjieum.BottomTabNavi
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/bottomNavi">
-
-        </dev.erica.hyunji.eeumjieum.BottomTabNavi>
-    </FrameLayout>
-
-
 </FrameLayout>

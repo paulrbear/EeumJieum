@@ -18,13 +18,13 @@
                 android:id="@+id/cancelbtn"
                 android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
                 android:layout_marginLeft="@dimen/topBar_Icon_Margin"
-                android:layout_width="@dimen/topBar_Button_Width"
-                android:layout_height = "@dimen/topBar_Button_Height"
+                android:layout_width="@dimen/topBar_TextButton_Width"
+                android:layout_height = "@dimen/topBar_TextButton_Height"
                 android:textColor="@android:color/white"
                 android:background="@android:color/transparent"
                 android:textAlignment="textStart"
                 android:text="취소"
-                android:textSize="@dimen/topBar_Button_Size"
+                android:textSize="@dimen/topBar_TextButton_Size"
                 android:onClick="onClick_backbtn"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -40,13 +40,13 @@
                 android:id="@+id/donebtn"
                 android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
                 android:layout_marginRight="@dimen/topBar_Icon_Margin"
-                android:layout_width="@dimen/topBar_Button_Width"
-                android:layout_height = "@dimen/topBar_Button_Height"
+                android:layout_width="@dimen/topBar_TextButton_Width"
+                android:layout_height = "@dimen/topBar_TextButton_Height"
                 android:textColor="@android:color/white"
                 android:background="@android:color/transparent"
                 android:textAlignment="textEnd"
                 android:text="다음"
-                android:textSize="@dimen/topBar_Button_Size"
+                android:textSize="@dimen/topBar_TextButton_Size"
                 android:onClick="onClick_donebtn"/>
         </LinearLayout>
     </FrameLayout>

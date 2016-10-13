@@ -43,7 +43,6 @@ public class WorkReportArticleListAdater extends BaseAdapter{
         }
         WorkReportArticleItem articlelistitem = mListData.get(position);
 
-        //ImageView objimg = (ImageView)convertView.findViewById(R.id.room_image);
         TextView roomname = (TextView) convertView.findViewById(R.id.room_name_tv);
         TextView workername = (TextView) convertView.findViewById(R.id.worker_name_tv);
         TextView artkey = (TextView) convertView.findViewById(R.id.invisible_content_key);

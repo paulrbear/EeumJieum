@@ -20,13 +20,13 @@
                 android:id="@+id/cancelbtn"
                 android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
                 android:layout_marginLeft="@dimen/topBar_Icon_Margin"
-                android:layout_width="@dimen/topBar_Button_Width"
-                android:layout_height = "@dimen/topBar_Button_Height"
+                android:layout_width="@dimen/topBar_TextButton_Width"
+                android:layout_height = "@dimen/topBar_TextButton_Height"
                 android:textColor="@color/colorBlueGray1"
                 android:background="@android:color/transparent"
                 android:textAlignment="textStart"
                 android:text="취소"
-                android:textSize="@dimen/topBar_Button_Size"
+                android:textSize="@dimen/topBar_TextButton_Size"
                 android:onClick="onClick_cancelbtn"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -41,11 +41,11 @@
                 android:id="@+id/donebtn"
                 android:layout_marginTop="@dimen/topBar_Icon_Margin_Top"
                 android:layout_marginRight="@dimen/topBar_Icon_Margin"
-                android:layout_width="@dimen/topBar_Button_Width"
-                android:layout_height = "@dimen/topBar_Button_Height"
+                android:layout_width="@dimen/topBar_TextButton_Width"
+                android:layout_height = "@dimen/topBar_TextButton_Height"
                 android:textAlignment="textEnd"
                 android:text="완료"
-                android:textSize="@dimen/topBar_Button_Size"
+                android:textSize="@dimen/topBar_TextButton_Size"
                 android:textColor="@color/colorCyanMain"
                 android:background="@android:color/transparent"
                 android:onClick="onClick_donebtn"/>
@@ -70,6 +70,8 @@
         </LinearLayout>
     </RelativeLayout>
 
+
+    //write mode selector
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -246,7 +248,9 @@
             android:layout_marginLeft="15dp"
             android:gravity="top"
             android:lineSpacingExtra="4dp"
+            android:lineSpacingMultiplier="1.2"
             android:textSize="18sp"
+            android:textColor="@color/colorBlueGray2"
             android:background="@android:color/transparent"/>
 
 
@@ -270,7 +274,7 @@
                         android:minHeight="40dp"
                         android:minWidth="80dp"
                         android:text="아침"
-                        android:textSize="20dp"
+                        android:textSize="18sp"
                         android:gravity="left"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
@@ -332,7 +336,7 @@
                         android:minHeight="40dp"
                         android:minWidth="80dp"
                         android:text="점심"
-                        android:textSize="20dp"
+                        android:textSize="18sp"
                         android:gravity="left"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
@@ -394,7 +398,7 @@
                         android:minHeight="40dp"
                         android:minWidth="80dp"
                         android:text="저녁"
-                        android:textSize="20dp"
+                        android:textSize="18sp"
                         android:gravity="left"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
