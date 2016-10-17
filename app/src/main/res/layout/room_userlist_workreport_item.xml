@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/shape_bggray_bottomline2">
+    android:background="@drawable/shape_bgwhite_bottomline2">
 
     <ImageView
         android:id="@+id/userImg_item"

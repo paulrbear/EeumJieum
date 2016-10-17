@@ -7,7 +7,6 @@
     tools:context="dev.erica.hyunji.eeumjieum.ObservReportWorkerActivity">
 
     //top title bar
-    //top title bar
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +42,6 @@
                 android:background="@android:color/transparent"/>
         </LinearLayout>
     </FrameLayout>
-
     //top calender
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,7 +103,6 @@
         </LinearLayout>
     </LinearLayout>
     //END OF CALENDAR TOP
-
     REST OF THE CALENDAR
     <LinearLayout
         android:layout_width="match_parent"
@@ -361,50 +358,35 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="125dp"
+    android:layout_marginBottom="60dp">
     //article container
     <ListView
+        android:layout_marginTop="50dp"
         android:id="@+id/articlelistview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="195dp"
-        android:layout_marginBottom="70dp"
-        android:choiceMode="singleChoice"
-        android:dividerHeight="4dp"
-        android:divider="@color/colorGray2"/>
+        android:choiceMode="singleChoice"/>
 
     //room select
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="145dp"
-        android:background="@android:color/transparent"
-        >
+        android:background="@android:color/transparent">
         <Button
             android:id="@+id/tfdbtn1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:paddingTop="5dp"
+            android:paddingTop="3dp"
             android:layout_gravity="center_horizontal"
-            android:textSize="10pt"
-            android:textColor="@android:color/black"
-            android:background="@color/colorGray1"
+            android:textSize="19sp"
+            android:textColor="@color/colorBlueDark1"
+            android:background="@drawable/shape_bggray_bottomline1"
             android:onClick="onClick_roomlist"
+            android:text="시설전체"
             />
         <Button
             android:id="@+id/tfdbtn2"
@@ -412,12 +394,13 @@
             android:layout_height="50dp"
             android:paddingTop="5dp"
             android:layout_gravity="center_horizontal"
-            android:textSize="10pt"
-            android:textColor="@android:color/black"
+            android:textSize="19sp"
+            android:textColor="@color/colorBlueDark1"
             android:background="@color/colorGray1"
             android:layout_marginTop="50dp"
             android:onClick="onClick_roomlist"
             android:visibility="gone"
+            android:text="전체"
             />
         <Button
             android:id="@+id/tfdbtn3"
@@ -425,14 +408,42 @@
             android:layout_height="50dp"
             android:paddingTop="5dp"
             android:layout_gravity="center_horizontal"
-            android:textSize="10pt"
-            android:textColor="@android:color/black"
+            android:textSize="19sp"
+            android:textColor="@color/colorBlueDark1"
             android:background="@color/colorGray1"
             android:layout_marginTop="100dp"
             android:onClick="onClick_roomlist"
-            android:visibility="gone"/>
-
+            android:visibility="gone"
+            android:text="은혜방"/>
+        <Button
+            android:id="@+id/tfdbtn4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="19sp"
+            android:textColor="@color/colorBlueDark1"
+            android:background="@color/colorGray1"
+            android:layout_marginTop="150dp"
+            android:onClick="onClick_roomlist"
+            android:visibility="gone"
+            android:text="기쁨방"/>
+        <Button
+            android:id="@+id/tfdbtn5"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="19sp"
+            android:textColor="@color/colorBlueDark1"
+            android:background="@color/colorGray1"
+            android:layout_marginTop="200dp"
+            android:onClick="onClick_roomlist"
+            android:visibility="gone"
+            android:text="믿음방"/>
     </FrameLayout>
+
+</FrameLayout>
 
     //floating action button
     <FrameLayout

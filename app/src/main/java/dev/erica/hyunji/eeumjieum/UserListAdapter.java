@@ -42,6 +42,8 @@ public class UserListAdapter extends BaseAdapter{
         UserListItem userlistitem = mListData.get(position);
 
         ImageView uImg = (ImageView)convertView.findViewById(R.id.userImg_item);
+        uImg.setClipToOutline(true);
+
         TextView name = (TextView) convertView.findViewById(R.id.userName_item);
         TextView room = (TextView) convertView.findViewById(R.id.userClass_item);
 

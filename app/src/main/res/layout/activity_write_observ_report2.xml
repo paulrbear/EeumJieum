@@ -1,314 +1,381 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-
-    //top two line layout
     <RelativeLayout
+        android:id="@+id/writeobservreport"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        //top title bar
+        android:layout_height="match_parent">
+        //top three object layout
         <RelativeLayout
+            android:id='@+id/topbarwriteobservreport'
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/topbar"
-            android:layout_gravity="top"
-            android:background="@drawable/shape_lightgray_bottomline">
+            android:layout_height="wrap_content">
+            //top title bar
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/topbar"
+                android:layout_gravity="top"
+                android:background="@drawable/shape_lightgray_bottomline">
                 <Button
                     android:id="@+id/cancelbtn"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_width="70dp"
                     android:layout_height = "40dp"
                     android:layout_alignParentLeft="true"
                     android:text="취소"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_cancelbtn"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:id="@+id/title_tv"
+                    android:text="관찰일지 작성"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"/>
+
                 <Button
                     android:id="@+id/donebtn"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_width="70dp"
                     android:layout_height = "40dp"
                     android:layout_alignParentRight="true"
                     android:text="완료"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textColor="@color/colorCyanMain"
                     android:background="@android:color/transparent"
                     android:onClick="onClick_donebtn"/>
 
+            </RelativeLayout>
+
+            //name object
+            <RelativeLayout
+                android:id="@+id/namebarobservreport"
+                android:layout_below="@id/topbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@drawable/shape_lightgray_bottomline">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/write_object_fam_tfd"
+                    android:text="가족명"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorCyanMain"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/write_object_fam_tfd"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/write_object_room_tfd"
+                    android:text="방이름"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlueGray1"/>
+            </RelativeLayout>
+
+            //status select btn
+            <LinearLayout
+                android:id="@+id/statusobjectsobservreport"
+                android:layout_below="@+id/namebarobservreport"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_bgwhite_bottomline1">
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="100dp"
+                        android:layout_alignParentRight="true"
+                        android:text="기분"
+                        android:textSize="19sp"
+                        android:gravity="left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="30dp"
+                        android:background="@android:color/transparent"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="좋음"
+                        android:textSize="20dp"
+                        android:id="@+id/btn11"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_11btn"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="보통"
+                        android:textSize="20dp"
+                        android:id="@+id/btn12"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_12btn"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="나쁨"
+                        android:textSize="20dp"
+                        android:id="@+id/btn13"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_13btn"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_bgwhite_bottomline1">
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="100dp"
+                        android:layout_alignParentRight="true"
+                        android:text="활동량"
+                        android:textSize="19sp"
+                        android:gravity="left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="30dp"
+                        android:background="@android:color/transparent"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="좋음"
+                        android:textSize="20dp"
+                        android:id="@+id/btn21"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_21btn"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="보통"
+                        android:textSize="20dp"
+                        android:id="@+id/btn22"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_22btn"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="나쁨"
+                        android:textSize="20dp"
+                        android:id="@+id/btn23"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_23btn"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_bgwhite_bottomline1">
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="100dp"
+                        android:layout_alignParentRight="true"
+                        android:text="수면"
+                        android:textSize="19sp"
+                        android:gravity="left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="30dp"
+                        android:background="@android:color/transparent"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="좋음"
+                        android:textSize="20dp"
+                        android:id="@+id/btn31"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_31btn"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="보통"
+                        android:textSize="20dp"
+                        android:id="@+id/btn32"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_32btn"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:minWidth="80dp"
+                        android:layout_alignParentRight="true"
+                        android:text="나쁨"
+                        android:textSize="20dp"
+                        android:id="@+id/btn33"
+                        android:textColor="@color/colorGray2"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick_33btn"/>
+                </LinearLayout>
+            </LinearLayout>
         </RelativeLayout>
 
-        //write object
+        //edit text
         <RelativeLayout
+            android:layout_below="@+id/topbarwriteobservreport"
+            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/topbar"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:paddingLeft="30dp"
-            android:background="@drawable/shape_lightgray_bottomline"
-            android:onClick="onClick_objectlayout">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/write_object_fam_tfd"
-                android:text="가족명"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/colorCyanMain"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/write_object_fam_tfd"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/write_object_room_tfd"
-                android:text="방이름"
-                android:textSize="20dp"
-                android:textColor="@color/colorBlueGray1"/>
+            android:layout_height="fill_parent"
+            android:focusableInTouchMode="false">
+
+            //bottom textfield and button
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="300dp"
+                android:gravity="top"
+                android:padding="15dp"
+                android:scrollHorizontally="true"
+                android:scrollbars="vertical"
+                android:id="@+id/content_tfd"
+                android:textSize="20sp"
+                android:lineSpacingMultiplier="1.1"
+                android:lineSpacingExtra="4dp"
+                android:text="내용을 입력하세요"
+                android:textColor="@color/colorBlueGray1"
+                android:background="@drawable/shape_lightgray_bottomline">
+            </EditText>
+
         </RelativeLayout>
     </RelativeLayout>
 
-
-//bottom textfield and button
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="106dp"
-        android:focusableInTouchMode="true">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="top"
-            android:scrollHorizontally="true"
-            android:scrollbars="vertical"
-            android:id="@+id/content_tfd"
-            android:textSize="20dp"
-            android:text="  내용을 입력하세요"
-            android:textColor="@color/colorBlueGray1"
-            android:background="@drawable/shape_lightgray_bottomline">
-        </EditText>
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    //bottom attach
+    <RelativeLayout
+        android:id="@+id/attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:background="@drawable/shape_bggray_bottomline1">
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:minHeight="30dp"
-                    android:minWidth="100dp"
-                    android:layout_marginLeft="260dp"
-                    android:background="@drawable/tag_location"/>
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:minHeight="30dp"
-                    android:minWidth="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:id="@+id/photo_btn"
-                    android:background="@drawable/album_click"
-                    android:onClick="onClick_photobtn"/>
-            </LinearLayout>
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/shape_bgwhite_bottomline1">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape_bggray_bottomline1">
-                <GridView
-                    android:id="@+id/img_grid_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:columnWidth="90dp"
-                    android:numColumns="auto_fit"
-                    android:verticalSpacing="5dp"
-                    android:horizontalSpacing="5dp"
-                    android:stretchMode="columnWidth"
-                    android:gravity="center"
-                    android:drawSelectorOnTop="true"
-                    android:visibility="gone"/>
-            </LinearLayout>
-            //bottom select btn
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/shape_bggray_bottomline1">
-                <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="100dp"
-                    android:layout_alignParentRight="true"
-                    android:text="기분"
-                    android:textSize="20dp"
-                    android:gravity="left"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:background="@android:color/transparent"/>
-                <Button
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
                     android:layout_alignParentRight="true"
-                    android:text="좋음"
-                    android:textSize="20dp"
-                    android:id="@+id/btn11"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_11btn"/>
-                <Button
+                    android:layout_marginRight="65dp">
+                    <Button
+                        android:id="@+id/tag_person_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:minHeight="30dp"
+                        android:minWidth="100dp"
+                        android:background="@drawable/blank"
+                        android:clickable="false"/>
+                    <TextView
+                        android:layout_below="@+id/tag_person_btn"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:id="@+id/person_count_tv"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorCyanMain"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
                     android:layout_alignParentRight="true"
-                    android:text="보통"
-                    android:textSize="20dp"
-                    android:id="@+id/btn12"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_12btn"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
-                    android:layout_alignParentRight="true"
-                    android:text="나쁨"
-                    android:textSize="20dp"
-                    android:id="@+id/btn13"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                android:onClick="onClick_13btn"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/shape_bggray_bottomline1">
-                <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="100dp"
-                    android:layout_alignParentRight="true"
-                    android:text="활동량"
-                    android:textSize="20dp"
-                    android:gravity="left"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:background="@android:color/transparent"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
-                    android:layout_alignParentRight="true"
-                    android:text="좋음"
-                    android:textSize="20dp"
-                    android:id="@+id/btn21"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_21btn"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
-                    android:layout_alignParentRight="true"
-                    android:text="보통"
-                    android:textSize="20dp"
-                    android:id="@+id/btn22"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_22btn"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
-                    android:layout_alignParentRight="true"
-                    android:text="나쁨"
-                    android:textSize="20dp"
-                    android:id="@+id/btn23"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_23btn"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/colorGray1">
-                <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="100dp"
-                    android:layout_alignParentRight="true"
-                    android:text="수면"
-                    android:textSize="20dp"
-                    android:gravity="left"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:background="@android:color/transparent"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
-                    android:layout_alignParentRight="true"
-                    android:text="좋음"
-                    android:textSize="20dp"
-                    android:id="@+id/btn31"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_31btn"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
-                    android:layout_alignParentRight="true"
-                    android:text="보통"
-                    android:textSize="20dp"
-                    android:id="@+id/btn32"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_32btn"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="40dp"
-                    android:minWidth="80dp"
-                    android:layout_alignParentRight="true"
-                    android:text="나쁨"
-                    android:textSize="20dp"
-                    android:id="@+id/btn33"
-                    android:textColor="@color/colorGray2"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick_33btn"/>
-            </LinearLayout>
+                    android:layout_marginRight="15dp">
+                    <Button
+                        android:id="@+id/photo_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:minHeight="30dp"
+                        android:minWidth="100dp"
+                        android:background="@drawable/addphoto"
+                        android:onClick="onClick_photobtn"/>
+                    <TextView
+                        android:layout_below="@+id/photo_btn"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:id="@+id/photo_count_tv"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorCyanMain"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
 
-
-        </LinearLayout>
-
+    //photo gridview
+    <LinearLayout
+        android:layout_below="@id/attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray1"
+        android:paddingLeft="10dp">
+        <GridView
+            android:id="@+id/img_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:columnWidth="90dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:drawSelectorOnTop="true"
+            android:visibility="gone"/>
     </LinearLayout>
-
-
-</FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

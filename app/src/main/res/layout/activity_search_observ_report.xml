@@ -43,7 +43,7 @@
                 android:layout_height = "40dp"
                 android:layout_weight="1"
                 android:background="@drawable/search_s"
-                android:onClick="onClick_serach"/>
+                android:onClick="onClick_search"/>
         </LinearLayout>
     </FrameLayout>
 

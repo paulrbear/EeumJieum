@@ -159,7 +159,7 @@ public class WriteObservReport2Activity extends FragmentActivity {
             }
             if(mThumbIds.size() > 0) {
                 gridView.setVisibility(View.VISIBLE);
-                photobtn.setBackgroundResource(R.color.colorMagenta);
+                photobtn.setBackgroundResource(R.drawable.addphoto_active);
                 mAdapter.notifyDataSetChanged();
             }
         }

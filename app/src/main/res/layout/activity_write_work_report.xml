@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_below="@id/topbar"
-            android:background="@drawable/shape_bggray_bottomline1"
+            android:background="@drawable/shape_bgwhite_bottomline1"
             android:onClick="onClick_objectlayout"
             android:gravity="center">
             <TextView
@@ -77,7 +77,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/top_two_line"
         android:id="@+id/section_linearlayout"
-        android:background="@drawable/shape_bggray_bottomline1">
+        android:background="@drawable/shape_bgwhite_bottomline1">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -131,13 +131,13 @@
 
 
 
-
+    //tabs 1, 2, 3
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_below="@id/section_linearlayout"
-        android:background="@drawable/shape_bggray_bottomline1">
+        android:background="@drawable/shape_bgwhite_bottomline1">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -154,7 +154,7 @@
                     android:minHeight="80dp"
                     android:orientation="horizontal"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/shape_bggray_bottomline1">
+                    android:background="@drawable/shape_bgwhite_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -178,7 +178,7 @@
                     android:minHeight="80dp"
                     android:orientation="horizontal"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/shape_bggray_bottomline1">
+                    android:background="@drawable/shape_bgwhite_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -202,7 +202,7 @@
                     android:minHeight="80dp"
                     android:orientation="horizontal"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/shape_bggray_bottomline1">
+                    android:background="@drawable/shape_bgwhite_bottomline1">
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
             android:stretchMode="columnWidth"
             android:gravity="top"
             android:drawSelectorOnTop="true"
-            android:background="@drawable/shape_bggray_bottomline1"/>
+            android:background="@drawable/shape_bgwhite_bottomline1"/>
         //first tab edit text
         <EditText
             android:layout_width="match_parent"
@@ -252,13 +252,11 @@
             android:textSize="18sp"
             android:textColor="@color/colorBlueGray2"
             android:background="@android:color/transparent"/>
-
-
         //second tab meal select status button layout
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_bggray_bottomline1"
+            android:background="@drawable/shape_bgwhite_bottomline1"
             android:id="@+id/meal_linearlayout"
             android:orientation="vertical"
             android:visibility="gone">
@@ -267,7 +265,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@drawable/shape_bggray_bottomline1">
+                    android:background="@drawable/shape_bgwhite_bottomline1">
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -329,7 +327,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@drawable/shape_bggray_bottomline1">
+                    android:background="@drawable/shape_bgwhite_bottomline1">
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -450,7 +448,6 @@
                         android:onClick="onClick_34btn"/>
                 </LinearLayout>
         </LinearLayout>
-
 
     </LinearLayout>
 

@@ -7,12 +7,9 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.SparseBooleanArray;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,7 +52,7 @@ public class SelectMultiRoomUserActivity extends FragmentActivity {
         listView = (ListView) findViewById(R.id.userlistview);
 
         listinint();
-
+        /*
         LinearLayout tmpBG = (LinearLayout) findViewById(R.id.content_bg);
         tmpBG.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +62,7 @@ public class SelectMultiRoomUserActivity extends FragmentActivity {
                 imm.hideSoftInputFromWindow(et.getWindowToken(),0);
             }
         });
+        */
     }
 
     public void listinint(){

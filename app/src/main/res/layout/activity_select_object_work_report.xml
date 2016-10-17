@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context="dev.erica.hyunji.eeumjieum.SelectObjectWorkReportActivity">
 
+    //근무일지 사람 선택
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,22 +129,22 @@
             android:layout_width="0dp"
             android:layout_weight="7.5"
             android:layout_height="wrap_content">
-<!--
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="30dp"
-                android:drawableRight="@drawable/sssearch"
-                android:background="@drawable/shape_search_bar_tfd"
-                android:textColor="@color/colorBlueGray1"
-                android:id="@+id/search_name"
-                android:text="이름으로 검색"
-                android:focusable="false"
-                android:clickable="false"/>
--->
+        <!--
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingTop="15dp"
+               android:paddingBottom="15dp"
+               android:paddingLeft="40dp"
+               android:paddingRight="30dp"
+               android:drawableRight="@drawable/sssearch"
+               android:background="@drawable/shape_search_bar_tfd"
+               android:textColor="@color/colorBlueGray1"
+               android:id="@+id/search_name"
+               android:text="이름으로 검색"
+               android:focusable="false"
+               android:clickable="false"/>
+        -->
             <ListView
                 android:id="@+id/userlistview"
                 android:layout_width="match_parent"

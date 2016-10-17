@@ -237,7 +237,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:orientation="horizontal"
-                android:background="@drawable/shape_bggray_bottomline1"
+                android:background="@drawable/shape_bgwhite_bottomline1"
                 android:paddingBottom="4dp">
                 <LinearLayout
                     android:layout_weight="1"
@@ -422,7 +422,6 @@
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
             android:onClick="onClick_fabbtn"/>
-
         <ImageView
             android:layout_marginTop="-2dp"
             android:layout_gravity="center"

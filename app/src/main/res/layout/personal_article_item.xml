@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="90dp"
-    android:background="@drawable/shape_bggray_bottomline1">
+    android:background="@drawable/shape_bgwhite_bottomline1">
     <LinearLayout
         android:id="@+id/userimg2"
         android:layout_width="55dp"
@@ -17,8 +17,7 @@
             android:id="@+id/objImg_item"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:background="@drawable/circular_image"
-            />
+            android:background="@drawable/circular_image"/>
 
         <TextView
             android:id="@+id/objName_item"
@@ -33,7 +32,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/userimg2"
         android:orientation="vertical">
         <TextView
             android:id="@+id/article_content_tfd"
@@ -54,7 +52,6 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_centerInParent="true"
             android:id="@+id/status_iv"
             android:visibility="gone"/>
     </LinearLayout>

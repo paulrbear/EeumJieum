@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -62,8 +62,6 @@
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
-
-
 
     //top calender
     <LinearLayout
@@ -260,7 +258,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:orientation="horizontal"
-                android:background="@drawable/shape_bggray_bottomline1"
+                android:background="@drawable/shape_bgwhite_bottomline1"
                 android:paddingBottom="4dp">
                 <LinearLayout
                     android:layout_weight="1"
@@ -381,8 +379,6 @@
     </LinearLayout>
 
 
-
-
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -393,7 +389,7 @@
         android:id="@+id/roomnameview"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@drawable/shape_bggray_bottomline1"
+        android:background="@drawable/shape_bgwhite_bottomline1"
         android:gravity="center">
         <TextView
             android:layout_width="wrap_content"
@@ -502,7 +498,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/countbarview"
-        android:background="@drawable/shape_bggray_bottomline1">
+        android:background="@drawable/shape_bgwhite_bottomline1">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -553,12 +549,105 @@
         </LinearLayout>
     </LinearLayout>
 
-
+    //tabs 1, 2, 3
     <LinearLayout
         android:layout_below="@id/writemodeselector"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/shape_bgwhite_bottomline1">
+
+        //third tab linear layout
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/third_tab_linearlayout"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_bgwhite_bottomline1">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="오전"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlueDark1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/morning_program_tv"
+                        android:text="야외활동"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlueGray1"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_bgwhite_bottomline1">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="오후"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlueDark1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/afternoon_program_tv"
+                        android:text="야외활동"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlueGray1"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_bgwhite_bottomline1">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="저녁"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlueDark1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/night_program_tv"
+                        android:text="야외활동"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlueGray1"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
         //first tab article container
         <ListView
             android:id="@+id/firsttab_listview"
@@ -570,7 +659,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_bggray_bottomline1"
+            android:background="@drawable/shape_bgwhite_bottomline1"
             android:paddingLeft="8dp"
             android:layout_centerInParent="true">
             <GridView
@@ -586,6 +675,7 @@
                 android:drawSelectorOnTop="true"
                 android:visibility="gone"/>
         </LinearLayout>
+
         //second tab bottom meal imageview
         <LinearLayout
             android:layout_width="match_parent"
@@ -598,108 +688,67 @@
                 android:id="@+id/secondtab_meal_linearview"
                 android:orientation="horizontal"
                 android:visibility="gone">
-                <ImageView
-                    android:padding="10dp"
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:id ="@+id/meal_iv_1"
-                    android:src="@drawable/s_pic_3"/>
-                <ImageView
-                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="아침"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlueGray1"
+                        android:textAlignment="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id ="@+id/meal_iv_1"
+                        android:src="@drawable/intake_none"/>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:id ="@+id/meal_iv_2"
-                    android:src="@drawable/s_pic_3"/>
-                <ImageView
-                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="점심"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlueGray1"
+                        android:textAlignment="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id ="@+id/meal_iv_2"
+                        android:src="@drawable/intake_none"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:id ="@+id/meal_iv_3"
-                    android:src="@drawable/s_pic_3"/>
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="저녁"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlueGray1"
+                        android:textAlignment="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id ="@+id/meal_iv_3"
+                        android:src="@drawable/intake_none"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-        //third tab linear layout
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="405dp"
-            android:orientation="horizontal"
-            android:background="@color/colorGray1"
-            android:id="@+id/third_tab_linearlayout"
-            android:visibility="gone">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:paddingTop="20dp"
-                android:background="@android:color/white"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:text="오전"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:id="@+id/morning_program_tv"
-                    android:text="야외활동"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:paddingTop="20dp"
-                android:background="@android:color/white"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:text="오후"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:id="@+id/afternoon_program_tv"
-                    android:text="야외활동"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:paddingTop="20dp"
-                android:background="@android:color/white"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:text="저녁"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:id="@+id/night_program_tv"
-                    android:text="야외활동"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
     </LinearLayout>
 
 
@@ -750,4 +799,4 @@
             android:visibility="gone"/>
 
     </FrameLayout>
-</FrameLayout>
+    </RelativeLayout>

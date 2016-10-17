@@ -37,7 +37,7 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
 
     Button btn01, btn02, btn03;
     String savedID;
-    int articleKey, selected_day, selected_date;
+    int articleKey, selected_day, selected_date, food_intake;
     int selected_tab = 1;
 
     String selected_room;
@@ -47,7 +47,6 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
     ListView firsttab_listview;
     GridView secondtab_gridView;
     LinearLayout thirdtab, secondtab_iv;
-
 
     ArrayList<PersonalWorkReportItem> personaldata = new ArrayList<>();
     PersonalWorkReportAdapter adapter;
@@ -280,30 +279,11 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
         Iterator iterator = articlelist.iterator();
         int i = 0;
         while (iterator.hasNext()){
-            personaldata.add((PersonalWorkReportItem) iterator.next());
+            personaldata.add(0,(PersonalWorkReportItem) iterator.next());
         }
 
         adapter = new PersonalWorkReportAdapter(this, R.layout.personal_article_item, personaldata);
         firsttab_listview.setAdapter(adapter);
-
-        tmptv = (TextView) findViewById(R.id.room_worker_tv);
-
-        if(selected_room.equals("기쁨방")){
-            roombtn1.setText("기쁨방");
-            roombtn2.setText("믿음방");
-            roombtn3.setText("은혜방");
-            tmptv.setText("이유민 선생님, 한남수 선생님");
-        }else if(selected_room.equals("믿음방")){
-            roombtn2.setText("기쁨방");
-            roombtn1.setText("믿음방");
-            roombtn3.setText("은혜방");
-            tmptv.setText("강지석 선생님");
-        }else if(selected_room.equals("은혜방")){
-            roombtn3.setText("기쁨방");
-            roombtn2.setText("믿음방");
-            roombtn1.setText("은혜방");
-            tmptv.setText("한지은 선생님, 윤고은 선생님");
-        }
 
         String[] strarr = dbresult.getProgramtxtList();
         tmptv = (TextView) findViewById(R.id.morning_program_tv);
@@ -340,52 +320,168 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
 
     /************************* need to change meal image **************************/
     public void secondTab_meal_imageset(int position){
+
         ImageView tmpiv = (ImageView) findViewById(R.id.meal_iv_1);
         switch(personaldata.get(position).getMeal1()){
             case 1:
-                tmpiv.setImageResource(R.drawable.status_good);
+                tmpiv.setImageResource(R.drawable.intake_much);
                 break;
             case 2:
-                tmpiv.setImageResource(R.drawable.status_soso);
+                tmpiv.setImageResource(R.drawable.intake_normal);
                 break;
             case 3:
-                tmpiv.setImageResource(R.drawable.status_bad);
+                tmpiv.setImageResource(R.drawable.intake_little);
                 break;
             case 4:
-                tmpiv.setImageResource(R.drawable.status_bad);
+                tmpiv.setImageResource(R.drawable.intake_none);
                 break;
         }
         tmpiv = (ImageView) findViewById(R.id.meal_iv_2);
         switch(personaldata.get(position).getMeal2()){
             case 1:
-                tmpiv.setImageResource(R.drawable.status_good);
+                tmpiv.setImageResource(R.drawable.intake_much);
                 break;
             case 2:
-                tmpiv.setImageResource(R.drawable.status_soso);
+                tmpiv.setImageResource(R.drawable.intake_normal);
                 break;
             case 3:
-                tmpiv.setImageResource(R.drawable.status_bad);
+                tmpiv.setImageResource(R.drawable.intake_little);
                 break;
             case 4:
-                tmpiv.setImageResource(R.drawable.status_bad);
+                tmpiv.setImageResource(R.drawable.intake_none);
                 break;
         }
         tmpiv = (ImageView) findViewById(R.id.meal_iv_3);
         switch(personaldata.get(position).getMeal3()){
             case 1:
-                tmpiv.setImageResource(R.drawable.status_good);
+                tmpiv.setImageResource(R.drawable.intake_much);
                 break;
             case 2:
-                tmpiv.setImageResource(R.drawable.status_soso);
+                tmpiv.setImageResource(R.drawable.intake_normal);
                 break;
             case 3:
-                tmpiv.setImageResource(R.drawable.status_bad);
+                tmpiv.setImageResource(R.drawable.intake_little);
                 break;
             case 4:
-                tmpiv.setImageResource(R.drawable.status_bad);
+                tmpiv.setImageResource(R.drawable.intake_none);
                 break;
         }
     }
+
+ /*
+    ImageView meal_01 = (ImageView) findViewById(R.id.meal_iv_1);
+    ImageView meal_02 = (ImageView) findViewById(R.id.meal_iv_2);
+    ImageView meal_03 = (ImageView) findViewById(R.id.meal_iv_3);
+
+    switch(personaldata.get(position).getMeal1()){
+        case 1:
+            Glide.with(this).load(R.drawable.status_gif_normal).into(imageViewTarget_01);
+            break;
+        case 2:
+            Glide.with(this).load(R.drawable.status_gif_normal).into(imageViewTarget_01);
+            break;
+        case 3:
+            Glide.with(this).load(R.drawable.status_gif_normal).into(imageViewTarget_01);
+            break;
+        case 4:
+            meal_01.setImageResource(R.drawable.status_bad);
+            break;
+    }
+    switch(personaldata.get(position).getMeal2()){
+        case 1:
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_02);
+            break;
+        case 2:
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_02);
+            break;
+        case 3:
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_02);
+            break;
+        case 4:
+            meal_02.setImageResource(R.drawable.status_bad);
+            break;
+    }
+    switch(personaldata.get(position).getMeal3()){
+        case 1:
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_03);
+            break;
+        case 2:
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_03);
+            break;
+        case 3:
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_03);
+            break;
+        case 4:
+            meal_03.setImageResource(R.drawable.status_bad);
+            break;
+    }
+}
+
+
+
+    ImageView meal_01 = (ImageView) findViewById(R.id.meal_iv_1);
+    switch(personaldata.get(position).getMeal1()){
+        case 1:
+            GlideDrawableImageViewTarget imageViewTarget_011 = new GlideDrawableImageViewTarget(meal_01);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_011);
+            break;
+        case 2:
+            GlideDrawableImageViewTarget imageViewTarget_012 = new GlideDrawableImageViewTarget(meal_01);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_012);
+            break;
+        case 3:
+            GlideDrawableImageViewTarget imageViewTarget_013 = new GlideDrawableImageViewTarget(meal_01);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_013);
+            break;
+        case 4:
+            GlideDrawableImageViewTarget imageViewTarget_014 = new GlideDrawableImageViewTarget(meal_01);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_014);
+            break;
+    }
+    ImageView meal_02 = (ImageView) findViewById(R.id.meal_iv_2);
+    switch(personaldata.get(position).getMeal2()){
+        case 1:
+            GlideDrawableImageViewTarget imageViewTarget_021 = new GlideDrawableImageViewTarget(meal_02);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_021);
+            break;
+        case 2:
+            GlideDrawableImageViewTarget imageViewTarget_022 = new GlideDrawableImageViewTarget(meal_02);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_022);
+            break;
+        case 3:
+            GlideDrawableImageViewTarget imageViewTarget_023 = new GlideDrawableImageViewTarget(meal_02);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_023);
+            break;
+        case 4:
+            GlideDrawableImageViewTarget imageViewTarget_024 = new GlideDrawableImageViewTarget(meal_02);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_024);
+            break;
+    }ImageView meal_03 = (ImageView) findViewById(R.id.meal_iv_3);
+    switch(personaldata.get(position).getMeal3()){
+        case 1:
+            GlideDrawableImageViewTarget imageViewTarget_031 = new GlideDrawableImageViewTarget(meal_03);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_031);
+            break;
+        case 2:
+            GlideDrawableImageViewTarget imageViewTarget_032 = new GlideDrawableImageViewTarget(meal_03);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_032);
+            break;
+        case 3:
+            GlideDrawableImageViewTarget imageViewTarget_033 = new GlideDrawableImageViewTarget(meal_03);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_033);
+            break;
+        case 4:
+            GlideDrawableImageViewTarget imageViewTarget_034 = new GlideDrawableImageViewTarget(meal_03);
+            Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget_034);
+            break;
+    }
+}
+*/
+
+
+
+
+
 
     private class ImageAdapter extends BaseAdapter {
         private LayoutInflater mInflater;
@@ -423,7 +519,10 @@ public class DetailWorkReportViewActivity extends FragmentActivity {
                 holder.disabledimg = (ImageView) convertView.findViewById(R.id.userImg_disabled_item);
                 holder.selectedimg = (ImageView) convertView.findViewById(R.id.userImg_selected_item);
                 holder.userName = (TextView) convertView. findViewById(R.id.userName_item);
+//                holder.objImgitem = (ImageView) convertView.findViewById(R.id.objImg_item);
 
+
+              //  holder.objImgitem.setClipToOutline(true);
                 convertView.setTag(holder);
 
                 //holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(220,220));

@@ -69,7 +69,7 @@ public class ImageListActivity extends FragmentActivity {
             TextView tv = (TextView) findViewById(R.id.total_limit_tfd);
             tv.setText("/50");
             tv = (TextView) findViewById(R.id.title_tfd);
-            tv.setText("프로그램 일지");
+            tv.setText("사진 선택");
         }else if(mode.equals("diet")){
             LinearLayout tll = (LinearLayout) findViewById(R.id.top_titlebar_color_layout);
             tll.setBackgroundResource(R.color.colorCyanMain);
@@ -78,13 +78,15 @@ public class ImageListActivity extends FragmentActivity {
 
             image_for = intent.getExtras().getInt("imgfor");
 
-        }else {
+        }else if(mode.equals("album")){
             LinearLayout tll = (LinearLayout) findViewById(R.id.top_titlebar_color_layout);
             tll.setBackgroundResource(R.color.colorCyanMain);
             TextView tv = (TextView) findViewById(R.id.total_limit_tfd);
             tv.setText("/50");
             tv = (TextView) findViewById(R.id.title_tfd);
             tv.setText("사진 선택");
+        }else{
+            finish();
         }
 
         gridView = (GridView) findViewById(R.id.grid_view);
@@ -196,9 +198,9 @@ public class ImageListActivity extends FragmentActivity {
 
                 convertView.setTag(holder);
 
-                holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(220,220));
+                holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(350,350));
                 holder.imageview.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                holder.selectedimg.setLayoutParams(new FrameLayout.LayoutParams(220,220));
+                holder.selectedimg.setLayoutParams(new FrameLayout.LayoutParams(350,350));
                 holder.selectedimg.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
             }else{

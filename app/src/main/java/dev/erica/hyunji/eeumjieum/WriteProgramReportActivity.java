@@ -264,9 +264,9 @@ public class WriteProgramReportActivity extends FragmentActivity {
 
                 convertView.setTag(holder);
 
-                holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(220,220));
+                holder.imageview.setLayoutParams(new FrameLayout.LayoutParams(350,350));
                 holder.imageview.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                holder.selectedimg.setLayoutParams(new FrameLayout.LayoutParams(220,220));
+                holder.selectedimg.setLayoutParams(new FrameLayout.LayoutParams(350,350));
                 holder.selectedimg.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 holder.selectedimg.setVisibility(View.VISIBLE);
                 holder.selectedtxt.setVisibility(View.VISIBLE);

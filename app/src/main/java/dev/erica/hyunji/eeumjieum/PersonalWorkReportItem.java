@@ -29,6 +29,7 @@ public class PersonalWorkReportItem {
         this.meal3 = meal3;
     }
 
+/*
     PersonalWorkReportItem(int reportkey, String objectName, String objectRoom, int objectImg, int status, String objectContext, int meal1, int meal2, int meal3){
         this.reportkey = reportkey;
         this.objectName = objectName;
@@ -40,6 +41,7 @@ public class PersonalWorkReportItem {
         this.meal2 = meal2;
         this.meal3 = meal3;
     }
+*/
 
     public int getObjectImg(){return objectImg;}
     public String getObjectName(){return objectName;}

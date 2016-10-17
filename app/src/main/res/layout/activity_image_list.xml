@@ -9,14 +9,14 @@
         android:layout_gravity="top">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:orientation="horizontal"
             android:id="@+id/top_titlebar_color_layout"
             android:background="@color/colorCyanMain">
             <Button
                 android:id="@+id/cancelbtn"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height = "40dp"
                 android:layout_alignParentLeft="true"
@@ -33,12 +33,13 @@
                 android:layout_marginTop="10dp"
                 android:text="모든 사진"
                 android:textAlignment="center"
-                android:textSize="25dp"
+                android:textSize="19sp"
+                android:textStyle="bold"
                 android:textColor="@android:color/white"/>
             <Button
                 android:id="@+id/donebtn"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height = "40dp"
                 android:layout_alignParentRight="true"
@@ -53,18 +54,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="55dp"
+        android:background="@color/colorBlueDark2">
     //img list
     <GridView
         android:id="@+id/grid_view"
-        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
-        android:columnWidth="90dp"
+        android:columnWidth="125dp"
         android:numColumns="auto_fit"
-        android:verticalSpacing="5dp"
-        android:horizontalSpacing="5dp"
+        android:verticalSpacing="2dp"
+        android:horizontalSpacing="2dp"
         android:stretchMode="columnWidth"
         android:gravity="center"
         android:drawSelectorOnTop="true"/>
@@ -77,24 +79,29 @@
         android:id="@+id/current_select_layout"
         android:background="@android:color/white"
         android:visibility="gone">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/selected_count_tfd"
-            android:textSize="20dp"
-            android:layout_marginLeft="155dp"
-            android:layout_marginTop="5dp"
-            android:gravity="right"
-            android:textColor="@color/colorCyanMain"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/total_limit_tfd"
-            android:textSize="20dp"
-            android:text="/10"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/colorCyanDark"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/selected_count_tfd"
+                android:textAlignment="textEnd"
+                android:textSize="20dp"
+                android:textColor="@color/colorCyanMain"/>
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/total_limit_tfd"
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:text="/10"
+                android:textColor="@color/colorCyanDark"/>
+        </LinearLayout>
     </FrameLayout>
 
     </LinearLayout>

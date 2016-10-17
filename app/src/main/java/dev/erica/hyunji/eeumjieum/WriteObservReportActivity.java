@@ -5,12 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,7 +52,7 @@ public class WriteObservReportActivity extends FragmentActivity {
         }//else "write"--> sekect observe report object
 
         listinint();
-
+/*
         LinearLayout tmpBG = (LinearLayout) findViewById(R.id.content_bg);
         tmpBG.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +62,7 @@ public class WriteObservReportActivity extends FragmentActivity {
                 imm.hideSoftInputFromWindow(et.getWindowToken(),0);
             }
         });
+        */
 
     }
 
@@ -257,7 +255,11 @@ public class WriteObservReportActivity extends FragmentActivity {
     }
 
     public void onClick_backbtn(View v){
-        finish();
+        Intent intent = new Intent(this, ObservReportWorkerActivity.class);
+        intent.putExtra("userID",savedID);
+        intent.putExtra("userMode", savedMode);
+        startActivityForResult(intent,0);
+        overridePendingTransition(0,0);
     }
 
 }

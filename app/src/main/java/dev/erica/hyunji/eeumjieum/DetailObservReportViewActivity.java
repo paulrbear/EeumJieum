@@ -18,8 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
@@ -283,13 +281,11 @@ public class DetailObservReportViewActivity extends Activity {
         switch (mood) {
             case 1:
                 tmp = (ImageView) findViewById(R.id.mood_iv);
-                GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(tmp);
-                Glide.with(this).load(R.drawable.soso_gif).into(imageViewTarget);
-                //tmp.setImageResource(R.drawable.status_good);
+                tmp.setImageResource(R.drawable.status_good);
                 break;
             case 2:
                 tmp = (ImageView) findViewById(R.id.mood_iv);
-                tmp.setImageResource(R.drawable.status_soso);
+                tmp.setImageResource(R.drawable.status_normal);
                 break;
             case 3:
                 tmp = (ImageView) findViewById(R.id.mood_iv);
@@ -303,7 +299,7 @@ public class DetailObservReportViewActivity extends Activity {
                 break;
             case 2:
                 tmp = (ImageView) findViewById(R.id.activity_iv);
-                tmp.setImageResource(R.drawable.status_soso);
+                tmp.setImageResource(R.drawable.status_normal);
                 break;
             case 3:
                 tmp = (ImageView) findViewById(R.id.activity_iv);
@@ -317,7 +313,7 @@ public class DetailObservReportViewActivity extends Activity {
                 break;
             case 2:
                 tmp = (ImageView) findViewById(R.id.sleep_iv);
-                tmp.setImageResource(R.drawable.status_soso);
+                tmp.setImageResource(R.drawable.status_normal);
                 break;
             case 3:
                 tmp = (ImageView) findViewById(R.id.sleep_iv);

@@ -44,7 +44,7 @@
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
         <activity
             android:name=".WriteObservReport2Activity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"/>
         <activity
             android:name=".ImageListActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
